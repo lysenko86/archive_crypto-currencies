@@ -1,0 +1,40 @@
+.header{
+    height: 50px;
+    background-color: #DDDDDD;
+}
+
+
+
+
+
+.main{}
+    .main .table{
+    	border: none;
+    }
+        .main .table thead>tr>th{
+        	text-align: center;
+        	border-bottom-width: 1px;
+            background-color: #337ab7;
+            color: #fff;
+        }
+        .main .table tbody>tr{
+        	cursor: pointer;
+        }
+        .main .table td.colorPlus, .main .table td.colorMinus{
+            font-weight: bold;
+        }
+        .main .table td.colorPlus{
+            color: #390;
+        }
+        .main .table td.colorMinus{
+            color: #F00;
+        }
+
+
+
+
+
+.footer{
+    height: 50px;
+    background-color: #DDDDDD;
+}
