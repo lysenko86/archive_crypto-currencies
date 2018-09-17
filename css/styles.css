@@ -29,6 +29,9 @@
         .main .table td.colorMinus{
             color: #F00;
         }
+        .main .table input.priceOut{
+            width: 50px;
+        }
 
 
 

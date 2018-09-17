@@ -48,9 +48,9 @@ const deposit = [
     {key: 'STQ_USD', title: 'Storiqa', sum: 0, priceIn: 0.0022, priceMax: 0.132},
     {key: 'DXT_USD', title: 'Datawallet', sum: 870, priceIn: 0.0115, priceMax: 0.9981},
     {key: 'INK_USD', title: 'Ink', sum: 655, priceIn: 0.0228, priceMax: 0.91597},
-    {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceOut: 0.1011},
-    {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceOut: 0.01365},
-    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceOut: 1}
+    {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.1011},
+    {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01365},
+    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
 let totalSumIn = 0;
 let totalSumOut = 0;
@@ -66,25 +66,25 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         const currencySum = item.sum;
         const priceIn = item.priceIn;
         const priceInSum = currencySum * priceIn;
-        const priceOut = item.priceOut ? item.priceOut : (data[key] && data[key].last_trade ? data[key].last_trade : 'error');
-        const priceOutSum = currencySum * priceOut;
-        const increaseSum = priceOutSum - priceInSum;
+        const priceNow = item.priceNow ? item.priceNow : (data[key] && data[key].last_trade ? data[key].last_trade : 'error');
+        const priceNowSum = currencySum * priceNow;
+        const increaseSum = priceNowSum - priceInSum;
         const increasePercent = currencySum === 0 ? 0 : Math.round(increaseSum * 100 / priceInSum / 100 * 10000) / 100;
         const priceMax = item.priceMax;
-        const increase30Percent = priceIn + priceIn * 30 / 100;
         totalSumIn += priceInSum;
-        totalSumOut += priceOutSum;
+        totalSumOut += priceNowSum;
         $('.table-currencies tbody').append($('<tr/>')
             .append($('<td/>', {text: title + ' (' + key.split('_')[0] + ')'}))
             .append($('<td/>', {text: roundPrice(currencySum)}))
             .append($('<td/>', {text: roundPrice(priceIn) + '$'}))
             .append($('<td/>', {text: roundPrice(priceInSum) + '$'}))
-            .append($('<td/>', {html: '<strong>' + roundPrice(priceOut) + '$</strong>'}))
-            .append($('<td/>', {text: roundPrice(priceOutSum) + '$'}))
+            .append($('<td/>', {html: '<strong>' + roundPrice(priceNow) + '$</strong>'}))
+            .append($('<td/>', {text: roundPrice(priceNowSum) + '$'}))
             .append($('<td/>', {text: roundPrice(increaseSum) + '$', class: increaseSum >= 0 ? 'colorPlus' : 'colorMinus'}))
             .append($('<td/>', {text: increasePercent + '%', class: increasePercent >= 0 ? 'colorPlus' : 'colorMinus'}))
             .append($('<td/>', {text: roundPrice(priceMax) + '$'}))
-            .append($('<td/>', {text: roundPrice(increase30Percent) + '$'}))
+            .append($('<td/>', {html: '<input class="priceOut" type="text" value="' + roundPrice(priceNow) + '"/> $'}))
+            .append($('<td/>', {text: roundPrice(priceNowSum) + '$'}))
         );
     }
     const totalIncreaseSum = totalSumOut - totalSumIn;
@@ -99,4 +99,10 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         .append($('<td/>', {text: roundPrice(totalIncreasePercent) + '%', class: totalIncreasePercent >= 0 ? 'colorPlus' : 'colorMinus'}))
         .append($('<td/>')).append($('<td/>'))
     );
+});
+
+$(function(){
+    $('body .priceOut').on('change', function(){
+        console.log('GOOD');
+    });
 });
