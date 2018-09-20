@@ -102,7 +102,8 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
 });
 
 $(function(){
-    $('body .priceOut').on('change', function(){
-        console.log('GOOD');
+    $('body').on('keyup', '.priceOut', function(){
+        const val = $(this).val();
+        $(this).closest('td').next().text($(this).val() + '$');
     });
 });
