@@ -53,6 +53,7 @@ const deposit = [
     {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
 let totalSumIn = 0;
+let totalSumNow = 0;
 let totalSumOut = 0;
 
 $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
@@ -72,6 +73,7 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         const increasePercent = currencySum === 0 ? 0 : Math.round(increaseSum * 100 / priceInSum / 100 * 10000) / 100;
         const priceMax = item.priceMax;
         totalSumIn += priceInSum;
+        totalSumNow += priceNowSum;
         totalSumOut += priceNowSum;
         $('.table-currencies tbody').append($('<tr/>')
             .append($('<td/>', {text: title + ' (' + key.split('_')[0] + ')'}))
@@ -87,23 +89,29 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
             .append($('<td/>', {text: roundPrice(priceNowSum) + '$'}))
         );
     }
-    const totalIncreaseSum = totalSumOut - totalSumIn;
+    const totalIncreaseSum = totalSumNow - totalSumIn;
     const totalIncreasePercent = Math.round(totalIncreaseSum * 100 / totalSumIn / 100 * 10000) / 100;
     $('.table-currencies tbody').append($('<tr/>')
         .append($('<td/>', {text: 'Загалом:'}))
         .append($('<td/>')).append($('<td/>'))
         .append($('<td/>', {text: roundPrice(totalSumIn) + '$'}))
         .append($('<td/>'))
-        .append($('<td/>', {text: roundPrice(totalSumOut) + '$'}))
+        .append($('<td/>', {text: roundPrice(totalSumNow) + '$'}))
         .append($('<td/>', {text: roundPrice(totalIncreaseSum) + '$', class: totalIncreaseSum >= 0 ? 'colorPlus' : 'colorMinus'}))
         .append($('<td/>', {text: roundPrice(totalIncreasePercent) + '%', class: totalIncreasePercent >= 0 ? 'colorPlus' : 'colorMinus'}))
         .append($('<td/>')).append($('<td/>'))
+        .append($('<td/>', {text: roundPrice(totalSumOut) + '$'}))
     );
 });
 
 $(function(){
     $('body').on('keyup', '.priceOut', function(){
-        const val = $(this).val();
-        $(this).closest('td').next().text($(this).val() + '$');
+        const price = $(this).val();
+        /*const currencySum = $(this).closest('tr').find('td:nth-child(2)').text();
+        const totalSum = roundPrice(price * currencySum);
+        $(this).closest('td').next().text(totalSum + '$');
+        $(this).closest('table').find('tr').map(function(el){
+            console.log($(el).find('td:nth-last-child(0)').text());
+        });*/
     });
 });
