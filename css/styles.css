@@ -1,47 +1,41 @@
 .header{
-    height: 50px;
+    height: 0px;
     background-color: #DDDDDD;
 }
 
 
 
-
-
-.main{}
-    .main .table{
-    	border: none;
-    }
-        .main .table thead>tr>th{
-        	text-align: center;
-        	border-bottom-width: 1px;
-            background-color: #337ab7;
-            color: #fff;
-        }
-        .main .table tbody>tr{
-        	cursor: pointer;
-        }
-        .main .table td.colorPlus, .main .table td.colorMinus{
-            font-weight: bold;
-        }
-        .main .table td.colorPlus{
-            color: #390;
-        }
-        .main .table td.colorMinus{
-            color: #F00;
-        }
-        .main .table input.priceOut{
-            width: 50px;
-        }
-
-.table-currencies tr:last-child td{
+.table-currencies{
+	border: none;
+}
+.table-currencies thead th{
+	text-align: center;
+	border-bottom-width: 1px;
+    background-color: #337ab7;
+    color: #fff;
+}
+.table-currencies tbody tr{
+	cursor: pointer;
+}
+.table-currencies td.colorPlus, .table-currencies td.colorMinus{
+    font-weight: bold;
+}
+.table-currencies td.colorPlus{
+    color: #390;
+}
+.table-currencies td.colorMinus{
+    color: #F00;
+}
+.table-currencies input.priceOut{
+    width: 50px;
+}
+.table-currencies tfoot td{
     font-weight: bold;
 }
 
 
 
-
-
 .footer{
-    height: 50px;
+    height: 0px;
     background-color: #DDDDDD;
 }

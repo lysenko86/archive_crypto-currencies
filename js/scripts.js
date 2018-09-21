@@ -48,8 +48,8 @@ const deposit = [
     {key: 'STQ_USD', title: 'Storiqa', sum: 0, priceIn: 0.0022, priceMax: 0.132},
     {key: 'DXT_USD', title: 'Datawallet', sum: 870, priceIn: 0.0115, priceMax: 0.9981},
     {key: 'INK_USD', title: 'Ink', sum: 655, priceIn: 0.0228, priceMax: 0.91597},
-    {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.1011},
-    {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01365},
+    {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.11098},
+    {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01557},
     {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
 let totalSumIn = 0;
@@ -94,7 +94,7 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
     }
     const totalIncreaseSum = totalSumNow - totalSumIn;
     const totalIncreasePercent = Math.round(totalIncreaseSum * 100 / totalSumIn / 100 * 10000) / 100;
-    $('.table-currencies tbody').append($('<tr/>')
+    $('.table-currencies tfoot').append($('<tr/>')
         .append($('<td/>', {text: 'Загалом:'}))
         .append($('<td/>')).append($('<td/>'))
         .append($('<td/>', {text: roundPrice(totalSumIn) + '$'}))
@@ -110,26 +110,25 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
 });
 
 $(function(){
-    $('body').on('keyup', '.priceOut', function(){
+    $('.table-currencies').on('keyup', '.priceOut', function(){
         const currencySum = $(this).closest('tr').find('td:eq(1)').text();
         const price = $(this).val();
         const totalSum = roundPrice(price * currencySum);
         const priceInSum = $(this).closest('tr').find('td:eq(3)').text().replace('$', '');
         const increaseSum = totalSum - priceInSum;
         const totalPercent = parseFloat(currencySum) === 0 ? 0 : Math.round(increaseSum * 100 / priceInSum / 100 * 10000) / 100;
-        console.log(currencySum);
         $(this).closest('td').next().text(totalSum + '$');
         $(this).closest('td').next().next().text(totalPercent + '%');
         let totalSumOut = 0;
-        $(this).closest('table tbody').find('tr:not(:last)').each(function(){
+        $(this).closest('.table-currencies tbody').find('tr').each(function(){
             const outSum = $(this).find('td:eq(-2)').text().replace('$', '');
             totalSumOut += parseFloat(outSum);
         });
         totalSumOut = roundPrice(totalSumOut);
-        const totalInSum = $(this).closest('table tbody').find('tr:last td:eq(3)').text().replace('$', '');
+        const totalInSum = $('.table-currencies tfoot tr td:eq(3)').text().replace('$', '');
         const totalIncreaseSum = totalSumOut - totalInSum;
         const totalPercentOut = totalSumOut === 0 ? 0 : Math.round(totalIncreaseSum * 100 / totalInSum / 100 * 10000) / 100;
-        $(this).closest('table tbody').find('tr:last td:eq(-2)').text(totalSumOut + '$');
-        $(this).closest('table tbody').find('tr:last td:eq(-1)').text(totalPercentOut + '%');
+        $('.table-currencies tfoot tr td:eq(-2)').text(totalSumOut + '$');
+        $('.table-currencies tfoot tr td:eq(-1)').text(totalPercentOut + '%');
     });
 });
