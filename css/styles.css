@@ -33,6 +33,10 @@
             width: 50px;
         }
 
+.table-currencies tr:last-child td{
+    font-weight: bold;
+}
+
 
 
 

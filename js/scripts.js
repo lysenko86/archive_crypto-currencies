@@ -54,7 +54,7 @@ const deposit = [
 ];
 let totalSumIn = 0;
 let totalSumNow = 0;
-let totalSumOut = 0;
+let totalSumMax = 0;
 
 $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
     if (!data['BTC_USD']){
@@ -70,11 +70,13 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         const priceNow = item.priceNow ? item.priceNow : (data[key] && data[key].last_trade ? data[key].last_trade : 'error');
         const priceNowSum = currencySum * priceNow;
         const increaseSum = priceNowSum - priceInSum;
-        const increasePercent = currencySum === 0 ? 0 : Math.round(increaseSum * 100 / priceInSum / 100 * 10000) / 100;
+        const increaseSumOut = priceNowSum - priceInSum;
+        const increasePercent = parseFloat(currencySum) === 0 ? 0 : Math.round(increaseSum * 100 / priceInSum / 100 * 10000) / 100;
         const priceMax = item.priceMax;
+        const priceMaxSum = currencySum * priceMax;
         totalSumIn += priceInSum;
         totalSumNow += priceNowSum;
-        totalSumOut += priceNowSum;
+        totalSumMax += priceMaxSum;
         $('.table-currencies tbody').append($('<tr/>')
             .append($('<td/>', {text: title + ' (' + key.split('_')[0] + ')'}))
             .append($('<td/>', {text: roundPrice(currencySum)}))
@@ -87,6 +89,7 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
             .append($('<td/>', {text: roundPrice(priceMax) + '$'}))
             .append($('<td/>', {html: '<input class="priceOut" type="text" value="' + roundPrice(priceNow) + '"/> $'}))
             .append($('<td/>', {text: roundPrice(priceNowSum) + '$'}))
+            .append($('<td/>', {text: increasePercent + '%'}))
         );
     }
     const totalIncreaseSum = totalSumNow - totalSumIn;
@@ -99,19 +102,34 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         .append($('<td/>', {text: roundPrice(totalSumNow) + '$'}))
         .append($('<td/>', {text: roundPrice(totalIncreaseSum) + '$', class: totalIncreaseSum >= 0 ? 'colorPlus' : 'colorMinus'}))
         .append($('<td/>', {text: roundPrice(totalIncreasePercent) + '%', class: totalIncreasePercent >= 0 ? 'colorPlus' : 'colorMinus'}))
-        .append($('<td/>')).append($('<td/>'))
-        .append($('<td/>', {text: roundPrice(totalSumOut) + '$'}))
+        .append($('<td/>', {text: roundPrice(totalSumMax) + '$'}))
+        .append($('<td/>'))
+        .append($('<td/>', {text: roundPrice(totalSumNow) + '$'}))
+        .append($('<td/>', {text: roundPrice(totalIncreasePercent) + '%'}))
     );
 });
 
 $(function(){
     $('body').on('keyup', '.priceOut', function(){
+        const currencySum = $(this).closest('tr').find('td:eq(1)').text();
         const price = $(this).val();
-        /*const currencySum = $(this).closest('tr').find('td:nth-child(2)').text();
         const totalSum = roundPrice(price * currencySum);
+        const priceInSum = $(this).closest('tr').find('td:eq(3)').text().replace('$', '');
+        const increaseSum = totalSum - priceInSum;
+        const totalPercent = parseFloat(currencySum) === 0 ? 0 : Math.round(increaseSum * 100 / priceInSum / 100 * 10000) / 100;
+        console.log(currencySum);
         $(this).closest('td').next().text(totalSum + '$');
-        $(this).closest('table').find('tr').map(function(el){
-            console.log($(el).find('td:nth-last-child(0)').text());
-        });*/
+        $(this).closest('td').next().next().text(totalPercent + '%');
+        let totalSumOut = 0;
+        $(this).closest('table tbody').find('tr:not(:last)').each(function(){
+            const outSum = $(this).find('td:eq(-2)').text().replace('$', '');
+            totalSumOut += parseFloat(outSum);
+        });
+        totalSumOut = roundPrice(totalSumOut);
+        const totalInSum = $(this).closest('table tbody').find('tr:last td:eq(3)').text().replace('$', '');
+        const totalIncreaseSum = totalSumOut - totalInSum;
+        const totalPercentOut = totalSumOut === 0 ? 0 : Math.round(totalIncreaseSum * 100 / totalInSum / 100 * 10000) / 100;
+        $(this).closest('table tbody').find('tr:last td:eq(-2)').text(totalSumOut + '$');
+        $(this).closest('table tbody').find('tr:last td:eq(-1)').text(totalPercentOut + '%');
     });
 });
