@@ -11,43 +11,24 @@
   <title>Crypto</title>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-            <div class="col-xs-12">
-				<div class="header"></div>
-			</div>
-		</div>
-    </div>
-	<div class="container-fluid">
-		<div class="row">
-            <div class="col-xs-12">
-				<table class="table table-bordered table-hover table-currencies">
-					<thead><tr>
-						<th>Валюта</th>
-						<th>Сума</th>
-						<th>Ціна закупа, $</th>
-						<th>Сума закупа, $</th>
-						<th>Ціна зараз, $</th>
-						<th>Сума зараз, $</th>
-						<th>Ріст, $</th>
-						<th>Ріст, %</th>
-						<th>Максимум, $</th>
-						<th>Ціна продажу, $</th>
-						<th>Сума продажу, $</th>
-						<th>Ріст продажу, %</th>
-					</tr></thead>
-					<tfoot></tfoot>
-					<tbody></tbody>
-				</table>
-			</div>
-		</div>
-    </div>
-	<div class="container">
-		<div class="row">
-            <div class="col-xs-12">
-				<div class="footer"></div>
-			</div>
-		</div>
-    </div>
+	<table class="table table-bordered table-currencies"><thead><tr>
+		<th class="col-name">Валюта</th>
+		<th class="col-sum">Сума</th>
+		<th class="col-price-in">Ціна закупа, $</th>
+		<th class="col-sum-in">Сума закупа, $</th>
+		<th class="col-price-now">Ціна зараз, $</th>
+		<th class="col-sum-now">Сума зараз, $</th>
+		<th class="col-increase-now">Ріст, $</th>
+		<th class="col-increase-now-percent">Ріст, %</th>
+		<th class="col-price-max">Макс, $</th>
+		<th class="col-price-out">Ціна продажу, $</th>
+		<th class="col-sum-out">Сума продажу, $</th>
+		<th class="col-increase-out-percent">Ріст продажу, %</th>
+		<th class="col-scrollbar"></th>
+	</tr></thead></table>
+    <div class="table-currencies-container">
+		<table class="table table-bordered table-hover table-currencies"><tbody></tbody></table>
+	</div>
+	<table class="table table-bordered table-currencies"><tfoot></tfoot></table>
 </body>
 </html>
