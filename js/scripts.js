@@ -47,10 +47,11 @@ const deposit = [
     {key: 'HBZ_USD', title: 'Helbiz', sum: 4130, priceIn: 0.00242, priceMax: 0.020609},
     {key: 'STQ_USD', title: 'Storiqa', sum: 0, priceIn: 0.0022, priceMax: 0.013205},
     {key: 'DXT_USD', title: 'Datawallet', sum: 870, priceIn: 0.0115, priceMax: 0.99813},
+    {key: 'DXT_USD', title: 'Datawallet', sum: 518, priceIn: 0.0105, priceMax: 0.99813},
     {key: 'INK_USD', title: 'Ink', sum: 655, priceIn: 0.0228, priceMax: 0.915974},
     {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.11098},
     {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01557},
-    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
+    {key: 'USD', title: 'Exmo', sum: 30, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
 let totalSumIn = 0;
 let totalSumNow = 0;
