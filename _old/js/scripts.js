@@ -20,6 +20,7 @@ const deposit = [
     {key: 'TRX_USD', title: 'Tron', sum: 100, priceIn: 0.02585, priceMax: 0.27371},
     {key: 'TRX_USD', title: 'Tron', sum: 700, priceIn: 0.02588, priceMax: 0.27371},
     {key: 'TRX_USD', title: 'Tron', sum: 677, priceIn: 0.01774, priceMax: 0.27371},
+    {key: 'TRX_USD', title: 'Tron', sum: 714.88, priceIn: 0.0208, priceMax: 0.27371},
     {key: 'DASH_USD', title: 'Dash', sum: 0.01, priceIn: 740, priceMax: 1470},
     {key: 'DASH_USD', title: 'Dash', sum: 0.00996, priceIn: 626.104, priceMax: 1470},
     {key: 'BCH_USD', title: 'Bitcoin Cash', sum: 0.03467, priceIn: 478.7, priceMax: 3446},
@@ -32,6 +33,7 @@ const deposit = [
     {key: 'EOS_USD', title: 'EOS', sum: 3.992, priceIn: 6.633, priceMax: 20.474},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 1.42628172, priceIn: 4.18, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 4.624, priceIn: 3.255, priceMax: 25.3071},
+    {key: 'OMG_USD', title: 'OmiseGO', sum: 3, priceIn: 3.332, priceMax: 25.3071},
     {key: 'ADA_USD', title: 'Cardano', sum: 29.94, priceIn: 0.12, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 117, priceIn: 0.0849, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 230, priceIn: 0.06599, priceMax: 1.2655},
@@ -52,7 +54,7 @@ const deposit = [
     {key: 'INK_USD', title: 'Ink', sum: 655, priceIn: 0.0228, priceMax: 0.915974},
     {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.11098},
     {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01557},
-    {key: 'USD', title: 'Exmo', sum: 30, priceIn: 1, priceMax: 1, priceNow: 1}
+    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
 let totalSumIn = 0;
 let totalSumNow = 0;
