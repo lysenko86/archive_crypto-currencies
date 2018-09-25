@@ -38,6 +38,7 @@ const deposit = [
     {key: 'ADA_USD', title: 'Cardano', sum: 117, priceIn: 0.0849, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 230, priceIn: 0.06599, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 185.301, priceIn: 0.067, priceMax: 1.2655},
+    {key: 'ADA_USD', title: 'Cardano', sum: 273.935, priceIn: 0.0775, priceMax: 1.2655},
     {key: 'XLM_USD', title: 'Stellar', sum: 9.98, priceIn: 0.244, priceMax: 0.87315},
     {key: 'XLM_USD', title: 'Stellar', sum: 21.6026, priceIn: 0.224945, priceMax: 0.87315},
     {key: 'XLM_USD', title: 'Stellar', sum: 59.8368, priceIn: 0.225, priceMax: 0.87315},
@@ -54,7 +55,7 @@ const deposit = [
     {key: 'INK_USD', title: 'Ink', sum: 655, priceIn: 0.0228, priceMax: 0.915974},
     {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.11098},
     {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01557},
-    {key: 'USD', title: 'Exmo', sum: 21.22, priceIn: 1, priceMax: 1, priceNow: 1}
+    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
 let totalSumIn = 0;
 let totalSumNow = 0;
