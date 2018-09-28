@@ -27,7 +27,7 @@ const deposit = [
     {key: 'XRP_USD', title: 'Ripple', sum: 14.9835297, priceIn: 1.1367, priceMax: 3.0515},
     {key: 'XRP_USD', title: 'Ripple', sum: 40.09, priceIn: 1.125, priceMax: 3.0515},
     {key: 'XMR_USD', title: 'Monero', sum: 0.27908, priceIn: 106.85, priceMax: 439.33},
-    {key: 'GAS_USD', title: 'Gas', sum: 1.09112, priceIn: 6.95, priceMax: 79.21},
+    {key: 'GAS_USD', title: 'Gas', sum: 0, priceIn: 9.1, priceMax: 79.21},
     {key: 'ETC_USD', title: 'Ethereum Classic', sum: 1.0, priceIn: 33.47, priceMax: 44.546},
     {key: 'ETC_USD', title: 'Ethereum Classic', sum: 0.594, priceIn: 29.044, priceMax: 44.546},
     {key: 'EOS_USD', title: 'EOS', sum: 3.992, priceIn: 6.633, priceMax: 20.474},
