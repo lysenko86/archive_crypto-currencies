@@ -1,9 +1,12 @@
 "use strict";
 
-const app = require('express')();
+const express = require('express');
+const app = express();
+
+app.use(express.static(__dirname + '/public/build'));
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/public/build/index.html');
-}).listen(8124);
+    res.sendFile(__dirname + '/public/templates/index.html');
+}).listen(80);
 
-console.log('Server was started at http://127.0.0.1:8124/');
+console.log('Server was started at http://127.0.0.1:80/');
