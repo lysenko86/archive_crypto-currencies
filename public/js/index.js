@@ -52,6 +52,7 @@ const deposit = [
     {key: 'DXT_USD', title: 'Datawallet', sum: 518, priceIn: 0.0105, priceMax: 0.99813},
     {key: 'DXT_USD', title: 'Datawallet', sum: 481.55, priceIn: 0.01053, priceMax: 0.99813},
     {key: 'INK_USD', title: 'Ink', sum: 655, priceIn: 0.0228, priceMax: 0.915974},
+    {key: 'MNX_USD', title: 'MinexCoin', sum: 0, priceIn: 2.268, priceMax: 51.633},
     {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.11098},
     {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01557},
     {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
@@ -65,6 +66,9 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         console.log(data.error);
     }
     for (let i=0; i<deposit.length; i++){
+        if (deposit[i].sum === 0){
+            continue;
+        }
         const key = deposit[i].key;
         const title = deposit[i].title;
         const item = deposit[i];
