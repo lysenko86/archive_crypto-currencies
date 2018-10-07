@@ -19,7 +19,6 @@ const deposit = [
     {key: 'TRX_USD', title: 'Tron', sum: 249.5, priceIn: 0.023, priceMax: 0.27371},
     {key: 'TRX_USD', title: 'Tron', sum: 100, priceIn: 0.02585, priceMax: 0.27371},
     {key: 'TRX_USD', title: 'Tron', sum: 700, priceIn: 0.02588, priceMax: 0.27371},
-    {key: 'TRX_USD', title: 'Tron', sum: 677, priceIn: 0.01774, priceMax: 0.27371},
     {key: 'TRX_USD', title: 'Tron', sum: 714.88, priceIn: 0.0208, priceMax: 0.27371},
     {key: 'DASH_USD', title: 'Dash', sum: 0.01, priceIn: 740, priceMax: 1470},
     {key: 'DASH_USD', title: 'Dash', sum: 0.00996, priceIn: 626.104, priceMax: 1470},
@@ -35,6 +34,7 @@ const deposit = [
     {key: 'OMG_USD', title: 'OmiseGO', sum: 4.624, priceIn: 3.255, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 3, priceIn: 3.332, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 16.667, priceIn: 3.68, priceMax: 25.3071},
+    {key: 'OMG_USD', title: 'OmiseGO', sum: 8.227, priceIn: 3.5, priceMax: 25.3071},
     {key: 'ADA_USD', title: 'Cardano', sum: 29.94, priceIn: 0.12, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 117, priceIn: 0.0849, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 273.935, priceIn: 0.0775, priceMax: 1.2655},
@@ -46,7 +46,6 @@ const deposit = [
     {key: 'ZEC_USD', title: 'Zcash', sum: 0.04, priceIn: 143.8788, priceMax: 731.37},
     {key: 'NEO_USD', title: 'NEO', sum: 1.9896, priceIn: 24.07989, priceMax: 170.04},
     {key: 'HBZ_USD', title: 'Helbiz', sum: 500, priceIn: 0.0038379, priceMax: 0.020609},
-    {key: 'HBZ_USD', title: 'Helbiz', sum: 4130, priceIn: 0.00242, priceMax: 0.020609},
     {key: 'STQ_USD', title: 'Storiqa', sum: 0, priceIn: 0.0022, priceMax: 0.013205},
     {key: 'DXT_USD', title: 'Datawallet', sum: 870, priceIn: 0.0115, priceMax: 0.99813},
     {key: 'DXT_USD', title: 'Datawallet', sum: 518, priceIn: 0.0105, priceMax: 0.99813},
@@ -143,3 +142,5 @@ $(function(){
         $('.table-currencies tfoot td.col-increase-out-percent').text(totalPercentOut + '%');
     });
 });
+
+console.log('GOOD');
