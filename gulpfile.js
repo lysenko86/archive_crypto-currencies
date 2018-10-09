@@ -1,6 +1,7 @@
 "use strict"
 
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const stylus = require('gulp-stylus');
@@ -13,6 +14,7 @@ gulp.task('build:js', function(){
         'public/js/*.*'
     ])
     .pipe(concat('scripts.js'))
+    .pipe(babel({plugins: ['transform-react-jsx']}))
     .pipe(minify({ext:{min:'.js'}}))
     .pipe(gulp.dest('public/build/'))
 });

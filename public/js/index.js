@@ -144,3 +144,7 @@ $(function(){
         $('.table-currencies tfoot td.col-increase-out-percent').text(totalPercentOut + '%');
     });
 });
+
+console.log('GOOD');
+
+import React from 'react';
