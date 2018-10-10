@@ -23,13 +23,12 @@ const deposit = [
     {key: 'DXT_USD', title: 'Datawallet', sum: 515.254, priceIn: 0.0105, priceMax: 0.99813},
     {key: 'DXT_USD', title: 'Datawallet', sum: 481, priceIn: 0.01053, priceMax: 0.99813},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 1.426, priceIn: 4.18, priceMax: 25.3071},
-    {key: 'OMG_USD', title: 'OmiseGO', sum: 4.624, priceIn: 3.255, priceMax: 25.3071},
-    {key: 'OMG_USD', title: 'OmiseGO', sum: 3, priceIn: 3.332, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 16.667, priceIn: 3.68, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 8.227, priceIn: 3.5, priceMax: 25.3071},
-    {key: 'OMG_USD', title: 'OmiseGO', sum: 5.551, priceIn: 3.53, priceMax: 25.3071},
+    {key: 'OMG_USD', title: 'OmiseGO', sum: 6.101, priceIn: 3.53, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 14.642, priceIn: 3.55, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 14.403, priceIn: 3.55, priceMax: 25.3071},
+    {key: 'MNX_USD', title: 'MinexCoin', sum: 10.297, priceIn: 2.4, priceMax: 51.633},
     {key: 'ADA_USD', title: 'Cardano', sum: 31, priceIn: 0.12, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 118.5, priceIn: 0.0849, priceMax: 1.2655},
     {key: 'INK_USD', title: 'Ink', sum: 653.69, priceIn: 0.0228, priceMax: 0.915974},
@@ -49,7 +48,6 @@ const deposit = [
     {key: 'BTG_USD', title: 'Bitcoin Gold', sum: 0, priceIn: 478.7, priceMax: 3446},
     {key: 'STQ_USD', title: 'Storiqa', sum: 0, priceIn: 0.0022, priceMax: 0.013205},
     {key: 'XLM_USD', title: 'Stellar', sum: 0, priceIn: 0.244, priceMax: 0.87315},
-    {key: 'MNX_USD', title: 'MinexCoin', sum: 0, priceIn: 2.268, priceMax: 51.633},
     {key: 'TRX_USD', title: 'Tron', sum: 0, priceIn: 0.023, priceMax: 0.27371},
     {key: 'GAS_USD', title: 'Gas', sum: 0, priceIn: 9.1, priceMax: 79.21},
 
@@ -145,6 +143,6 @@ $(function(){
     });
 });
 
-console.log('GOOD');
+//console.log('GOOD');
 
-import React from 'react';
+//import React from 'react';
