@@ -28,11 +28,16 @@ const deposit = [
     {key: 'OMG_USD', title: 'OmiseGO', sum: 6.101, priceIn: 3.53, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 14.642, priceIn: 3.55, priceMax: 25.3071},
     {key: 'OMG_USD', title: 'OmiseGO', sum: 14.403, priceIn: 3.55, priceMax: 25.3071},
+    {key: 'OMG_USD', title: 'OmiseGO', sum: 4.134, priceIn: 3.12, priceMax: 25.3071},
     {key: 'MNX_USD', title: 'MinexCoin', sum: 10.297, priceIn: 2.4, priceMax: 51.633},
+    {key: 'MNX_USD', title: 'MinexCoin', sum: 9.054, priceIn: 2.11, priceMax: 51.633},
     {key: 'ADA_USD', title: 'Cardano', sum: 31, priceIn: 0.12, priceMax: 1.2655},
     {key: 'ADA_USD', title: 'Cardano', sum: 118.5, priceIn: 0.0849, priceMax: 1.2655},
+    {key: 'ADA_USD', title: 'Cardano', sum: 400, priceIn: 0.077, priceMax: 1.2655},
     {key: 'INK_USD', title: 'Ink', sum: 653.69, priceIn: 0.0228, priceMax: 0.915974},
     {key: 'NEO_USD', title: 'NEO', sum: 1.9896, priceIn: 24.07989, priceMax: 170.04},
+    {key: 'TRX_USD', title: 'Tron', sum: 1400, priceIn: 0.0228, priceMax: 0.27371},
+    {key: 'XLM_USD', title: 'Stellar', sum: 57.02, priceIn: 0.22, priceMax: 0.87315},
 
     {key: 'BTC_USD', title: 'Bitcoin', sum: 0.0037293, priceIn: 11250, priceMax: 19331},
     {key: 'DASH_USD', title: 'Dash', sum: 0.01, priceIn: 740, priceMax: 1470},
@@ -47,12 +52,10 @@ const deposit = [
     {key: 'BCH_USD', title: 'Bitcoin Cash', sum: 0, priceIn: 478.7, priceMax: 3446},
     {key: 'BTG_USD', title: 'Bitcoin Gold', sum: 0, priceIn: 478.7, priceMax: 3446},
     {key: 'STQ_USD', title: 'Storiqa', sum: 0, priceIn: 0.0022, priceMax: 0.013205},
-    {key: 'XLM_USD', title: 'Stellar', sum: 0, priceIn: 0.244, priceMax: 0.87315},
-    {key: 'TRX_USD', title: 'Tron', sum: 0, priceIn: 0.023, priceMax: 0.27371},
     {key: 'GAS_USD', title: 'Gas', sum: 0, priceIn: 9.1, priceMax: 79.21},
 
-    {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.10976},
-    {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01596},
+    {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.12398},
+    {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01503},
 
     {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
@@ -143,6 +146,10 @@ $(function(){
     });
 });
 
-//console.log('GOOD');
+/*console.log('IMPORT WORKS!!!');
 
-//import React from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app'
+
+ReactDOM.render(<App/>, document.getElementById('root'));*/
