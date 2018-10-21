@@ -56,6 +56,8 @@ const deposit = [
     {key: 'XMR_USD', title: 'Monero', sum: 0, priceIn: 106.85, priceMax: 439.33},
     {key: 'BCH_USD', title: 'Bitcoin Cash', sum: 0, priceIn: 478.7, priceMax: 3446},
     {key: 'BTG_USD', title: 'Bitcoin Gold', sum: 0, priceIn: 478.7, priceMax: 3446},
+    {key: 'LSK_USD', title: 'Lisk', sum: 0, priceIn: 2.89, priceMax: 35},
+    {key: 'XEM_USD', title: 'NEM', sum: 0, priceIn: 0.09569, priceMax: 1.8892},
 
     {key: 'XEM_USD', title: 'NEM', sum: 56.62, priceIn: 0.58, priceMax: 1.8892, priceNow: 0.12398},
     {key: 'XVG_USD', title: 'Verge', sum: 209, priceIn: 0.076, priceMax: 0.25177, priceNow: 0.01503},

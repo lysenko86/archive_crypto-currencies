@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import TableHeader from './table-header';
 import TableFooter from './table-footer';
 

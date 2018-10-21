@@ -10,7 +10,8 @@ const clean = require('gulp-clean');
 const stylus = require('gulp-stylus');
 
 gulp.task('build:js1', function(){
-    return gulp.src('public/js/**/*.jsx')
+    //return gulp.src('public/js/**/*.jsx')
+    return gulp.src(['public/js/test_app.jsx', 'public/js/test_comp1.jsx', 'public/js/test_comp2.jsx'])
     .pipe(babel({plugins: ['transform-react-jsx']}))
     .pipe(babel({presets: ['@babel/env']}))   // es6 ---> es5
     .pipe(gulp.dest('public/build/jsx'))
