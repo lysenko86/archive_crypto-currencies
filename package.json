@@ -1,22 +1,29 @@
 {
-  "name": "crypto-currencies",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lysenko86/crypto.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lysenko86/crypto/issues"
-  },
-  "homepage": "https://github.com/lysenko86/crypto#readme",
-  "dependencies": {},
-  "devDependencies": {}
+    "name": "crypto-currencies",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "node_modules/.bin/webpack -w",
+        "wds": "node_modules/.bin/webpack-dev-server --config webpack.dev.config.js --hot"
+    },
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.5",
+        "css-loader": "^2.1.0",
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0",
+        "react-hot-loader": "^4.6.3",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.28.1",
+        "webpack-cli": "^3.2.1",
+        "webpack-dev-server": "^3.1.14"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-react"
+        ]
+    }
 }
