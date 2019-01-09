@@ -4,7 +4,7 @@
     "main": "index.js",
     "scripts": {
         "build": "node_modules/.bin/webpack -w",
-        "wds": "node_modules/.bin/webpack-dev-server --config webpack.dev.config.js --hot"
+        "wds": "node_modules/.bin/webpack-dev-server --config webpack.config.js --hot"
     },
     "license": "ISC",
     "dependencies": {},

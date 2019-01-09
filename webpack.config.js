@@ -1,6 +1,10 @@
 module.exports = {
-    entry: __dirname + '/public/jsx/app.jsx',
+    entry: [
+        'webpack-dev-server/client/?http://localhost:8080',
+        './public/jsx/app.jsx'
+    ],
     output: {
+        publicPath: 'public/build',
         path: __dirname + '/public/build/',
         filename: 'bundle.js'
     },
@@ -15,7 +19,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: [/(node_modules)/, /(public\/build)/],
-                use: ['babel-loader']
+                use: ['react-hot-loader/webpack', 'babel-loader']
             }
         ]
     }
