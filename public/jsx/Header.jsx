@@ -7,7 +7,7 @@ class Header extends React.Component{
             <header className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div class="flex-container">
+                        <div className="flex-container">
                             <img className="logo" src='../images/logo.png' alt="" />
                             <Menu  history={this.props.history}/>
                         </div>
