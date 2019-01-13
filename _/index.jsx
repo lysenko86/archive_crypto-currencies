@@ -11,11 +11,6 @@ function roundPrice(price){
     return price;
 }
 
-
-let totalSumIn = 0;
-let totalSumNow = 0;
-let totalSumMax = 0;
-
 $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
     if (!data['BTC_USD']){
         console.log(data.error);
