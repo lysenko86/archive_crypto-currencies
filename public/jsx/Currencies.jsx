@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 class Currencies extends React.Component{
@@ -55,9 +56,23 @@ class Currencies extends React.Component{
             totalSumMax: 0
         };
     }
+    roundPrice(price){
+        if (Math.abs(price) >= 1000){
+            price = Math.round(price);
+        } else if (Math.abs(price) >= 100){
+            price = Math.round(price * 1000) / 1000;
+        } else if (Math.abs(price) >= 1){
+            price = Math.round(price * 100000) / 100000
+        } else {
+            price = Math.round(price * 100000000) / 100000000
+        }
+        return price;
+    }
     render(){
         $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
             console.log(data);
+            ReactDOM.findDOMNode('.table-currencies-container table tbody').html(data['BTC_USD'].high);
+
         });
         return (<div className="page-currencies">
             <table className="table table-bordered table-currencies"><thead><tr>

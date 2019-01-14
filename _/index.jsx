@@ -1,16 +1,3 @@
-function roundPrice(price){
-    if (Math.abs(price) >= 1000){
-        price = Math.round(price);
-    } else if (Math.abs(price) >= 100){
-        price = Math.round(price * 1000) / 1000;
-    } else if (Math.abs(price) >= 1){
-        price = Math.round(price * 100000) / 100000
-    } else {
-        price = Math.round(price * 100000000) / 100000000
-    }
-    return price;
-}
-
 $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
     if (!data['BTC_USD']){
         console.log(data.error);
