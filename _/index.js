@@ -6,8 +6,6 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         if (deposit[i].sum === 0){
             continue;
         }
-        const key = deposit[i].key;
-        const title = deposit[i].title;
         const item = deposit[i];
         const currencySum = item.sum;
         const priceIn = item.priceIn;
@@ -22,20 +20,6 @@ $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
         totalSumIn += priceInSum;
         totalSumNow += priceNowSum;
         totalSumMax += priceMaxSum;
-        $('.table-currencies tbody').append($('<tr/>')
-            .append($('<td/>', {text: title + ' (' + key.split('_')[0] + ')', class: 'col-name'}))
-            .append($('<td/>', {text: roundPrice(currencySum), class: 'col-sum'}))
-            .append($('<td/>', {text: roundPrice(priceIn) + '$', class: 'col-price-in'}))
-            .append($('<td/>', {text: roundPrice(priceInSum) + '$', class: 'col-sum-in'}))
-            .append($('<td/>', {html: '<strong>' + roundPrice(priceNow) + '$</strong>', class: 'col-price-now'}))
-            .append($('<td/>', {text: roundPrice(priceNowSum) + '$', class: 'col-sum-now'}))
-            .append($('<td/>', {text: roundPrice(increaseSum) + '$', class: 'col-increase-now ' + (increaseSum >= 0 ? 'colorPlus' : 'colorMinus')}))
-            .append($('<td/>', {text: increasePercent + '%', class: 'col-increase-now-percent ' + (increasePercent >= 0 ? 'colorPlus' : 'colorMinus')}))
-            .append($('<td/>', {text: roundPrice(priceMax) + '$', class: 'col-price-max'}))
-            .append($('<td/>', {html: '<input class="priceOut" type="text" value="' + roundPrice(priceNow) + '"/> $', class: 'col-price-out'}))
-            .append($('<td/>', {text: roundPrice(priceNowSum) + '$', class: 'col-sum-out'}))
-            .append($('<td/>', {text: increasePercent + '%', class: 'col-increase-out-percent'}))
-        );
     }
     const totalIncreaseSum = totalSumNow - totalSumIn;
     const totalIncreasePercent = Math.round(totalIncreaseSum * 100 / totalSumIn / 100 * 10000) / 100;
