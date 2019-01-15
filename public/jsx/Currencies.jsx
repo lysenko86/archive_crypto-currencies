@@ -11,7 +11,7 @@ class Currencies extends React.Component{
         this.roundPrice = this.roundPrice.bind(this);
         this.handleChangeFooter = this.handleChangeFooter.bind(this);
         this.state = {
-            currencies: [],
+            currencies: {},
             totalSumIn: 0,
             totalSumNow: 0,
             totalSumMax: 0,
@@ -32,15 +32,13 @@ class Currencies extends React.Component{
     }
     handleChangeFooter(priceOut){
         let totalSumOut = 0;
-        deposit.map((value)=>{
-            const exmo = this.state.currencies[value.key];
-            //totalSumOut += value === changedInput ? priceOut : value.priceNow * value.sum;
-            // просуммировать весь столбец и в одном случает вставить priceOut вместо sumNow
-        });
-        console.log(totalSumOut);
-        this.setState({
-            totalSumOut: this.roundPrice(totalSumOut)
-        });
+        const rows = document.querySelectorAll('.table-currencies tbody tr');
+        for (let i=0; i<rows.length; i++){
+            const sum = rows[i].querySelector('td.col-sum').innerHTML;
+            const price = rows[i].querySelector('input.priceOut').value;
+            totalSumOut += price * sum;
+        }
+        this.setState({totalSumOut: this.roundPrice(totalSumOut)});
     }
     render(){
         if (!this.state.currencies.BTC_USD){
