@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import CryptoJS from 'crypto-js';
+import exmo from './exmo.jsx';
 
 class Orders extends React.Component{
     constructor(props){
@@ -12,16 +13,14 @@ class Orders extends React.Component{
     render(){
         if (!this.state.orders.length){
             const thisLink = this;
-            const key = 'K-d13cee0437febdbafd20c25381dfc27e5af2aff5';
             const nonce = new Date().getTime();
-            const secret = 'S-b00f72dcd822a55709394f6c7fe2f063241ee25d';
-            const secretPrepared = CryptoJS.HmacSHA512($.param({nonce: nonce}), secret);
+            const secretPrepared = CryptoJS.HmacSHA512($.param({nonce: nonce}), exmo.secret);
             $.ajax({
                 url: 'https://api.exmo.com/v1/user_open_orders',
                 type: 'post',
                 data: {nonce: nonce},
                 headers: {
-                    Key: key,
+                    Key: exmo.key,
                     Sign: secretPrepared
                 },
                 dataType: 'json',
