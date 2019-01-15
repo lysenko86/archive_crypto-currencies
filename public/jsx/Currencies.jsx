@@ -1,51 +1,81 @@
 import React from 'react';
-import CurrenciesHead from './CurrenciesHead.jsx';
-import CurrencyRow from './CurrencyRow.jsx';
+import CurrenciesHeader from './CurrenciesHeader.jsx';
+import CurrenciesRow from './CurrenciesRow.jsx';
+import CurrenciesFooter from './CurrenciesFooter.jsx';
 import deposit from './deposit.jsx';
 import $ from 'jquery';
 
 class Currencies extends React.Component{
     constructor(props){
         super(props);
+        this.roundPrice = this.roundPrice.bind(this);
         this.handleChangeFooter = this.handleChangeFooter.bind(this);
         this.state = {
             currencies: [],
             totalSumIn: 0,
             totalSumNow: 0,
-            totalSumMax: 0
+            totalSumMax: 0,
+            totalSumOut: 0
         };
     }
-    handleChangeFooter(row){
-        /*let totalSumOut = 0;
-        $(this).closest('tbody').find('tr').each(function(){
-            const outSum = $(this).find('td.col-sum-out').text().replace('$', '');
-            totalSumOut += parseFloat(outSum);
+    roundPrice(price){
+        if (Math.abs(price) >= 1000){
+            price = Math.round(price);
+        } else if (Math.abs(price) >= 100){
+            price = Math.round(price * 1000) / 1000;
+        } else if (Math.abs(price) >= 1){
+            price = Math.round(price * 100000) / 100000
+        } else {
+            price = Math.round(price * 100000000) / 100000000
+        }
+        return price;
+    }
+    handleChangeFooter(priceOut){
+        let totalSumOut = 0;
+        deposit.map((value)=>{
+            const exmo = this.state.currencies[value.key];
+            //totalSumOut += value === changedInput ? priceOut : value.priceNow * value.sum;
+            // просуммировать весь столбец и в одном случает вставить priceOut вместо sumNow
         });
-        totalSumOut = roundPrice(totalSumOut);
-        const totalInSum = $('.table-currencies tfoot td.col-sum-in').text().replace('$', '');
-        const totalIncreaseSum = totalSumOut - totalInSum;
-        const totalPercentOut = totalSumOut === 0 ? 0 : Math.round(totalIncreaseSum * 100 / totalInSum / 100 * 10000) / 100;
-        $('.table-currencies tfoot td.col-sum-out').text(totalSumOut + '$');
-        $('.table-currencies tfoot td.col-increase-out-percent').text(totalPercentOut + '%');*/
+        console.log(totalSumOut);
+        this.setState({
+            totalSumOut: this.roundPrice(totalSumOut)
+        });
     }
     render(){
         if (!this.state.currencies.BTC_USD){
             const thisLink = this;
             $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
                 thisLink.setState({currencies: data});
+                let totalSumIn = 0;
+                let totalSumNow = 0;
+                let totalSumMax = 0;
+                deposit.map((value)=>{
+                    const exmo = data[value.key];
+                    totalSumIn += value.priceIn * value.sum;
+                    totalSumNow += value.priceNow ? value.priceNow : (exmo && exmo.last_trade ? exmo.last_trade : 'error') * value.sum;
+                    totalSumMax += value.priceMax * value.sum;
+                });
+                thisLink.setState({
+                    totalSumIn: thisLink.roundPrice(totalSumIn),
+                    totalSumNow: thisLink.roundPrice(totalSumNow),
+                    totalSumMax: thisLink.roundPrice(totalSumMax),
+                    totalSumOut: thisLink.roundPrice(totalSumNow)
+                });
             });
         }
         return (<div className="page-currencies">
-            <CurrenciesHead />
+            <CurrenciesHeader />
             <div className="table-currencies-container">
                 <table className="table table-bordered table-hover table-currencies"><tbody>
                     {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
                         value.exmo = this.state.currencies[value.key];
-                        return <CurrencyRow key={index} currency={value} changeFooter={this.handleChangeFooter}/>
+                        value.roundPrice = this.roundPrice;
+                        return <CurrenciesRow key={index} currency={value} changeFooter={this.handleChangeFooter} />
                     })}
                 </tbody></table>
             </div>
-            <table className="table table-bordered table-currencies"><tfoot></tfoot></table>
+            <CurrenciesFooter totalSumIn={this.state.totalSumIn} totalSumNow={this.state.totalSumNow} totalSumMax={this.state.totalSumMax} totalSumOut={this.state.totalSumOut}/>
         </div>)
     }
 }

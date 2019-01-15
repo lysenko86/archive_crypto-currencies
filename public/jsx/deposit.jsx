@@ -1,5 +1,7 @@
 export default [
-    {key: 'LTC_USD', title: 'Litecoin', sum: 0.03657, priceIn: 60.69, priceMax: 352.616},
+    {key: 'LTC_USD', title: 'Litecoin', sum: 1, priceIn: 60.05, priceMax: 350.05},
+    {key: 'LTC_USD', title: 'Litecoin', sum: 0.5, priceIn: 60.15, priceMax: 350.05},
+/*    {key: 'LTC_USD', title: 'Litecoin', sum: 0.03657, priceIn: 60.69, priceMax: 352.616},
     {key: 'LTC_USD', title: 'Litecoin', sum: 0.05, priceIn: 66.2, priceMax: 352.616},
     {key: 'ZEC_USD', title: 'Zcash', sum: 0.03992, priceIn: 143.8788, priceMax: 731.37},
     {key: 'EOS_USD', title: 'EOS', sum: 3.992, priceIn: 6.633, priceMax: 20.474},
@@ -41,5 +43,5 @@ export default [
     {key: 'ETC_USD', title: 'Ethereum Classic', sum: 1.0, priceIn: 33.47, priceMax: 44.546},
     {key: 'ETC_USD', title: 'Ethereum Classic', sum: 0.59136, priceIn: 29.044, priceMax: 44.546},
 
-    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
+    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}*/
 ];

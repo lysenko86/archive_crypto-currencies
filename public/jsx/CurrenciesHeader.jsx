@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CurrenciesHead extends React.Component{
+class CurrenciesHeader extends React.Component{
     render(){
         return <table className="table table-bordered table-currencies"><thead><tr>
             <th className="col-name">Валюта</th>
@@ -20,4 +20,4 @@ class CurrenciesHead extends React.Component{
     }
 }
 
-export default CurrenciesHead;
+export default CurrenciesHeader;
