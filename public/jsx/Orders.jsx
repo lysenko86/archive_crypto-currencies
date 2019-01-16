@@ -19,24 +19,40 @@ class Orders extends React.Component{
                 url: 'https://api.exmo.com/v1/user_open_orders',
                 type: 'post',
                 data: {nonce: nonce},
-                headers: {
-                    Key: exmo.key,
-                    Sign: secretPrepared
-                },
+                headers: {Key: exmo.key, Sign: secretPrepared},
                 dataType: 'json',
                 success: function(data){
                     const orders = [];
                     for (let key in data){
-                        orders.push(data[key][0]);
+                        for (let i=0; i<data[key].length; i++){
+                            orders.push(data[key][i]);
+                        }
                     }
                     thisLink.setState({orders: orders});
                 }
             });
         }
         return (<div className="page-orders">
-            {this.state.orders.map((value, index)=>{
-                return <div key={'k' + index}>{value.pair} - {value.price} - {value.quantity}</div>
-            })}
+            <table className="table table-bordered table-hover table-orders">
+                <thead><tr>
+                    <th className="col-name">Валюта</th>
+                    <th className="col-count">Кількість</th>
+                    <th className="col-price">Ціна, $</th>
+                    <th className="col-sum">Сума, $</th>
+                    <th className="col-type">Тип</th>
+                </tr></thead>
+                <tbody>
+                    {this.state.orders.map((value, index)=>{
+                        return <tr key={'order_' + index}>
+                            <td className="col-name">{value.pair}</td>
+                            <td className="col-count">{value.quantity}</td>
+                            <td className="col-price">{value.price}</td>
+                            <td className="col-sum">{value.price * value.quantity}</td>
+                            <td className="col-type"><img src={'../images/' + (value.type === 'sell' ? 'minus' : 'plus') + '.jpg'} alt="" /></td>
+                        </tr>
+                    })}
+                </tbody>
+            </table>
         </div>)
     }
 }

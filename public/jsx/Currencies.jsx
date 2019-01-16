@@ -69,7 +69,7 @@ class Currencies extends React.Component{
                     {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
                         value.exmo = this.state.currencies[value.key];
                         value.roundPrice = this.roundPrice;
-                        return <CurrenciesRow key={index} currency={value} changeFooter={this.handleChangeFooter} />
+                        return <CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} />
                     })}
                 </tbody></table>
             </div>
