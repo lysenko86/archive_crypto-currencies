@@ -19,7 +19,6 @@ class CurrenciesFooter extends React.Component{
             <td className="col-price-out"></td>
             <td className="col-sum-out">{this.props.totalSumOut + '$'}</td>
             <td className="col-increase-out-percent">{totalIncreaseOutPercent + '%'}</td>
-            <td className="col-scrollbar"></td>
         </tr></tfoot></table>
     }
 }

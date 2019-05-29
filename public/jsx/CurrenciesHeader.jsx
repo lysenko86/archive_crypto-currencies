@@ -15,7 +15,6 @@ class CurrenciesHeader extends React.Component{
             <th className="col-price-out">Ціна продажу, $</th>
             <th className="col-sum-out">Сума продажу, $</th>
             <th className="col-increase-out-percent">Ріст продажу, %</th>
-            <th className="col-scrollbar"></th>
         </tr></thead></table>
     }
 }
