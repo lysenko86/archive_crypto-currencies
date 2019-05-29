@@ -2,7 +2,7 @@ import React from 'react';
 
 class CurrenciesFooter extends React.Component{
     render(){
-        const totalIncreaseSum = this.props.totalSumNow - this.props.totalSumIn;
+        const totalIncreaseSum = Math.round((this.props.totalSumNow - this.props.totalSumIn) * 100)  / 100;
         const totalIncreasePercent = Math.round(totalIncreaseSum * 100 / this.props.totalSumIn / 100 * 10000) / 100;
         const totalIncreaseOutSum = this.props.totalSumOut - this.props.totalSumIn;
         const totalIncreaseOutPercent = Math.round(totalIncreaseOutSum * 100 / this.props.totalSumIn / 100 * 10000) / 100;
