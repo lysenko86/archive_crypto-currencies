@@ -32,4 +32,4 @@ export default [
     {key: 'ZRX_USD', title: '0x', sum: 0, priceIn: 0, priceMax: 2.3183},
 
     {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
-]);
+];
