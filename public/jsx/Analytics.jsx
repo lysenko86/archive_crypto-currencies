@@ -25,8 +25,8 @@ class Analytics extends React.Component{
                 </tr></thead>
                 <tbody>
                     {analytics.map((value, index)=>{
-                        const capitalDiffUSD = value.capitalEndMonth - value.capitalBeginMonth;
-                        const capitalDiffPercent = value.capitalEndMonth * 100 / value.capitalBeginMonth / 100;
+                        const capitalDiffUSD = Math.round(value.capitalEndMonth - value.capitalBeginMonth);
+                        const capitalDiffPercent = Math.round(value.capitalEndMonth * 100 / value.capitalBeginMonth / 100);
                         return <tr key={'order_' + index}>
                             <td className="col-month">{value.month}</td>
                             <td className="col-sum">{value.add}</td>
