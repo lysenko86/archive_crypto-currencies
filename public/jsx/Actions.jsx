@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import actions from './actions.jsx';
+import actions from './actions.js';
 
 class Actions extends React.Component{
     constructor(props){

@@ -2,7 +2,7 @@ import React from 'react';
 import CurrenciesHeader from './CurrenciesHeader.jsx';
 import CurrenciesRow from './CurrenciesRow.jsx';
 import CurrenciesFooter from './CurrenciesFooter.jsx';
-import deposit from './deposit.jsx';
+import deposit from './deposit.js';
 import $ from 'jquery';
 
 class Currencies extends React.Component{
