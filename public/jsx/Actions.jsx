@@ -38,11 +38,11 @@ class Actions extends React.Component{
                         </tr>
                     })}
                 </tbody>
-                <tfooter><tr>
+                <tfoot><tr>
                     <td className="col-date"></td>
                     <td className="col-sum">{this.state.totalSumUAH}</td>
                     <td className="col-sum">{this.state.totalSumUSD}</td>
-                </tr></tfooter>
+                </tr></tfoot>
             </table>
         </div>)
     }
