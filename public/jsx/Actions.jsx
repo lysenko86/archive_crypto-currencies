@@ -18,6 +18,7 @@ class Actions extends React.Component{
             totalSumUSD += value.USD;
         });
         this.setState({
+            ...this.state,
             totalSumUAH: totalSumUAH,
             totalSumUSD: totalSumUSD
         });
