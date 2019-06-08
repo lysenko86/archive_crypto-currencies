@@ -8,7 +8,7 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import Home from './Home.jsx';
 import Currencies from './Currencies.jsx';
-import Orders from './Orders.jsx';
+import Actions from './Actions.jsx';
 
 class App extends React.Component{
     render(){
@@ -22,7 +22,7 @@ class App extends React.Component{
                                 <div>
                                     <Route exact path="/" component={Home} />
                                     <Route exact path="/currencies" component={Currencies} />
-                                    <Route exact path="/orders" component={Orders} />
+                                    <Route exact path="/actions" component={Actions} />
                                 </div>
                             </Router>
                         </div>
