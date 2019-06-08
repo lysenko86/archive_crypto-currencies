@@ -38,9 +38,12 @@ class Analytics extends React.Component{
                     })}
                 </tbody>
                 <tfoot><tr>
-                    <td className="col-date"></td>
-                    <td className={'col-sum ' + (totalSumUAH >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUAH)}</td>
-                    <td className={'col-sum ' + (totalSumUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUSD)}</td>
+                    <td className="col-month"></td>
+                    <td className="col-sum">{totalSumAdd}</td>
+                    <td className="col-sum"></td>
+                    <td className="col-sum"></td>
+                    <td className={'col-sum ' + (totalGrowthUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalGrowthUSD)}</td>
+                    <td className={'col-sum ' + (totalGrowthPercent >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalGrowthPercent)}</td>
                 </tr></tfoot>
             </table>
         </div>)
