@@ -35,8 +35,8 @@ class Actions extends React.Component{
                 </tbody>
                 <tfoot><tr>
                     <td className="col-date"></td>
-                    <td className={'col-sum ' + (totalSumUAH >= 0 ? 'colorPlus' : 'colorMinus')}>{totalSumUAH}</td>
-                    <td className={'col-sum ' + (totalSumUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{totalSumUSD}</td>
+                    <td className={'col-sum ' + (totalSumUAH >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUAH)}</td>
+                    <td className={'col-sum ' + (totalSumUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUSD)}</td>
                 </tr></tfoot>
             </table>
         </div>)
