@@ -21,7 +21,6 @@ class Actions extends React.Component{
             totalSumUAH: totalSumUAH,
             totalSumUSD: totalSumUSD
         });
-
         return (<div className="page-orders">
             <table className="table table-bordered table-hover table-orders">
                 <thead><tr>
@@ -30,18 +29,8 @@ class Actions extends React.Component{
                     <th className="col-sum">USD</th>
                 </tr></thead>
                 <tbody>
-                    {actions.map((value, index)=>{
-                        return <tr key={'order_' + index}>
-                            <td className="col-date">{value.pair}</td>
-                            <td className="col-sum">{value.quantity}</td>
-                            <td className="col-sum">{value.price}</td>
-                        </tr>
-                    })}
                 </tbody>
                 <tfoot><tr>
-                    <td className="col-date"></td>
-                    <td className="col-sum">{this.state.totalSumUAH}</td>
-                    <td className="col-sum">{this.state.totalSumUSD}</td>
                 </tr></tfoot>
             </table>
         </div>)
