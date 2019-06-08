@@ -13,7 +13,9 @@ class Analytics extends React.Component{
         const lastCapital = analytics[analytics.length - 1].capitalEndMonth;
         let totalGrowthUSD = lastCapital - totalSumAdd;
         totalGrowthUSD = Math.round(totalGrowthUSD * 100) / 100;
-        const totalGrowthPercent = Math.round(lastCapital * 100 / totalSumAdd / 100);
+        let totalGrowthPercent = lastCapital * 100 / totalSumAdd / 100 - 100;
+        totalGrowthPercent = Math.round(totalGrowthPercent * 100) / 100;
+        totalSumAdd = Math.round(totalSumAdd * 100) / 100;
         return (<div className="page-analytics">
             <table className="table table-bordered table-hover table-analytics">
                 <thead><tr>
@@ -28,8 +30,8 @@ class Analytics extends React.Component{
                     {analytics.map((value, index)=>{
                         let capitalDiffUSD = value.capitalEndMonth - value.capitalBeginMonth;
                         capitalDiffUSD = Math.round(capitalDiffUSD * 100) / 100;
-                        let capitalDiffPercent = value.capitalEndMonth * 100 / value.capitalBeginMonth / 100;
-                        //capitalDiffPercent = Math.round((value.capitalEndMonth * 100 / value.capitalBeginMonth / 100) * 100) / 100;
+                        let capitalDiffPercent = value.capitalEndMonth * 100 / value.capitalBeginMonth / 100 - 100;
+                        capitalDiffPercent = Math.round(capitalDiffPercent * 100) / 100;
                         return <tr key={'order_' + index}>
                             <td className="col-month">{value.month}</td>
                             <td className="col-sum">{value.add}$</td>
