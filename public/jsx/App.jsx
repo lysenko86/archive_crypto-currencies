@@ -9,6 +9,7 @@ import Footer from './Footer.jsx';
 import Home from './Home.jsx';
 import Currencies from './Currencies.jsx';
 import Actions from './Actions.jsx';
+import Analytics from './Analytics.jsx';
 
 class App extends React.Component{
     render(){
@@ -23,6 +24,7 @@ class App extends React.Component{
                                     <Route exact path="/" component={Home} />
                                     <Route exact path="/currencies" component={Currencies} />
                                     <Route exact path="/actions" component={Actions} />
+                                    <Route exact path="/analytics" component={Analytics} />
                                 </div>
                             </Router>
                         </div>

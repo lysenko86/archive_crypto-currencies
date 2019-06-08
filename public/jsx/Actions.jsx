@@ -5,15 +5,12 @@ import actions from './actions.js';
 class Actions extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            totalSumUAH: 0,
-            totalSumUSD: 0
-        }
+        this.state = {}
     }
     render(){
         let totalSumUAH = 0;
         let totalSumUSD = 0;
-        actions.map((value)=>{
+        actions.map(value => {
             totalSumUAH += value.UAH;
             totalSumUSD += value.USD;
         });

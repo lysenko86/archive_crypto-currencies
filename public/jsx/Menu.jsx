@@ -10,6 +10,7 @@ class Menu extends React.Component{
                         <li><Link to="/">Головна</Link></li>
                         <li><Link to="/currencies">Валюти</Link></li>
                         <li><Link to="/actions">Транзакції</Link></li>
+                        <li><Link to="/analytics">Аналітика</Link></li>
                     </ul>
                 </div>
             </Router>

@@ -62,10 +62,43 @@ main.container
 .page-actions
     .table-actions
         border none
-        margin 0
+        margin 0 auto
         width auto
         .col-date
             width 80px
+        .col-sum
+            width 70px
+        tbody tr
+            cursor pointer
+        tfoot td
+            font-weight bold
+        th
+            text-align center
+            border-bottom-width 1px!important
+            background-color #337ab7
+            color #fff
+        th, td
+            font-size 13px
+            line-height 1.3
+            vertical-align middle!important
+            padding 5px 5px 4px!important
+        td
+            &.colorPlus, &.colorMinus
+                font-weight bold
+            &.colorPlus
+                color #390
+            &.colorMinus
+                color #F00
+
+
+
+.page-analytics
+    .table-analytics
+        border none
+        margin 0 auto
+        width auto
+        .col-month
+            width 150px
         .col-sum
             width 70px
         tbody tr
