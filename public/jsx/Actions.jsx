@@ -25,15 +25,15 @@ class Actions extends React.Component{
                     {actions.map((value, index)=>{
                         return <tr key={'order_' + index}>
                             <td className="col-date">{value.date}</td>
-                            <td className="col-sum">{value.UAH}</td>
-                            <td className="col-sum">{value.USD}</td>
+                            <td className="col-sum">{value.UAH}грн.</td>
+                            <td className="col-sum">{value.USD}$</td>
                         </tr>
                     })}
                 </tbody>
                 <tfoot><tr>
                     <td className="col-date"></td>
-                    <td className={'col-sum ' + (totalSumUAH >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUAH)}</td>
-                    <td className={'col-sum ' + (totalSumUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUSD)}</td>
+                    <td className={'col-sum ' + (totalSumUAH >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUAH * 100) / 100}грн.</td>
+                    <td className={'col-sum ' + (totalSumUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUSD * 100) / 100}$</td>
                 </tr></tfoot>
             </table>
         </div>)

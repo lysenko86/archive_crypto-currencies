@@ -25,25 +25,25 @@ class Analytics extends React.Component{
                 </tr></thead>
                 <tbody>
                     {analytics.map((value, index)=>{
-                        const capitalDiffUSD = Math.round(value.capitalEndMonth - value.capitalBeginMonth);
-                        const capitalDiffPercent = Math.round(value.capitalEndMonth * 100 / value.capitalBeginMonth / 100);
+                        const capitalDiffUSD = Math.round((value.capitalEndMonth - value.capitalBeginMonth) * 100) / 100;
+                        const capitalDiffPercent = Math.round((value.capitalEndMonth * 100 / value.capitalBeginMonth / 100) * 100) / 100;
                         return <tr key={'order_' + index}>
                             <td className="col-month">{value.month}</td>
-                            <td className="col-sum">{value.add}</td>
-                            <td className="col-sum">{value.capitalBeginMonth}</td>
-                            <td className="col-sum">{value.capitalEndMonth}</td>
-                            <td className={'col-sum ' + (capitalDiffUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{capitalDiffUSD}</td>
-                            <td className={'col-sum ' + (capitalDiffPercent >= 0 ? 'colorPlus' : 'colorMinus')}>{capitalDiffPercent}</td>
+                            <td className="col-sum">{value.add}$</td>
+                            <td className="col-sum">{value.capitalBeginMonth}$</td>
+                            <td className="col-sum">{value.capitalEndMonth}$</td>
+                            <td className={'col-sum ' + (capitalDiffUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{capitalDiffUSD}$</td>
+                            <td className={'col-sum ' + (capitalDiffPercent >= 0 ? 'colorPlus' : 'colorMinus')}>{capitalDiffPercent}%</td>
                         </tr>
                     })}
                 </tbody>
                 <tfoot><tr>
                     <td className="col-month"></td>
-                    <td className="col-sum">{totalSumAdd}</td>
+                    <td className="col-sum">{totalSumAdd}$</td>
                     <td className="col-sum"></td>
                     <td className="col-sum"></td>
-                    <td className={'col-sum ' + (totalGrowthUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalGrowthUSD)}</td>
-                    <td className={'col-sum ' + (totalGrowthPercent >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalGrowthPercent)}</td>
+                    <td className={'col-sum ' + (totalGrowthUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalGrowthUSD)}$</td>
+                    <td className={'col-sum ' + (totalGrowthPercent >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalGrowthPercent)}%</td>
                 </tr></tfoot>
             </table>
         </div>)
