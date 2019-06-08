@@ -49,8 +49,8 @@ class CurrenciesRow extends React.Component{
             <td className="col-sum-in">{this.state.priceInSum + '$'}</td>
             <td className="col-price-now"><strong>{this.state.priceNow + '$'}</strong></td>
             <td className="col-sum-now">{this.state.priceNowSum + '$'}</td>
-            <td className={'col-increase-now ' +  (this.state.increaseSum >= 0 ? 'colorPlus' : 'colorMinus')}>{this.state.increaseSum + '$'}</td>
-            <td className={'col-increase-now-percent ' +  (this.state.increasePercent >= 0 ? 'colorPlus' : 'colorMinus')}>{this.state.increasePercent + '%'}</td>
+            <td className={'col-increase-now ' + (this.state.increaseSum >= 0 ? 'colorPlus' : 'colorMinus')}>{this.state.increaseSum + '$'}</td>
+            <td className={'col-increase-now-percent ' + (this.state.increasePercent >= 0 ? 'colorPlus' : 'colorMinus')}>{this.state.increasePercent + '%'}</td>
             <td className="col-price-max">{this.state.priceMax + '$'}</td>
             <td className="col-price-out"><input type="text" className="priceOut" value={this.state.priceOut} onChange={this.handleChangePrice} /> $</td>
             <td className="col-sum-out">{this.state.priceOutSum + '$'}</td>

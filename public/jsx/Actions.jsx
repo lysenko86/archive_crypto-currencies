@@ -17,8 +17,8 @@ class Actions extends React.Component{
             totalSumUAH += value.UAH;
             totalSumUSD += value.USD;
         });
-        return (<div className="page-orders">
-            <table className="table table-bordered table-hover table-orders">
+        return (<div className="page-actions">
+            <table className="table table-bordered table-hover table-actions">
                 <thead><tr>
                     <th className="col-date">Дата</th>
                     <th className="col-sum">UAH</th>
@@ -27,16 +27,16 @@ class Actions extends React.Component{
                 <tbody>
                     {actions.map((value, index)=>{
                         return <tr key={'order_' + index}>
-                            <td className="col-date">{value.pair}</td>
-                            <td className="col-sum">{value.quantity}</td>
-                            <td className="col-sum">{value.price}</td>
+                            <td className="col-date">{value.date}</td>
+                            <td className="col-sum">{value.UAH}</td>
+                            <td className="col-sum">{value.USD}</td>
                         </tr>
                     })}
                 </tbody>
                 <tfoot><tr>
                     <td className="col-date"></td>
-                    <td className="col-sum">{totalSumUAH}</td>
-                    <td className="col-sum">{totalSumUSD}</td>
+                    <td className={'col-sum ' + (totalSumUAH >= 0 ? 'colorPlus' : 'colorMinus')}>{totalSumUAH}</td>
+                    <td className={'col-sum ' + (totalSumUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{totalSumUSD}</td>
                 </tr></tfoot>
             </table>
         </div>)
