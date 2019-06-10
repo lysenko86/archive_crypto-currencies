@@ -67,9 +67,6 @@ class Currencies extends React.Component{
             <div className="table-currencies-container">
                 <table className="table table-bordered table-hover table-currencies"><tbody>
                     {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
-                        if (value.sum === 0){
-                            return false;
-                        }
                         value.exmo = this.state.currencies[value.key];
                         value.roundPrice = this.roundPrice;
                         return <CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} />
