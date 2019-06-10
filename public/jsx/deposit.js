@@ -26,7 +26,7 @@ export default [
 
     {key: 'USD', title: 'Exmo', sum: 30.8, priceIn: 1, priceMax: 1, priceNow: 1},
 
-    {key: 'LTC_USD', title: 'Litecoin', sum: 0.45592, priceIn: 66.2, priceMax: 352.616},
+    {key: 'LTC_USD', title: 'Litecoin', sum: 0, priceIn: 66.2, priceMax: 352.616},
     {key: 'DOGE_USD', title: 'Dogecoin', sum: 0, priceIn: 0.016702, priceMax: 1470},
     {key: 'QTUM_USD', title: 'Qtum', sum: 0, priceIn: 0, priceMax: 65.853},
     {key: 'ZRX_USD', title: '0x', sum: 0, priceIn: 0, priceMax: 2.3183},
