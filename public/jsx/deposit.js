@@ -1,9 +1,10 @@
 export default [
-    {key: 'LTC_USD', title: 'Litecoin', sum: 0.45592, priceIn: 66.2, priceMax: 352.616},
+    //{key: 'LTC_USD', title: 'Litecoin', sum: 0.45592, priceIn: 66.2, priceMax: 352.616},
     {key: 'TRX_USD', title: 'Tron', sum: 1197, priceIn: 0.0252, priceMax: 0.27371},
     {key: 'ADA_USD', title: 'Cardano', sum: 400, priceIn: 0.077, priceMax: 1.2655},
     {key: 'EOS_USD', title: 'EOS', sum: 4.60496, priceIn: 6.633, priceMax: 20.474},
     {key: 'BCH_USD', title: 'Bitcoin Cash', sum: 0.06668, priceIn: 457, priceMax: 3446},
+    {key: 'WAVES_USD', title: 'Waves', sum: 11.13892, priceIn: 2.36, priceMax: 17.331},
     {key: 'XEM_USD', title: 'NEM', sum: 296.4, priceIn: 0.103, priceMax: 1.8892},
     {key: 'XMR_USD', title: 'Monero', sum: 0.28513, priceIn: 108, priceMax: 439.337},
     {key: 'BTC_USD', title: 'Bitcoin', sum: 0.0026993, priceIn: 11250, priceMax: 19331},
@@ -24,12 +25,10 @@ export default [
     {key: 'STQ_USD', title: 'Storiqa', sum: 12544, priceIn: 0.0024, priceMax: 0.013205},
     {key: 'MNX_USD', title: 'MinexCoin', sum: 12.66972, priceIn: 2.4, priceMax: 51.633},
 
-    {key: 'DAI_USD', title: 'Dai', sum: 0, priceIn: 0, priceMax: 1.16407},
     {key: 'DOGE_USD', title: 'Dogecoin', sum: 0, priceIn: 0.016702, priceMax: 1470},
     {key: 'QTUM_USD', title: 'Qtum', sum: 0, priceIn: 0, priceMax: 65.853},
-    {key: 'SMART_USD', title: 'SmartCash', sum: 0, priceIn: 0, priceMax: 2.222},
-    {key: 'WAVES_USD', title: 'Waves', sum: 0, priceIn: 0, priceMax: 16.957},
     {key: 'ZRX_USD', title: '0x', sum: 0, priceIn: 0, priceMax: 2.3183},
+    {key: 'SMART_USD', title: 'SmartCash', sum: 0, priceIn: 0, priceMax: 2.222},
 
-    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
+    {key: 'USD', title: 'Exmo', sum: 30.8, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
