@@ -70,14 +70,12 @@ class Currencies extends React.Component{
                     {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
                         let topRow = '';
                         if (this.top !== value.top) {
-                            topRow = <tr key={'topRow_' + index}><td colspan="12">TOP ${value.top}</td></tr>
+                            topRow = <tr key={'topRow_' + index}><td colSpan="12">TOP ${value.top}</td></tr>
                             this.top = value.top;
                         }
                         value.exmo = this.state.currencies[value.key];
                         value.roundPrice = this.roundPrice;
-                        return (<React.Fragment>
-                            {topRow}<CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} />
-                        </React.Fragment>)
+                        return <React.Fragment key={'fr_' + index}>{topRow}<CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} /></React.Fragment>
                     })}
                 </tbody></table>
             </div>
