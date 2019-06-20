@@ -24,7 +24,8 @@ class CurrenciesRow extends React.Component{
             priceMax: this.roundPrice(currency.priceMax),
             priceOut: this.roundPrice(priceNow),
             priceOutSum: this.roundPrice(priceNowSum),
-            increaseOutPercent: increasePercent
+            increaseOutPercent: increasePercent,
+            top: currency.top
         };
     }
     handleChangePrice(event){
@@ -43,7 +44,7 @@ class CurrenciesRow extends React.Component{
     }
     render(){
         return <React.Fragment>
-            {this.props.topHeader ? <tr><td colSpan="12">TOP ${this.state.top}</td></tr> : false}
+            {this.props.topHeader ? <tr><td className="col-top" colSpan="12">TOP {this.state.top}</td></tr> : false}
             <tr>
                 <td className="col-name">{this.state.title}</td>
                 <td className="col-sum">{this.state.sum}</td>
