@@ -70,7 +70,7 @@ class Currencies extends React.Component{
                     {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
                         let topRow = '';
                         if (this.top !== value.top) {
-                            topRow = `<tr><td colspan="12">TOP ${value.top}</td></tr>`
+                            topRow = <tr key={'topRow_' + index}><td colspan="12">TOP ${value.top}</td></tr>
                             this.top = value.top;
                         }
                         value.exmo = this.state.currencies[value.key];
