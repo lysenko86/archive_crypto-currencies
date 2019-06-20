@@ -20,10 +20,10 @@ export default [
     {key: 'DASH_USD', title: 'Dash', top: 20, sum: 0.04085, priceIn: 740, priceMax: 1470},
 
 // TOP 40
+    {key: 'WAVES_USD', title: 'Waves', top: 40, sum: 11.13892, priceIn: 2.36, priceMax: 17.331},
     {key: 'BTG_USD', title: 'Bitcoin Gold', top: 40, sum: 0.78244, priceIn: 39, priceMax: 394.946},
     {key: 'LSK_USD', title: 'Lisk', top: 40, sum: 9.65804, priceIn: 3.15, priceMax: 35.592},
     {key: 'OMG_USD', title: 'OmiseGO', top: 40, sum: 7.31634, priceIn: 4.18, priceMax: 25.3071},
-    {key: 'WAVES_USD', title: 'Waves', top: 40, sum: 11.13892, priceIn: 2.36, priceMax: 17.331},
     {key: 'DOGE_USD', title: 'Dogecoin', top: 40, sum: 0, priceIn: 0.016702, priceMax: 1470},
     {key: 'XTZ_USD', title: 'Tezos', top: 40, sum: 0, priceIn: 1.23797, priceMax: 8.10891},
     {key: 'QTUM_USD', title: 'Qtum', top: 40, sum: 0, priceIn: 0, priceMax: 65.853},
