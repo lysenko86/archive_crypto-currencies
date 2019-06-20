@@ -75,10 +75,10 @@ class Currencies extends React.Component{
                         }
                         value.exmo = this.state.currencies[value.key];
                         value.roundPrice = this.roundPrice;
-                        return (<Fragment>
+                        return (<React.Fragment>
                             {topRow}
                             <CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} />
-                        </Fragment>)
+                        </React.Fragment>)
                     })}
                 </tbody></table>
             </div>
