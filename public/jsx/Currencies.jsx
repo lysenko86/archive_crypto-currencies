@@ -16,8 +16,7 @@ class Currencies extends React.Component{
             totalSumIn: 0,
             totalSumNow: 0,
             totalSumMax: 0,
-            totalSumOut: 0,
-            top: 0
+            totalSumOut: 0
         };
     }
     roundPrice(price){
@@ -70,13 +69,13 @@ class Currencies extends React.Component{
                 <table className="table table-bordered table-hover table-currencies"><tbody>
                     {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
                         let topRow = '';
-                        if (this.state.top !== value.top) {
+                        if (this.top !== value.top) {
                             topRow = `<tr><td colspan="12">TOP ${value.top}</td></tr>`
-                            this.state.top = value.top;
+                            this.top = value.top;
                         }
                         value.exmo = this.state.currencies[value.key];
                         value.roundPrice = this.roundPrice;
-                        return <CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} />
+                        return {topRow}<CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} />
                     })}
                 </tbody></table>
             </div>
