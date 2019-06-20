@@ -31,7 +31,7 @@ export default [
 // TOP 150
     {key: 'GAS_USD', title: 'Gas', top: 150, sum: 5.6156, priceIn: 5.37, priceMax: 79.21},
     {key: 'ZRX_USD', title: '0x', top: 150, sum: 0, priceIn: 0, priceMax: 2.3183},
-    {key: 'SMART_USD', title: 'SmartCash', top: 150, sum: 0, priceIn: 0, priceMax: 2.222}
+    {key: 'SMART_USD', title: 'SmartCash', top: 150, sum: 0, priceIn: 0, priceMax: 2.222},
 
 // TOP 670
     {key: 'INK_USD', title: 'Ink', top: 670, sum: 1334, priceIn: 0.0228, priceMax: 0.915974},
@@ -40,5 +40,5 @@ export default [
     {key: 'STQ_USD', title: 'Storiqa', top: 670, sum: 12544, priceIn: 0.0024, priceMax: 0.013205},
     {key: 'MNX_USD', title: 'MinexCoin', top: 670, sum: 12.66972, priceIn: 2.4, priceMax: 51.633},
 
-    {key: 'USD', title: 'Exmo', sum: 30.8, priceIn: 1, priceMax: 1, priceNow: 1},
+    {key: 'USD', title: 'Exmo', sum: 30.8, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
