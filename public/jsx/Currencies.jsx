@@ -10,6 +10,7 @@ class Currencies extends React.Component{
         super(props);
         this.roundPrice = this.roundPrice.bind(this);
         this.handleChangeFooter = this.handleChangeFooter.bind(this);
+        this.top = 0;
         this.state = {
             currencies: {},
             totalSumIn: 0,
@@ -67,6 +68,11 @@ class Currencies extends React.Component{
             <div className="table-currencies-container">
                 <table className="table table-bordered table-hover table-currencies"><tbody>
                     {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
+                        let topRow = '';
+                        if (this.top !== value.top) {
+                            topRow = `<tr><td colspan="12">TOP ${value.top}</td></tr>`
+                            this.top = value.top;
+                        }
                         value.exmo = this.state.currencies[value.key];
                         value.roundPrice = this.roundPrice;
                         return <CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} />
