@@ -36,8 +36,6 @@ export default [
 // TOP 670
     {key: 'INK_USD', title: 'Ink', top: 670, sum: 1334, priceIn: 0.0228, priceMax: 0.915974},
     {key: 'DXT_USD', title: 'Datawallet', top: 670, sum: 2662, priceIn: 0.0115, priceMax: 0.99813},
-    {key: 'HBZ_USD', title: 'Helbiz', top: 670, sum: 7865, priceIn: 0.0038379, priceMax: 0.020609},
-    {key: 'STQ_USD', title: 'Storiqa', top: 670, sum: 12544, priceIn: 0.0024, priceMax: 0.013205},
     {key: 'MNX_USD', title: 'MinexCoin', top: 670, sum: 12.66972, priceIn: 2.4, priceMax: 51.633},
 
     {key: 'USD', title: 'Exmo', sum: 30.8, priceIn: 1, priceMax: 1, priceNow: 1}

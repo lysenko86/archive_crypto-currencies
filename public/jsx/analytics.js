@@ -17,4 +17,6 @@ export default [
     {month: 'Квітень 2019', add: 0, capitalBeginMonth: 642.63, capitalEndMonth: 642.63},
     {month: 'Травень 2019', add: 0, capitalBeginMonth: 642.63, capitalEndMonth: 445.92},
     {month: 'Червень 2019', add: 0, capitalBeginMonth: 445.92, capitalEndMonth: 352.23},
+    {month: 'Липень 2019', add: 0, capitalBeginMonth: 352.23, capitalEndMonth: 323.42},
+    {month: 'Серпень 2019', add: 0, capitalBeginMonth: 323.42, capitalEndMonth: 0},
 ];
