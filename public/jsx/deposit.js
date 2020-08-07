@@ -33,10 +33,5 @@ export default [
     {key: 'ZRX_USD', title: '0x', top: 150, sum: 0, priceIn: 0, priceMax: 2.3183},
     {key: 'SMART_USD', title: 'SmartCash', top: 150, sum: 0, priceIn: 0, priceMax: 2.222},
 
-// TOP 670
-    {key: 'INK_USD', title: 'Ink', top: 670, sum: 1334, priceIn: 0.0228, priceMax: 0.915974},
-    {key: 'DXT_USD', title: 'Datawallet', top: 670, sum: 2662, priceIn: 0.0115, priceMax: 0.99813},
-    {key: 'MNX_USD', title: 'MinexCoin', top: 670, sum: 12.66972, priceIn: 2.4, priceMax: 51.633},
-
     {key: 'USD', title: 'Exmo', sum: 30.8, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
