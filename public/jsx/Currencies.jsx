@@ -4,7 +4,6 @@ import CurrenciesRow from './CurrenciesRow.jsx';
 import CurrenciesFooter from './CurrenciesFooter.jsx';
 import deposit from './deposit.js';
 import $ from 'jquery';
-//test
 
 class Currencies extends React.Component{
     constructor(props){
