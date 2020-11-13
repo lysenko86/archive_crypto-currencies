@@ -41,6 +41,8 @@ class Currencies extends React.Component{
         }
         this.setState({totalSumOut: this.roundPrice(totalSumOut)});
     }
+
+    // TEST
     render(){
         if (!this.state.currencies.BTC_USD){
             const thisLink = this;
