@@ -30,5 +30,5 @@ export default [
 // TOP 150
     {key: 'GAS_USD', title: 'Gas', top: 150, sum: 5.6156, priceIn: 5.37, priceMax: 79.21},
 
-    {key: 'USD', title: 'Exmo', sum: 30, priceIn: 1, priceMax: 1, priceNow: 1}
+    {key: 'USD', title: 'Exmo', sum: 0, priceIn: 1, priceMax: 1, priceNow: 1}
 ];
