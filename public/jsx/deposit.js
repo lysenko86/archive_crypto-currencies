@@ -25,6 +25,7 @@ export default [
     {key: 'BTG_USD', title: 'Bitcoin Gold', top: 40, sum: 0.78354231, priceIn: 39, priceMax: 394.946},
     {key: 'LSK_USD', title: 'Lisk', top: 40, sum: 9.67159356, priceIn: 3.15, priceMax: 35.592},
     {key: 'OMG_USD', title: 'OmiseGO', top: 40, sum: 7.3163461, priceIn: 4.18, priceMax: 25.3071},
+    {key: 'OMG_USD', title: 'OmiseGO', top: 40, sum: 9.03126, priceIn: 3.404, priceMax: 25.3071},
 
 // TOP 150
     {key: 'GAS_USD', title: 'Gas', top: 150, sum: 5.6156, priceIn: 5.37, priceMax: 79.21},
