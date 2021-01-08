@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import CryptoJS from 'crypto-js';
-import exmo from './exmo.jsx';
+import exmo from './exmoAccess.jsx';
 
 class Orders extends React.Component{
     constructor(props){
