@@ -1,7 +1,118 @@
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-@import "header.styl"
-@import "main.styl"
-@import "footer.styl"
 
 body
     font-family Helvetica
+    background-color #888
+
+.loading
+    position fixed
+    display flex
+    justify-content center
+    align-items center
+    background-color rgba(0, 0, 0, 0.4)
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index 1
+    color #fff
+    font-size 40px
+    font-weight bold
+    text-shadow 5px 5px 10px #000
+
+table.table
+    background-color #fff
+    border none
+    width auto
+    display inline-block
+    vertical-align top
+    margin 5px
+    th, td
+        font-size 12px
+        line-height 1.3
+        padding 5px 5px 4px
+    th
+        text-align center
+        background-color #337ab7
+        color #fff
+        padding 5px 0 4px
+    .colorPlus, .colorMinus
+        font-weight bold
+    .colorPlus
+        color #390
+    .colorMinus
+        color #f00
+
+.table-currencies
+    .col-tip
+        position: relative
+        &:after
+            content: '';
+            position: absolute;
+            background-color: #7777ff;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            right: 2px;
+            top: 2px;
+    .col-top
+        font-weight bold
+    .col-name
+        width 60px
+    .col-sum
+        width 60px
+    .col-price-in
+        width 70px
+    .col-price-now
+        width 70px
+        font-weight bold
+    .col-increase-now
+        width 60px
+    .col-increase-now-percent
+        width 60px
+    .col-price-min
+        width 70px
+    .col-price-max
+        width 70px
+    tfoot td
+        font-weight bold
+
+.table-actions
+    .col-date
+        width 75px
+    .col-type
+        width 40px
+        font-weight bold
+        text-align center
+    .col-pair
+        width 90px
+    .col-sum
+        width 75px
+    .col-price
+        width 75px
+    .col-usd
+        width 70px
+    .color-buy
+        color #390
+    .color-sell
+        color #F00
+    .color-add
+        background-color #83bf66
+        color #FFF
+    .color-out
+        background-color #fc9999
+        color #FFF
+
+.table-analytics
+    .col-month
+        width 100px
+    .col-add
+        width 70px
+    .col-sum
+        width 70px
+    .col-usd
+        width 70px
+    .col-percent
+        width 70px
+    tfoot td
+        font-weight bold

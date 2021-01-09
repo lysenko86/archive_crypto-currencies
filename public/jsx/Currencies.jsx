@@ -1,88 +1,136 @@
 import React from 'react';
-import CurrenciesHeader from './CurrenciesHeader.jsx';
-import CurrenciesRow from './CurrenciesRow.jsx';
-import CurrenciesFooter from './CurrenciesFooter.jsx';
-import deposit from './deposit.js';
-import $ from 'jquery';
 
-class Currencies extends React.Component{
-    constructor(props){
+import { deposit } from '../data.js';
+
+class Currencies extends React.Component {
+    constructor(props) {
         super(props);
         this.roundPrice = this.roundPrice.bind(this);
-        this.handleChangeFooter = this.handleChangeFooter.bind(this);
-        this.top = 0;
+        this.roundUsd = this.roundUsd.bind(this);
         this.state = {
             currencies: {},
-            totalSumIn: 0,
-            totalSumNow: 0,
-            totalSumMax: 0,
-            totalSumOut: 0
+            dataIsLoaded: false,
         };
     }
-    roundPrice(price){
-        if (Math.abs(price) >= 1000){
-            price = Math.round(price);
-        } else if (Math.abs(price) >= 100){
-            price = Math.round(price * 1000) / 1000;
-        } else if (Math.abs(price) >= 1){
-            price = Math.round(price * 100000) / 100000
-        } else {
-            price = Math.round(price * 100000000) / 100000000
-        }
-        return price;
-    }
-    handleChangeFooter(priceOut){
-        let totalSumOut = 0;
-        const rows = document.querySelectorAll('.table-currencies tbody tr');
-        for (let i=0; i<rows.length; i++){
-            const sum = rows[i].querySelector('td.col-sum').innerHTML;
-            const price = rows[i].querySelector('input.priceOut').value;
-            totalSumOut += price * sum;
-        }
-        this.setState({totalSumOut: this.roundPrice(totalSumOut)});
-    }
 
-    // TEST
-    render(){
-        if (!this.state.currencies.BTC_USD){
-            const thisLink = this;
-            $.get('https://api.exmo.com/v1/ticker/', {}, function(data){
-                thisLink.setState({currencies: data});
-                let totalSumIn = 0;
-                let totalSumNow = 0;
-                let totalSumMax = 0;
-                deposit.map((value)=>{
-                    const exmo = data[value.key];
-                    totalSumIn += value.priceIn * value.sum;
-                    totalSumNow += value.priceNow ? value.priceNow : (exmo && exmo.last_trade ? exmo.last_trade : 'error') * value.sum;
-                    totalSumMax += value.priceMax * value.sum;
-                });
-                thisLink.setState({
-                    totalSumIn: thisLink.roundPrice(totalSumIn),
-                    totalSumNow: thisLink.roundPrice(totalSumNow),
-                    totalSumMax: thisLink.roundPrice(totalSumMax),
-                    totalSumOut: thisLink.roundPrice(totalSumNow)
+    componentDidMount() {
+        fetch('https://api.exmo.com/v1/ticker/')
+            .then((response) => response.json())
+            .then((data) => {
+                this.setState({
+                    currencies: data,
+                    dataIsLoaded: data['BTC_USD'],
                 });
             });
+    }
+
+    roundPrice(price) {
+        const abs = Math.abs(price);
+        if (abs >= 1000){
+            price = Math.round(price);
+        } else if (abs >= 100){
+            price = Math.round(price * 1000) / 1000;
+        } else if (abs >= 1){
+            price = Math.round(price * 100000) / 100000;
+        } else {
+            price = Math.round(price * 100000000) / 100000000;
         }
-        return (<div className="page-currencies">
-            <CurrenciesHeader />
-            <div className="table-currencies-container">
-                <table className="table table-bordered table-hover table-currencies"><tbody>
-                    {!this.state.currencies.BTC_USD ? false : deposit.map((value, index)=>{
-                        let topHeader = false;
-                        if (this.top !== value.top) {
-                            topHeader = true;
-                            this.top = value.top;
-                        }
-                        value.exmo = this.state.currencies[value.key];
-                        value.roundPrice = this.roundPrice;
-                        return <CurrenciesRow key={'currency_' + index} currency={value} changeFooter={this.handleChangeFooter} topHeader={topHeader}/>
+        return String(price).substring(0, 7);
+    }
+
+    roundUsd(price) {
+        return Math.round(price * 100) / 100;
+    }
+
+    render(){
+        const { dataIsLoaded, currencies } = this.state;
+        let topValue = 0;
+
+        let totalSumIn = 0;
+        let totalSumNow = 0;
+        let totalSumMin = 0;
+        let totalSumMax = 0;
+        deposit.map((value)=>{
+            const lastTrade = currencies[value.key] && currencies[value.key].last_trade || 0;
+            totalSumIn += value.priceIn * value.sum;
+            totalSumNow += (value.priceNow || lastTrade) * value.sum;
+            totalSumMin += value.priceMin * value.sum;
+            totalSumMax += value.priceMax * value.sum;
+        });
+        const totalIncreaseSum = this.roundUsd(totalSumNow - totalSumIn);
+        const totalIncreasePercent = Math.round(totalIncreaseSum * 100 / totalSumIn / 100 * 10000) / 100;
+        const growthClass = totalIncreaseSum < 0 ? 'colorMinus' : 'colorPlus';
+
+        return !dataIsLoaded ? <div className="loading" >Завантажуються дані...</div> : (
+            <table className="table table-bordered table-hover table-currencies">
+                <thead>
+                    <tr>
+                        <th className="col-name">Валюта</th>
+                        <th className="col-sum">Сума</th>
+                        <th className="col-price-in">Закупив</th>
+                        <th className="col-price-now">Ціна</th>
+                        <th className="col-increase-now">Ріст, $</th>
+                        <th className="col-increase-now-percent">Ріст, %</th>
+                        <th className="col-price-min">Мін, $</th>
+                        <th className="col-price-max">Макс, $</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {deposit.map((currency, index) => {
+                        const topHeader = topValue !== currency.top;
+                        topValue = currency.top;
+                        const exmo = this.state.currencies[currency.key];
+                        const cyrPriceNow = currency.priceNow || exmo && exmo.last_trade || 'error';
+                        const cyrTitle = currency.title;
+                        const cyrCode = currency.key.split('_')[0];
+                        const cyrSum = this.roundPrice(currency.sum);
+                        const priceIn = this.roundPrice(currency.priceIn);
+                        const usdSumIn = this.roundUsd(currency.priceIn * currency.sum);
+                        const usdSumInTitle = 'Сума закупа: $' + usdSumIn;
+                        const priceNow = this.roundPrice(cyrPriceNow);
+                        const usdSumNow = this.roundUsd(cyrPriceNow * currency.sum);
+                        const usdSumNowTitle = 'Сума зараз: $' + usdSumNow;
+                        const increaseSum = this.roundUsd(usdSumNow - usdSumIn);
+                        const increaseSumTitle = !increaseSum ? '' : (increaseSum < 0 ? '-' : '') + '$' + Math.abs(increaseSum);
+                        const increasePercent = parseFloat(currency.sum) === 0 ? 0 : Math.round(increaseSum * 100 / usdSumIn / 100 * 10000) / 100;
+                        const growthClass = increaseSum < 0 ? 'colorMinus' : 'colorPlus';
+                        const priceMin = this.roundPrice(currency.priceMin);
+                        const priceMax = this.roundPrice(currency.priceMax);
+                        return (
+                            <>
+                                {!topHeader ? null : (
+                                    <tr key={'top-' + index}>
+                                        <td className="col-top" colSpan="8">TOP {currency.top}</td>
+                                    </tr>
+                                )}
+                                <tr key={'currency-' + index}>
+                                    <td className="col-name col-tip" title={cyrTitle}>{cyrCode}</td>
+                                    <td className="col-sum">{cyrSum}</td>
+                                    <td className="col-price-in col-tip" title={usdSumInTitle}>{'$' + priceIn}</td>
+                                    <td className="col-price-now col-tip" title={usdSumNowTitle}>{'$' + priceNow}</td>
+                                    <td className={'col-increase-now ' + growthClass}>{increaseSumTitle}</td>
+                                    <td className={'col-increase-now-percent ' + growthClass}>{increasePercent}%</td>
+                                    <td className="col-price-min">{'$' + priceMin}</td>
+                                    <td className="col-price-max">{'$' + priceMax}</td>
+                                </tr>
+                            </>
+                        );
                     })}
-                </tbody></table>
-            </div>
-            <CurrenciesFooter totalSumIn={this.state.totalSumIn} totalSumNow={this.state.totalSumNow} totalSumMax={this.state.totalSumMax} totalSumOut={this.state.totalSumOut}/>
-        </div>)
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td className="col-name">Total:</td>
+                        <td className="col-sum"></td>
+                        <td className="col-price-in">{'$' + this.roundUsd(totalSumIn)}</td>
+                        <td className="col-price-now">{'$' + this.roundUsd(totalSumNow)}</td>
+                        <td className={'col-increase-now ' + growthClass}>{'$' + totalIncreaseSum}</td>
+                        <td className={'col-increase-now-percent ' + growthClass}>{totalIncreasePercent + '%'}</td>
+                        <td className="col-price-min">{'$' + this.roundUsd(totalSumMin)}</td>
+                        <td className="col-price-max">{'$' + this.roundUsd(totalSumMax)}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        )
     }
 }
 

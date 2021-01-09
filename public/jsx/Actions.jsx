@@ -1,43 +1,43 @@
 import React from 'react';
-import $ from 'jquery';
-import actions from './actions.js';
 
-class Actions extends React.Component{
-    constructor(props){
+import { actions } from '../data.js';
+
+class Currencies extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = {}
     }
-    render(){
-        let totalSumUAH = 0;
-        let totalSumUSD = 0;
-        actions.map(value => {
-            totalSumUAH += value.UAH;
-            totalSumUSD += value.USD;
-        });
-        return (<div className="page-actions">
+
+    render() {
+        return (
             <table className="table table-bordered table-hover table-actions">
-                <thead><tr>
-                    <th className="col-date">Дата</th>
-                    <th className="col-sum">UAH</th>
-                    <th className="col-sum">USD</th>
-                </tr></thead>
-                <tbody>
-                    {actions.map((value, index)=>{
-                        return <tr key={'order_' + index}>
-                            <td className="col-date">{value.date}</td>
-                            <td className="col-sum">{value.UAH}грн</td>
-                            <td className="col-sum">{value.USD}$</td>
+                <thead>
+                    <tr>
+                        <th className="col-date">Дата</th>
+                        <th className="col-type">Тип</th>
+                        <th className="col-pair">Пара</th>
+                        <th className="col-sum">Сума</th>
+                        <th className="col-price">Ціна</th>
+                        <th className="col-usd">USD</th>
                         </tr>
+                    </thead>
+                <tbody>
+                    {actions.reverse().map((action, index) => {
+                        const classType = 'color-' + action.type;
+                        return (
+                            <tr key={index}>
+                                <td className="col-date">{action.date}</td>
+                                <td className={'col-type ' + classType}>{action.type}</td>
+                                <td className="col-pair">{action.pair}</td>
+                                <td className="col-sum">{action.sum}</td>
+                                <td className="col-price">{action.price}</td>
+                                <td className="col-usd">${action.sumUsd}</td>
+                            </tr>
+                        );
                     })}
                 </tbody>
-                <tfoot><tr>
-                    <td className="col-date"></td>
-                    <td className={'col-sum ' + (totalSumUAH >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUAH * 100) / 100}грн</td>
-                    <td className={'col-sum ' + (totalSumUSD >= 0 ? 'colorPlus' : 'colorMinus')}>{Math.round(totalSumUSD * 100) / 100}$</td>
-                </tr></tfoot>
             </table>
-        </div>)
+        );
     }
 }
 
-export default Actions;
+export default Currencies;
