@@ -8,9 +8,11 @@ const deposit = [
     {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.0000000, priceIn: 0.302906, priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
     {key: 'BCH_USD', title: 'Bitcoin Cash', top: 10, sum: 0.0667799, priceIn: 457,  priceMin: 140,   priceMax: 3300},
+    {key: 'BCH_USD', title: 'Bitcoin Cash', top: 10, sum: 0.046581,  priceIn: 429,  priceMin: 140,   priceMax: 3300},
     {key: 'XLM_USD', title: 'Stellar',      top: 10, sum: 136.92,    priceIn: 0.22, priceMin: 0.045, priceMax: 0.8},
 // TOP 20
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 4.6070881, priceIn: 6.63,    priceMin: 2.4,   priceMax: 20},
+    {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 12.858015, priceIn: 3.1109,  priceMin: 2.4,   priceMax: 20},
     {key: 'XMR_USD', title: 'Monero', top: 20, sum: 0.2855385, priceIn: 108,     priceMin: 45,    priceMax: 420},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1199,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1000,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
@@ -21,8 +23,10 @@ const deposit = [
     {key: 'ATOM_USD',  title: 'Cosmos',           top: 50, sum: 0.0000000, priceIn: 5.9875,   priceMin: 2,     priceMax: 7.5},
     {key: 'DOGE_USD',  title: 'Dogecoin',         top: 50, sum: 0.0000000, priceIn: 0.009481, priceMin: 0.002, priceMax: 0.015},
     {key: 'DASH_USD',  title: 'Dash',             top: 50, sum: 0.0408874, priceIn: 740,      priceMin: 45,    priceMax: 1200},
+    {key: 'DASH_USD',  title: 'Dash',             top: 50, sum: 0.30653,   priceIn: 97.87,    priceMin: 45,    priceMax: 1200},
     {key: 'ETC_USD',   title: 'Ethereum Classic', top: 50, sum: 0.9041805, priceIn: 33.47,    priceMin: 3.8,   priceMax: 40},
     {key: 'ZEC_USD',   title: 'Zcash',            top: 50, sum: 0.2114869, priceIn: 143.88,   priceMin: 30,    priceMax: 882},
+    {key: 'ZEC_USD',   title: 'Zcash',            top: 50, sum: 0.2189781, priceIn: 68.49389, priceMin: 30,    priceMax: 882},
     {key: 'WAVES_USD', title: 'Waves',            top: 50, sum: 0.0000000, priceIn: 2.36,     priceMin: 0.8,   priceMax: 15},
 // TOP 99
     {key: 'OMG_USD',  title: 'OmiseGO',      top: 99, sum: 7.316,     priceIn: 4.18,    priceMin: 0.6,  priceMax: 24},
@@ -30,7 +34,9 @@ const deposit = [
     {key: 'ZRX_USD',  title: '0x',           top: 99, sum: 0.000,     priceIn: 0.44506, priceMin: 0.17, priceMax: 2},
     {key: 'QTUM_USD', title: 'Qtum',         top: 99, sum: 40.931506, priceIn: 2.92,    priceMin: 1.54, priceMax: 90},
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 0.7835423, priceIn: 39,      priceMin: 6,    priceMax: 420},
+    {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 1.2888575, priceIn: 9.9,     priceMin: 6,    priceMax: 420},
     {key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 9.672,     priceIn: 3.15,    priceMin: 0.8,  priceMax: 32},
+    {key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 11.19403,  priceIn: 1.34,    priceMin: 0.8,  priceMax: 32},
 // TOP 500
     {key: 'GAS_USD', title: 'Gas', top: 500, sum: 5.6156, priceIn: 5.37, priceMin: 1, priceMax: 65},
 // TOP 1
@@ -106,6 +112,12 @@ const actions = [
     {date: '08.01.2021', type: 'sell', pair: 'LTC/USD',   sum: 0.228538,  price: 164.5859, sumUsd: 37.61},
     {date: '08.01.2021', type: 'buy',  pair: 'QTUM/USD',  sum: 40.931,    price: 2.92,     sumUsd: 120.00},
     {date: '08.01.2021', type: 'buy',  pair: 'XRP/USD',   sum: 360.36,    price: 0.33209,  sumUsd: 119.68},
+    {date: '09.01.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.046581,  price: 429,      sumUsd: 19.98},
+    {date: '09.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 12.858015, price: 3.1109,   sumUsd: 40.00},
+    {date: '09.01.2021', type: 'buy',  pair: 'LSK/USD',   sum: 11.19403,  price: 1.34,     sumUsd: 15.00},
+    {date: '09.01.2021', type: 'buy',  pair: 'DASH/USD',  sum: 0.30653,   price: 97.87,    sumUsd: 30.00},
+    {date: '09.01.2021', type: 'buy',  pair: 'ZEC/USD',   sum: 0.2189781, price: 68.49389, sumUsd: 15.00},
+    {date: '09.01.2021', type: 'buy',  pair: 'BTG/USD',   sum: 1.2888575, price: 9.899999, sumUsd: 11.62},
 ]
 
 
