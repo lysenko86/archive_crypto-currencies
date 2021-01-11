@@ -5,7 +5,7 @@ const deposit = [
     {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0.0000000, priceIn: 0,        priceMin: 105,    priceMax: 1250},
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 26.611355, priceIn: 1.1367,   priceMin: 0.205,  priceMax: 3.2},
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 360.36036, priceIn: 0.332099, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'LTC_USD', title: 'Litecoin', top: 5, sum: 0.0000000, priceIn: 0,        priceMin: 35,     priceMax: 320},
+    {key: 'LTC_USD', title: 'Litecoin', top: 5, sum: 1.0028011, priceIn: 143.9473, priceMin: 35,     priceMax: 320},
     {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.0000000, priceIn: 0,        priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
     {key: 'topHead', title: 'TOP 10'},
@@ -16,21 +16,19 @@ const deposit = [
     {key: 'topHead', title: 'TOP 20'},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 4.6070881, priceIn: 6.63,    priceMin: 2.4,   priceMax: 20},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 12.858015, priceIn: 3.1109,  priceMin: 2.4,   priceMax: 20},
-    {key: 'XMR_USD', title: 'Monero', top: 20, sum: 0.2855385, priceIn: 108,     priceMin: 45,    priceMax: 420},
+    {key: 'XMR_USD', title: 'Monero', top: 20, sum: 0.0000000, priceIn: 0,       priceMin: 45,    priceMax: 420},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1199,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1000,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
     {key: 'XEM_USD', title: 'NEM',    top: 20, sum: 0.0000000, priceIn: 0,       priceMin: 0.033, priceMax: 1.6},
     {key: 'XTZ_USD', title: 'Tezos',  top: 20, sum: 0.0000000, priceIn: 0,       priceMin: 0.38,  priceMax: 4},
 // TOP 50
     {key: 'topHead', title: 'TOP 50'},
-    {key: 'NEO_USD',   title: 'NEO',              top: 50, sum: 1.2626023, priceIn: 24.08,    priceMin: 6.45,  priceMax: 160},
+    {key: 'NEO_USD',   title: 'NEO',              top: 50, sum: 0,         priceIn: 24.08,    priceMin: 6.45,  priceMax: 160},
     {key: 'ATOM_USD',  title: 'Cosmos',           top: 50, sum: 0,         priceIn: 0.0000,   priceMin: 2,     priceMax: 7.5},
     {key: 'DOGE_USD',  title: 'Dogecoin',         top: 50, sum: 0,         priceIn: 0.000000, priceMin: 0.002, priceMax: 0.015},
     {key: 'DASH_USD',  title: 'Dash',             top: 50, sum: 0.0408874, priceIn: 740,      priceMin: 45,    priceMax: 1200},
-    {key: 'DASH_USD',  title: 'Dash',             top: 50, sum: 0.30653,   priceIn: 97.87,    priceMin: 45,    priceMax: 1200},
     {key: 'ETC_USD',   title: 'Ethereum Classic', top: 50, sum: 0.9041805, priceIn: 33.47,    priceMin: 3.8,   priceMax: 40},
     {key: 'ZEC_USD',   title: 'Zcash',            top: 50, sum: 0.2114869, priceIn: 143.88,   priceMin: 30,    priceMax: 882},
-    {key: 'ZEC_USD',   title: 'Zcash',            top: 50, sum: 0.2189781, priceIn: 68.49389, priceMin: 30,    priceMax: 882},
     {key: 'WAVES_USD', title: 'Waves',            top: 50, sum: 0,         priceIn: 0.00,     priceMin: 0.8,   priceMax: 15},
 // TOP 99
     {key: 'topHead', title: 'TOP 99'},
@@ -46,7 +44,7 @@ const deposit = [
     {key: 'topHead', title: 'TOP 500'},
     {key: 'GAS_USD', title: 'Gas', top: 500, sum: 5.6156, priceIn: 5.37, priceMin: 1, priceMax: 65},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.0, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
@@ -124,6 +122,12 @@ const actions = [
     {date: '09.01.2021', type: 'buy',  pair: 'DASH/USD',  sum: 0.30653,   price: 97.87,    sumUsd: 30.00},
     {date: '09.01.2021', type: 'buy',  pair: 'ZEC/USD',   sum: 0.2189781, price: 68.49389, sumUsd: 15.00},
     {date: '09.01.2021', type: 'buy',  pair: 'BTG/USD',   sum: 1.2888575, price: 9.899999, sumUsd: 11.62},
+    {date: '11.01.2021', type: 'sell', pair: 'ZEC/USD',   sum: 0.21897,   price: 106,      sumUsd: 23.21},
+    {date: '11.01.2021', type: 'sell', pair: 'XMR/USD',   sum: 0.2855386, price: 173,      sumUsd: 49.40},
+    {date: '11.01.2021', type: 'sell', pair: 'NEO/USD',   sum: 0.2053279, price: 24.4,     sumUsd: 5.01},
+    {date: '11.01.2021', type: 'sell', pair: 'NEO/USD',   sum: 1.0572745, price: 24.15,    sumUsd: 25.53},
+    {date: '11.01.2021', type: 'sell', pair: 'DASH/USD',  sum: 0.30653,   price: 138.1561, sumUsd: 42.35},
+    {date: '11.01.2021', type: 'sell', pair: 'LTC/USD',   sum: 1.0068284, price: 143.9473, sumUsd: 144.93},
 ]
 
 
