@@ -103,7 +103,7 @@ class Currencies extends React.Component {
                         const growthClass = increaseSum < 0 ? 'colorMinus' : 'colorPlus';
                         const priceMin = this.roundPrice(currency.priceMin);
                         const priceMax = this.roundPrice(currency.priceMax);
-                        return !currency.sum ? null : (
+                        return (
                             <tr key={index}>
                                 <td className="col-name col-tip" title={cyrTitle}>{cyrCode}</td>
                                 <td className="col-sum">{cyrSum}</td>
