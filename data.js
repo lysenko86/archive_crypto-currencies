@@ -127,7 +127,7 @@ const actions = [
     {date: '11.01.2021', type: 'sell', pair: 'NEO/USD',   sum: 0.2053279, price: 24.4,     sumUsd: 5.01},
     {date: '11.01.2021', type: 'sell', pair: 'NEO/USD',   sum: 1.0572745, price: 24.15,    sumUsd: 25.53},
     {date: '11.01.2021', type: 'sell', pair: 'DASH/USD',  sum: 0.30653,   price: 138.1561, sumUsd: 42.35},
-    {date: '11.01.2021', type: 'sell', pair: 'LTC/USD',   sum: 1.0068284, price: 143.9473, sumUsd: 144.93},
+    {date: '11.01.2021', type: 'buy',  pair: 'LTC/USD',   sum: 1.0068284, price: 143.9473, sumUsd: 144.93},
 ]
 
 
