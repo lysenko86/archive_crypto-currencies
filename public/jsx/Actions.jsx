@@ -1,13 +1,21 @@
 import React from 'react';
 
-import { actions } from '../data.js';
+import { actions } from '../../data.js';
 
 class Currencies extends React.Component {
     constructor(props) {
         super(props);
+        this.onChangeFilterValue = this.onChangeFilterValue.bind(this);
+        this.state = { filterValue: '' };
+    }
+
+    onChangeFilterValue(event) {
+        const filterValue = event.target.value.toUpperCase();
+        this.setState({ filterValue });
     }
 
     render() {
+        const acts = actions.slice().reverse().filter((action) => action.pair.includes(this.state.filterValue));
         return (
             <table className="table table-bordered table-hover table-actions">
                 <thead>
@@ -21,7 +29,12 @@ class Currencies extends React.Component {
                         </tr>
                     </thead>
                 <tbody>
-                    {actions.reverse().map((action, index) => {
+                    <tr>
+                        <td colSpan="6">
+                            <input type="text" onChange={this.onChangeFilterValue} value={this.state.filterValue} />
+                        </td>
+                    </tr>
+                    {acts.map((action, index) => {
                         const classType = 'color-' + action.type;
                         return (
                             <tr key={index}>

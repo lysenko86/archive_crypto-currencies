@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { analytics } from '../data.js';
+import { analytics } from '../../data.js';
 
 class Currencies extends React.Component {
     constructor(props) {

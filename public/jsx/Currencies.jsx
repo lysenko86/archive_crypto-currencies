@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { deposit } from '../data.js';
+import { deposit } from '../../data.js';
 
 class Currencies extends React.Component {
     constructor(props) {
@@ -44,18 +44,20 @@ class Currencies extends React.Component {
 
     render(){
         const { dataIsLoaded, currencies } = this.state;
-        let topValue = 0;
 
         let totalSumIn = 0;
         let totalSumNow = 0;
         let totalSumMin = 0;
         let totalSumMax = 0;
-        deposit.map((value)=>{
-            const lastTrade = currencies[value.key] && currencies[value.key].last_trade || 0;
-            totalSumIn += value.priceIn * value.sum;
-            totalSumNow += (value.priceNow || lastTrade) * value.sum;
-            totalSumMin += value.priceMin * value.sum;
-            totalSumMax += value.priceMax * value.sum;
+        deposit.map((currency)=>{
+            if (currency.key === 'topHead') {
+                return false;
+            }
+            const lastTrade = currencies[currency.key] && currencies[currency.key].last_trade || 0;
+            totalSumIn += currency.priceIn * currency.sum;
+            totalSumNow += (currency.priceNow || lastTrade) * currency.sum;
+            totalSumMin += currency.priceMin * currency.sum;
+            totalSumMax += currency.priceMax * currency.sum;
         });
         const totalIncreaseSum = this.roundUsd(totalSumNow - totalSumIn);
         const totalIncreasePercent = Math.round(totalIncreaseSum * 100 / totalSumIn / 100 * 10000) / 100;
@@ -77,8 +79,13 @@ class Currencies extends React.Component {
                 </thead>
                 <tbody>
                     {deposit.map((currency, index) => {
-                        const topHeader = topValue !== currency.top;
-                        topValue = currency.top;
+                        if (currency.key === 'topHead') {
+                            return (
+                                <tr key={index}>
+                                    <td className="col-top" colSpan="8">{currency.title}</td>
+                                </tr>
+                            );
+                        }
                         const exmo = this.state.currencies[currency.key];
                         const cyrPriceNow = currency.priceNow || exmo && exmo.last_trade || 'error';
                         const cyrTitle = currency.title;
@@ -96,24 +103,17 @@ class Currencies extends React.Component {
                         const growthClass = increaseSum < 0 ? 'colorMinus' : 'colorPlus';
                         const priceMin = this.roundPrice(currency.priceMin);
                         const priceMax = this.roundPrice(currency.priceMax);
-                        return (
-                            <>
-                                {!topHeader ? null : (
-                                    <tr key={'top-' + index}>
-                                        <td className="col-top" colSpan="8">TOP {currency.top}</td>
-                                    </tr>
-                                )}
-                                <tr key={'currency-' + index}>
-                                    <td className="col-name col-tip" title={cyrTitle}>{cyrCode}</td>
-                                    <td className="col-sum">{cyrSum}</td>
-                                    <td className="col-price-in col-tip" title={usdSumInTitle}>{'$' + priceIn}</td>
-                                    <td className="col-price-now col-tip" title={usdSumNowTitle}>{'$' + priceNow}</td>
-                                    <td className={'col-increase-now ' + growthClass}>{increaseSumTitle}</td>
-                                    <td className={'col-increase-now-percent ' + growthClass}>{increasePercent}%</td>
-                                    <td className="col-price-min">{'$' + priceMin}</td>
-                                    <td className="col-price-max">{'$' + priceMax}</td>
-                                </tr>
-                            </>
+                        return !currency.sum ? null : (
+                            <tr key={index}>
+                                <td className="col-name col-tip" title={cyrTitle}>{cyrCode}</td>
+                                <td className="col-sum">{cyrSum}</td>
+                                <td className="col-price-in col-tip" title={usdSumInTitle}>{'$' + priceIn}</td>
+                                <td className="col-price-now col-tip" title={usdSumNowTitle}>{'$' + priceNow}</td>
+                                <td className={'col-increase-now ' + growthClass}>{increaseSumTitle}</td>
+                                <td className={'col-increase-now-percent ' + growthClass}>{increasePercent}%</td>
+                                <td className="col-price-min">{'$' + priceMin}</td>
+                                <td className="col-price-max">{'$' + priceMax}</td>
+                            </tr>
                         );
                     })}
                 </tbody>
