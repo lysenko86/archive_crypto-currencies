@@ -15,6 +15,7 @@ const deposit = [
     {key: 'topHead', title: 'TOP 20'},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 4.6070881, priceIn: 6.63,    priceMin: 2.4,   priceMax: 20},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 12.858015, priceIn: 3.1109,  priceMin: 2.4,   priceMax: 20},
+    {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 9.9331266, priceIn: 2.98,    priceMin: 2.4,   priceMax: 20},
     {key: 'XMR_USD', title: 'Monero', top: 20, sum: 0.0000000, priceIn: 0,       priceMin: 45,    priceMax: 420},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1199,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1000,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
@@ -33,8 +34,7 @@ const deposit = [
     {key: 'WAVES_USD', title: 'Waves',            top: 50, sum: 0,         priceIn: 0.00,     priceMin: 0.8,   priceMax: 15},
 // TOP 99
     {key: 'topHead', title: 'TOP 99'},
-    {key: 'OMG_USD',  title: 'OmiseGO',      top: 99, sum: 7.316,     priceIn: 4.18,    priceMin: 0.6,  priceMax: 24},
-    {key: 'OMG_USD',  title: 'OmiseGO',      top: 99, sum: 9.031,     priceIn: 3.404,   priceMin: 0.6,  priceMax: 24},
+    {key: 'OMG_USD',  title: 'OmiseGO',      top: 99, sum: 7.3115067, priceIn: 4.18,    priceMin: 0.6,  priceMax: 24},
     {key: 'ZRX_USD',  title: '0x',           top: 99, sum: 0,         priceIn: 0.00000, priceMin: 0.17, priceMax: 2},
     {key: 'QTUM_USD', title: 'Qtum',         top: 99, sum: 40.931506, priceIn: 2.92,    priceMin: 1.54, priceMax: 90},
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 0.7835423, priceIn: 39,      priceMin: 6,    priceMax: 420},
@@ -44,7 +44,7 @@ const deposit = [
     {key: 'topHead', title: 'TOP 500'},
     {key: 'GAS_USD', title: 'Gas', top: 500, sum: 5.6156, priceIn: 5.37, priceMin: 1, priceMax: 65},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.30, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
@@ -134,6 +134,8 @@ const actions = [
     {date: '12.01.2021', type: 'buy',  pair: 'TRX/USD',   sum: 3742.2307, price: 0.029219, sumUsd: 109.34},
     {date: '14.01.2021', type: 'sell', pair: 'LTC/USD',   sum: 1.0028011, price: 145.5,    sumUsd: 145.91},
     {date: '14.01.2021', type: 'buy',  pair: 'DASH/USD',  sum: 1.0954144, price: 145.5,    sumUsd: 145.69},
+    {date: '14.01.2021', type: 'sell', pair: 'OMG/USD',   sum: 9,         price: 3.302173, sumUsd: 29.72},
+    {date: '14.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 9.9331266, price: 2.979996, sumUsd: 29.60},
 ]
 
 
