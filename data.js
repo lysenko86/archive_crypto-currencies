@@ -35,7 +35,7 @@ const deposit = [
     {key: 'WAVES_USD', title: 'Waves',            top: 50, sum: 0,         priceIn: 0.00,     priceMin: 0.8,   priceMax: 15},
 // TOP 99
     {key: 'topHead', title: 'TOP 99'},
-    {key: 'OMG_USD',  title: 'OmiseGO',      top: 99, sum: 7.3115067, priceIn: 4.18,    priceMin: 0.6,  priceMax: 24},
+    {key: 'OMG_USD',  title: 'OmiseGO',      top: 99, sum: 0.0,       priceIn: 0.0,     priceMin: 0.6,  priceMax: 24},
     {key: 'ZRX_USD',  title: '0x',           top: 99, sum: 0,         priceIn: 0.00000, priceMin: 0.17, priceMax: 2},
     {key: 'QTUM_USD', title: 'Qtum',         top: 99, sum: 0.0,       priceIn: 0.00,    priceMin: 1.54, priceMax: 90},
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 0.7835423, priceIn: 39,      priceMin: 6,    priceMax: 420},
@@ -45,7 +45,7 @@ const deposit = [
     {key: 'topHead', title: 'TOP 500'},
     {key: 'GAS_USD', title: 'Gas', top: 500, sum: 5.6156, priceIn: 5.37, priceMin: 1, priceMax: 65},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 77.11, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 104.28, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
@@ -139,6 +139,7 @@ const actions = [
     {date: '14.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 9.9331266, price: 2.979996, sumUsd: 29.60},
     {date: '15.01.2021', type: 'sell', pair: 'QTUM/USD',  sum: 40.931507, price: 3.1121,   sumUsd: 127.38},
     {date: '15.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 17.667220, price: 2.8301,   sumUsd: 50.00},
+    {date: '15.01.2021', type: 'sell', pair: 'OMG/USD',   sum: 7.3115067, price: 3.73,     sumUsd: 27.27},
 ]
 
 
