@@ -18,6 +18,7 @@ const deposit = [
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 9.9331266, priceIn: 2.98,    priceMin: 2.4,   priceMax: 20},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 17.667220, priceIn: 2.8301,  priceMin: 2.4,   priceMax: 20},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 13.333861, priceIn: 2.9,     priceMin: 2.4,   priceMax: 20},
+    {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 9.7658973, priceIn: 2.8491,  priceMin: 2.4,   priceMax: 20},
     {key: 'XMR_USD', title: 'Monero', top: 20, sum: 0.0000000, priceIn: 0,       priceMin: 45,    priceMax: 420},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1199,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1000,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
@@ -40,8 +41,7 @@ const deposit = [
     {key: 'QTUM_USD', title: 'Qtum',         top: 99, sum: 0.0,       priceIn: 0.00,     priceMin: 1.54, priceMax: 90},
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 0.7835423, priceIn: 39,       priceMin: 6,    priceMax: 420},
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 2.557395,  priceIn: 11.24356, priceMin: 6,    priceMax: 420},
-    {key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 9.672,     priceIn: 3.15,     priceMin: 0.8,  priceMax: 32},
-    {key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 11.19403,  priceIn: 1.34,     priceMin: 0.8,  priceMax: 32},
+    //{key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 0.00,      priceIn: 0.00,     priceMin: 0.8,  priceMax: 32},
 // TOP 1
     {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
@@ -144,6 +144,8 @@ const actions = [
     {date: '16.01.2021', type: 'sell', pair: 'ZEC/USD',   sum: 0.2106192, price: 103.1185, sumUsd: 21.72},
     {date: '16.01.2021', type: 'sell', pair: 'ETC/USD',   sum: 0.9041805, price: 7.758931, sumUsd: 7.02},
     {date: '16.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 13.333861, price: 2.9,      sumUsd: 38.67},
+    {date: '16.01.2021', type: 'sell', pair: 'LSK/USD',   sum: 20.820847, price: 1.3416,   sumUsd: 27.94},
+    {date: '16.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 9.7658973, price: 2.8491,   sumUsd: 27.82},
 ]
 
 
