@@ -20,11 +20,12 @@ const deposit = [
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 13.333861, priceIn: 2.9,     priceMin: 2.4,   priceMax: 20},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 9.7658973, priceIn: 2.8491,  priceMin: 2.4,   priceMax: 20},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 51.69889,  priceIn: 2.8872,  priceMin: 2.4,   priceMax: 20},
+    {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 31.935538, priceIn: 2.555,   priceMin: 2.4,   priceMax: 20},
     {key: 'XMR_USD', title: 'Monero', top: 20, sum: 0.0000000, priceIn: 0,       priceMin: 45,    priceMax: 420},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1199,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 1000,      priceIn: 0.0252,  priceMin: 0.014, priceMax: 0.22},
     {key: 'TRX_USD', title: 'Tron',   top: 20, sum: 3742.231,  priceIn: 0.02922, priceMin: 0.014, priceMax: 0.22},
-    {key: 'XEM_USD', title: 'NEM',    top: 20, sum: 354.17869, priceIn: 0.2132,  priceMin: 0.033, priceMax: 1.6},
+    {key: 'XEM_USD', title: 'NEM',    top: 20, sum: 0.0,       priceIn: 0.0,     priceMin: 0.033, priceMax: 1.6},
     {key: 'XTZ_USD', title: 'Tezos',  top: 20, sum: 0.0000000, priceIn: 0,       priceMin: 0.38,  priceMax: 4},
 // TOP 50
     {key: 'topHead', title: 'TOP 50'},
@@ -148,6 +149,8 @@ const actions = [
     {date: '16.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 9.7658973, price: 2.8491,   sumUsd: 27.82},
     {date: '19.01.2021', type: 'sell', pair: 'DASH/USD',  sum: 1.1324465, price: 132.9,    sumUsd: 150.50},
     {date: '19.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 51.69889,  price: 2.8872,   sumUsd: 149.02},
+    {date: '27.01.2021', type: 'sell', pair: 'XEM/USD',   sum: 352.9037,  price: 0.2289,   sumUsd: 80.78},
+    {date: '27.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 31.935538, price: 2.555,    sumUsd: 81.60},
 ]
 
 
