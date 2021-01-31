@@ -8,7 +8,7 @@ const deposit = [
     {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.0000000, priceIn: 0, priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
     {key: 'topHead', title: 'TOP 10'},
-    {key: 'BCH_USD', title: 'Bitcoin Cash', top: 10, sum: 0.00, priceIn: 0, priceMin: 140,   priceMax: 3300},
+    {key: 'BCH_USD', title: 'Bitcoin Cash', top: 10, sum: 0.15037593, priceIn: 399, priceMin: 140,   priceMax: 3300},
     {key: 'XLM_USD', title: 'Stellar',      top: 10, sum: 0.00, priceIn: 0, priceMin: 0.045, priceMax: 0.8},
 // TOP 20
     {key: 'topHead', title: 'TOP 20'},
@@ -31,8 +31,8 @@ const deposit = [
     {key: 'NEO_USD',   title: 'NEO',              top: 50, sum: 0,         priceIn: 0.000,    priceMin: 6.45,  priceMax: 160},
     {key: 'ATOM_USD',  title: 'Cosmos',           top: 50, sum: 0,         priceIn: 0.0000,   priceMin: 2,     priceMax: 7.5},
     {key: 'DOGE_USD',  title: 'Dogecoin',         top: 50, sum: 0,         priceIn: 0.000000, priceMin: 0.002, priceMax: 0.015},
-    {key: 'DASH_USD',  title: 'Dash',             top: 50, sum: 0.00,      priceIn: 0,        priceMin: 45,    priceMax: 1200},
-    {key: 'ZEC_USD',   title: 'Zcash',            top: 50, sum: 0,         priceIn: 0.00,     priceMin: 30,    priceMax: 882},
+    {key: 'DASH_USD',  title: 'Dash',             top: 50, sum: 0.3933137, priceIn: 101.7,    priceMin: 45,    priceMax: 1200},
+    {key: 'ZEC_USD',   title: 'Zcash',            top: 50, sum: 0.7017544, priceIn: 85.49893, priceMin: 30,    priceMax: 882},
     {key: 'WAVES_USD', title: 'Waves',            top: 50, sum: 0,         priceIn: 0.00,     priceMin: 0.8,   priceMax: 15},
 // TOP 99
     {key: 'topHead', title: 'TOP 99'},
@@ -43,7 +43,7 @@ const deposit = [
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 2.557395,  priceIn: 11.24356, priceMin: 6,    priceMax: 420},
     {key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 0.00,      priceIn: 0.00,     priceMin: 0.8,  priceMax: 32},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 181.28, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 21.35, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
@@ -151,6 +151,9 @@ const actions = [
     {date: '27.01.2021', type: 'sell', pair: 'XEM/USD',   sum: 352.9037,  price: 0.2289,   sumUsd: 80.78},
     {date: '27.01.2021', type: 'buy',  pair: 'EOS/USD',   sum: 31.935538, price: 2.555,    sumUsd: 81.60},
     {date: '30.01.2021', type: 'sell', pair: 'XRP/USD',   sum: 385.53027, price: 0.471999, sumUsd: 181.97},
+    {date: '31.01.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.1503759, price: 399,      sumUsd: 60.00},
+    {date: '31.01.2021', type: 'buy',  pair: 'ZEC/USD',   sum: 0.7017544, price: 85.49893, sumUsd: 60.00},
+    {date: '31.01.2021', type: 'buy',  pair: 'DASH/USD',  sum: 0.3933137, price: 101.7,    sumUsd: 40.00},
 ]
 
 
