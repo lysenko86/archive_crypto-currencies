@@ -1,16 +1,15 @@
 const deposit = [
 // TOP 5
     {key: 'topHead', title: 'TOP 5'},
-    {key: 'BTC_USD', title: 'Bitcoin',  top: 5, sum: 0.00282703, priceIn: 33780, priceMin: 3500,   priceMax: 41000},
-    {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0.0000000,  priceIn: 0, priceMin: 105,    priceMax: 1250},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 0.0000000,  priceIn: 0, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'LTC_USD', title: 'Litecoin', top: 5, sum: 0.0000000,  priceIn: 0, priceMin: 35,     priceMax: 320},
-    {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.0000000,  priceIn: 0, priceMin: 0.0275, priceMax: 1.02},
+    {key: 'BTC_USD', title: 'Bitcoin',  top: 5, sum: 0.0000000, priceIn: 0, priceMin: 3500,   priceMax: 41000},
+    {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0.0000000, priceIn: 0, priceMin: 105,    priceMax: 1250},
+    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 797.14245, priceIn: 0, priceMin: 0.205,  priceMax: 3.2},
+    {key: 'LTC_USD', title: 'Litecoin', top: 5, sum: 0.0000000, priceIn: 0, priceMin: 35,     priceMax: 320},
+    {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.0000000, priceIn: 0, priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
     {key: 'topHead', title: 'TOP 10'},
-    {key: 'BCH_USD', title: 'Bitcoin Cash', top: 10, sum: 0.15037593, priceIn: 399, priceMin: 140,   priceMax: 3300},
-    {key: 'BCH_USD', title: 'Bitcoin Cash', top: 10, sum: 0.5083071,  priceIn: 413, priceMin: 140,   priceMax: 3300},
-    {key: 'XLM_USD', title: 'Stellar',      top: 10, sum: 0.00,       priceIn: 0,   priceMin: 0.045, priceMax: 0.8},
+    {key: 'BCH_USD', title: 'Bitcoin Cash', top: 10, sum: 0.00, priceIn: 0, priceMin: 140,   priceMax: 3300},
+    {key: 'XLM_USD', title: 'Stellar',      top: 10, sum: 0.00, priceIn: 0, priceMin: 0.045, priceMax: 0.8},
 // TOP 20
     {key: 'topHead', title: 'TOP 20'},
     {key: 'EOS_USD', title: 'EOS',    top: 20, sum: 0, priceIn: 0, priceMin: 2.4,   priceMax: 20},
@@ -37,7 +36,7 @@ const deposit = [
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 2.557395,  priceIn: 11.24356, priceMin: 6,    priceMax: 420},
     {key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 0.00,      priceIn: 0.00,     priceMin: 0.8,  priceMax: 32},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 3.98, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
@@ -154,7 +153,10 @@ const actions = [
     {date: '01.02.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.5083071, price: 413,      sumUsd: 209.91},
     {date: '01.02.2021', type: 'buy',  pair: 'DASH/USD',  sum: 1.8975332, price: 105.246,  sumUsd: 199.71},
     {date: '01.02.2021', type: 'buy',  pair: 'ZEC/USD',   sum: 2.259887,  price: 88.36666, sumUsd: 199.70},
-    {date: '01.02.2021', type: 'buy',  pair: 'BTC/USD',   sum: 0.00282703, price: 33780,   sumUsd: 95.50},
+    {date: '01.02.2021', type: 'buy',  pair: 'BTC/USD',   sum: 0.002827,  price: 33780,    sumUsd: 95.50},
+    {date: '01.02.2021', type: 'sell', pair: 'BTC/USD',   sum: 0.0028157, price: 33785.8,  sumUsd: 95.14},
+    {date: '01.02.2021', type: 'sell', pair: 'BCH/USD',   sum: 0.6562889, price: 416,      sumUsd: 273.02},
+    {date: '01.02.2021', type: 'buy',  pair: 'XRP/USD',   sum: 797.14245, price: 0.455,    sumUsd: 362.70},
 ]
 
 
