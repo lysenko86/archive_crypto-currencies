@@ -3,7 +3,7 @@ const deposit = [
     {key: 'topHead', title: 'TOP 5'},
     {key: 'BTC_USD', title: 'Bitcoin',  top: 5, sum: 0.0000000, priceIn: 0, priceMin: 3500,   priceMax: 41000},
     {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0.0000000, priceIn: 0, priceMin: 105,    priceMax: 1250},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 797.14245, priceIn: 0, priceMin: 0.205,  priceMax: 3.2},
+    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 797.14245, priceIn: 0.455, priceMin: 0.205,  priceMax: 3.2},
     {key: 'LTC_USD', title: 'Litecoin', top: 5, sum: 0.0000000, priceIn: 0, priceMin: 35,     priceMax: 320},
     {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.0000000, priceIn: 0, priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
