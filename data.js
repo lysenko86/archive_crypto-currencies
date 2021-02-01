@@ -199,7 +199,7 @@ const analytics = [
     {month: 'Листопад 2020', add: 0,      sumBegin: 323.42, sumEnd: 323.42},
     {month: 'Грудень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 695.52},
 // 2021
-    //{month: 'Січень 2021',   add: 0,      sumBegin: 323.42, sumEnd: 323.42},
+    {month: 'Січень 2021',   add: 0,      sumBegin: 695.52, sumEnd: 880.48},
 ];
 
 
