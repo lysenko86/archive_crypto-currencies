@@ -23,7 +23,7 @@ const deposit = [
     {key: 'NEO_USD',   title: 'NEO',      top: 50, sum: 0,         priceIn: 0.000,    priceMin: 6.45,  priceMax: 160},
     {key: 'ATOM_USD',  title: 'Cosmos',   top: 50, sum: 0,         priceIn: 0.0000,   priceMin: 2,     priceMax: 7.5},
     {key: 'DOGE_USD',  title: 'Dogecoin', top: 50, sum: 0,         priceIn: 0.000000, priceMin: 0.002, priceMax: 0.015},
-    {key: 'DASH_USD',  title: 'Dash',     top: 50, sum: 0.2263029, priceIn: 101.7,    priceMin: 45,    priceMax: 1200},
+    {key: 'DASH_USD',  title: 'Dash',     top: 50, sum: 0.2177688, priceIn: 101.7,    priceMin: 45,    priceMax: 1200},
     {key: 'DASH_USD',  title: 'Dash',     top: 50, sum: 1.8975332, priceIn: 105.246,  priceMin: 45,    priceMax: 1200},
     {key: 'ZEC_USD',   title: 'Zcash',    top: 50, sum: 0.7017544, priceIn: 85.49893, priceMin: 30,    priceMax: 882},
     {key: 'ZEC_USD',   title: 'Zcash',    top: 50, sum: 2.259887,  priceIn: 88.36666, priceMin: 30,    priceMax: 882},
