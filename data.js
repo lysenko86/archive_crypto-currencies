@@ -37,7 +37,7 @@ const deposit = [
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 99, sum: 2.557395,  priceIn: 11.24356, priceMin: 6,    priceMax: 420},
     {key: 'LSK_USD',  title: 'Lisk',         top: 99, sum: 0.00,      priceIn: 0.00,     priceMin: 0.8,  priceMax: 32},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 21.35, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 95.49, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
