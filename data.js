@@ -6,6 +6,7 @@ const deposit = [
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 797.14245, priceIn: 0.455, priceMin: 0.205,  priceMax: 3.2},
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 127.80641, priceIn: 0.42,  priceMin: 0.205,  priceMax: 3.2},
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 223.34097, priceIn: 0.371, priceMin: 0.205,  priceMax: 3.2},
+    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 273.82,    priceIn: 0.368, priceMin: 0.205,  priceMax: 3.2},
     {key: 'LTC_USD', title: 'Litecoin', top: 5, sum: 0.0000000, priceIn: 0,     priceMin: 35,     priceMax: 320},
     {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.0000000, priceIn: 0,     priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
@@ -25,7 +26,7 @@ const deposit = [
     {key: 'ATOM_USD',  title: 'Cosmos',   top: 50, sum: 0,         priceIn: 0.0000,   priceMin: 2,     priceMax: 7.5},
     {key: 'DOGE_USD',  title: 'Dogecoin', top: 50, sum: 0,         priceIn: 0.000000, priceMin: 0.002, priceMax: 0.015},
     {key: 'DASH_USD',  title: 'Dash',     top: 50, sum: 1.889302,  priceIn: 105.246,  priceMin: 45,    priceMax: 1200},
-    {key: 'ZEC_USD',   title: 'Zcash',    top: 50, sum: 2.2483255, priceIn: 88.36666, priceMin: 30,    priceMax: 882},
+    {key: 'ZEC_USD',   title: 'Zcash',    top: 50, sum: 1.1491384, priceIn: 88.36666, priceMin: 30,    priceMax: 882},
     {key: 'WAVES_USD', title: 'Waves',    top: 50, sum: 0,         priceIn: 0.00,     priceMin: 0.8,   priceMax: 15},
 // TOP 99
     {key: 'topHead', title: 'TOP 99'},
@@ -162,6 +163,8 @@ const actions = [
     {date: '01.02.2021', type: 'sell', pair: 'DASH/USD',  sum: 0.226,     price: 102.2,    sumUsd: 23.10},
     {date: '01.02.2021', type: 'sell', pair: 'ZEC/USD',   sum: 0.70175,   price: 85.12912, sumUsd: 59.74},
     {date: '01.02.2021', type: 'buy',  pair: 'XRP/USD',   sum: 223.34097, price: 0.371,    sumUsd: 82.86},
+    {date: '02.02.2021', type: 'sell', pair: 'ZEC/USD',   sum: 1.1000911, price: 90.94064, sumUsd: 100.04},
+    {date: '02.02.2021', type: 'buy',  pair: 'XRP/USD',   sum: 273.82,    price: 0.368,    sumUsd: 100.77},
 ]
 
 
