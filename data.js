@@ -3,10 +3,13 @@ const deposit = [
     {key: 'topHead', title: 'TOP 5'},
     {key: 'BTC_USD', title: 'Bitcoin',  top: 5, sum: 0.00, priceIn: 0.00,  priceMin: 3500,   priceMax: 41000},
     {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0.00, priceIn: 0.00,  priceMin: 105,    priceMax: 1250},
+
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 800,  priceIn: 0.455, priceMin: 0.205,  priceMax: 3.2},
+    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 115,  priceIn: 0.448, priceMin: 0.205,  priceMax: 3.2},
+    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 805,  priceIn: 0.382, priceMin: 0.205,  priceMax: 3.2},
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 220,  priceIn: 0.371, priceMin: 0.205,  priceMax: 3.2},
     {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 275,  priceIn: 0.368, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 805,  priceIn: 0.382, priceMin: 0.205,  priceMax: 3.2},
+
     {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.00, priceIn: 0.00,  priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
     {key: 'topHead', title: 'TOP 10'},
@@ -31,7 +34,7 @@ const deposit = [
     {key: 'OMG_USD',   title: 'OmiseGO',  top: 99, sum: 0.00, priceIn: 0.00, priceMin: 0.6,   priceMax: 24},
     {key: 'QTUM_USD',  title: 'Qtum',     top: 99, sum: 0.00, priceIn: 0.00, priceMin: 1.54,  priceMax: 90},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 51.38, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
@@ -164,6 +167,7 @@ const actions = [
     {date: '02.02.2021', type: 'sell', pair: 'ZEC/USD',   sum: 1.149138,  price: 92.79911, sumUsd: 106.64},
     {date: '02.02.2021', type: 'buy',  pair: 'XRP/USD',   sum: 806.57245, price: 0.382,    sumUsd: 308.11},
     {date: '04.02.2021', type: 'sell', pair: 'XRP/USD',   sum: 120,       price: 0.426,    sumUsd: 	51.12},
+    {date: '05.02.2021', type: 'buy',  pair: 'XRP/USD',   sum: 114,       price: 0.448,    sumUsd: 	51.48},
 ]
 
 
