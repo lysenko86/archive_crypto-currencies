@@ -214,6 +214,7 @@ const analytics = [
     {month: 'Грудень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 695.52},
 // 2021
     {month: 'Січень 2021',   add: 0,      sumBegin: 695.52, sumEnd: 880.48},
+    {month: 'Лютий 2021',    add: 0,      sumBegin: 880.48, sumEnd: 954.00},
 ];
 
 
