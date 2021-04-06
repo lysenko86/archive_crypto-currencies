@@ -215,6 +215,7 @@ const analytics = [
 // 2021
     {month: 'Січень 2021',   add: 0,      sumBegin: 695.52, sumEnd: 880.48},
     {month: 'Лютий 2021',    add: 0,      sumBegin: 880.48, sumEnd: 954.00},
+    {month: 'Березень 2021', add: 0,      sumBegin: 954.00, sumEnd: 1300.00},
 ];
 
 
