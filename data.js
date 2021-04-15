@@ -11,10 +11,10 @@ const deposit = [
     {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.00, priceIn: 0.00,  priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
     {key: 'topHead',  title: 'TOP 10'},
-    {key: 'LTC_USD',  title: 'Litecoin',     top: 10, sum: 0.00,    priceIn: 0.00,   priceMin: 35,    priceMax: 320},
-    {key: 'DOGE_USD', title: 'Dogecoin',     top: 10, sum: 138.102, priceIn: 0.1254, priceMin: 0.002, priceMax: 0.128},
-    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 10, sum: 0.00,    priceIn: 0.00,   priceMin: 140,   priceMax: 3300},
-    {key: 'XLM_USD',  title: 'Stellar',      top: 10, sum: 0.00,    priceIn: 0.00,   priceMin: 0.045, priceMax: 0.8},
+    {key: 'LTC_USD',  title: 'Litecoin',     top: 10, sum: 0.00, priceIn: 0.00,   priceMin: 35,    priceMax: 320},
+    {key: 'DOGE_USD', title: 'Dogecoin',     top: 10, sum: 0.00, priceIn: 0.1254, priceMin: 0.002, priceMax: 0.128},
+    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 10, sum: 0.00, priceIn: 0.00,   priceMin: 140,   priceMax: 3300},
+    {key: 'XLM_USD',  title: 'Stellar',      top: 10, sum: 0.00, priceIn: 0.00,   priceMin: 0.045, priceMax: 0.8},
 // TOP 20
     {key: 'topHead', title: 'TOP 20'},
     {key: 'TRX_USD', title: 'Tron', top: 20, sum: 0.00, priceIn: 0.00, priceMin: 0.014, priceMax: 0.22},
@@ -34,8 +34,9 @@ const deposit = [
     {key: 'QTUM_USD',  title: 'Qtum',         top: 99, sum: 0.00, priceIn: 0.00, priceMin: 1.54, priceMax: 90},
     {key: 'OMG_USD',   title: 'OmiseGO',      top: 99, sum: 0.00, priceIn: 0.00, priceMin: 0.6,  priceMax: 24},
 // TOP 999
-    {key: 'EXM_USD',   title: 'EXMO Coin', top: 999, sum: 202.307, priceIn: 0.066234, priceMin: 0.0028, priceMax: 0.09},
-    {key: 'LSK_USD',   title: 'EXMO Coin', top: 999, sum: 0.00,    priceIn: 0.00,     priceMin: 0.0028, priceMax: 0.09},
+    {key: 'EXM_USD', title: 'EXMO Coin', top: 999, sum: 202,  priceIn: 0.0662, priceMin: 0.0028, priceMax: 0.09},
+    {key: 'EXM_USD', title: 'EXMO Coin', top: 999, sum: 275,  priceIn: 0.0621, priceMin: 0.0028, priceMax: 0.09},
+    {key: 'LSK_USD', title: 'EXMO Coin', top: 999, sum: 0.00, priceIn: 0.00,   priceMin: 0.0028, priceMax: 0.09},
 // TOP 1
     {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
@@ -173,8 +174,10 @@ const actions = [
     {date: '05.02.2021', type: 'buy',  pair: 'XRP/USD',   sum: 114,       price: 0.448,    sumUsd: 51.48},
     {date: '14.04.2021', type: 'sell', pair: 'XRP/USD',   sum: 7,         price: 1.92,     sumUsd: 13.44},
     {date: '14.04.2021', type: 'sell', pair: 'XRP/USD',   sum: 9,         price: 1.93,     sumUsd: 17.37},
-    {date: '14.04.2021', type: 'buy',  pair: 'EXM/USD',   sum: 202.307,   price: 0.066234, sumUsd: 13.40},
+    {date: '14.04.2021', type: 'buy',  pair: 'EXM/USD',   sum: 202,       price: 0.066234, sumUsd: 13.40},
     {date: '14.04.2021', type: 'buy',  pair: 'DOGE/USD',  sum: 138.102,   price: 0.1254,   sumUsd: 17.32},
+    {date: '15.04.2021', type: 'sell', pair: 'DOGE/USD',  sum: 137.68,    price: 0.12656,  sumUsd: 17.43},
+    {date: '15.04.2021', type: 'buy',  pair: 'EXM/USD',   sum: 275,       price: 0.0621,   sumUsd: 17.12},
 ]
 
 
