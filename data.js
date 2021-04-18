@@ -1,14 +1,10 @@
 const deposit = [
 // TOP 5
     {key: 'topHead', title: 'TOP 5'},
-    {key: 'BTC_USD', title: 'Bitcoin',  top: 5, sum: 0.00, priceIn: 0.00,  priceMin: 3500,   priceMax: 41000},
-    {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0.00, priceIn: 0.00,  priceMin: 105,    priceMax: 1250},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 800,  priceIn: 0.455, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 111,  priceIn: 0.448, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 800,  priceIn: 0.382, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 220,  priceIn: 0.371, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 270,  priceIn: 0.368, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.00, priceIn: 0.00,  priceMin: 0.0275, priceMax: 1.02},
+    {key: 'BTC_USD', title: 'Bitcoin',  top: 5, sum: 0.00, priceIn: 0.00, priceMin: 3500,   priceMax: 41000},
+    {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0.00, priceIn: 0.00, priceMin: 105,    priceMax: 1250},
+    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 0.00, priceIn: 0.00, priceMin: 0.205,  priceMax: 3.2},
+    {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0.00, priceIn: 0.00, priceMin: 0.0275, priceMax: 1.02},
 // TOP 10
     {key: 'topHead',  title: 'TOP 10'},
     {key: 'LTC_USD',  title: 'Litecoin',     top: 10, sum: 0.00, priceIn: 0.00,   priceMin: 35,    priceMax: 320},
@@ -38,7 +34,7 @@ const deposit = [
     {key: 'EXM_USD', title: 'EXMO Coin', top: 999, sum: 275,  priceIn: 0.0621, priceMin: 0.0028, priceMax: 0.09},
     {key: 'LSK_USD', title: 'EXMO Coin', top: 999, sum: 0.00, priceIn: 0.00,   priceMin: 0.0028, priceMax: 0.09},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 2849.00, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
@@ -178,6 +174,7 @@ const actions = [
     {date: '14.04.2021', type: 'buy',  pair: 'DOGE/USD',  sum: 138.102,   price: 0.1254,   sumUsd: 17.32},
     {date: '15.04.2021', type: 'sell', pair: 'DOGE/USD',  sum: 137.68,    price: 0.12656,  sumUsd: 17.43},
     {date: '15.04.2021', type: 'buy',  pair: 'EXM/USD',   sum: 275,       price: 0.0621,   sumUsd: 17.12},
+    {date: '18.04.2021', type: 'sell', pair: 'XRP/USD',   sum: 2201,      price: 1.285,    sumUsd: 2828.41},
 ]
 
 
