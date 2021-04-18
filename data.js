@@ -33,7 +33,7 @@ const deposit = [
     {key: 'EXM_USD', title: 'EXMO Coin', top: 999, sum: 1118, priceIn: 0.062593, priceMin: 0.0028, priceMax: 0.09},
     {key: 'LSK_USD', title: 'Lisk',      top: 999, sum: 10.5, priceIn: 5.48759,  priceMin: 1.00,   priceMax: 32.00},
 // TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 2849.00, priceIn: 1, priceMin: 1, priceMax: 1},
+    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
 ];
 
 
