@@ -31,6 +31,7 @@ const deposit = [
     {key: 'QTUM_USD',  title: 'Qtum',         top: 5, sum: 0, priceIn: 0, priceMin: 1.54,  priceMax: 90},
     {key: 'OMG_USD',   title: 'OmiseGO',      top: 5, sum: 0, priceIn: 0, priceMin: 0.6,   priceMax: 24},
     {key: 'ZRX_USD',   title: '0x',           top: 5, sum: 0, priceIn: 0, priceMin: 0.20,  priceMax: 2.07},
+    {key: 'XTZ_USD',   title: 'Tezos',        top: 5, sum: 0, priceIn: 0, priceMin: 0.40,  priceMax: 7.5},
     {key: 'BTG_USD',   title: 'Bitcoin Gold', top: 5, sum: 0, priceIn: 0, priceMin: 6,     priceMax: 440},
     {key: 'DOGE_USD',  title: 'Dogecoin',     top: 5, sum: 0, priceIn: 0, priceMin: 0.002, priceMax: 0.128},
     {key: 'LSK_USD',   title: 'Lisk',         top: 5, sum: 0, priceIn: 0, priceMin: 1.00,  priceMax: 32.00},
