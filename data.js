@@ -287,6 +287,7 @@ const analytics = [
     {month: 'Лютий 2021',    add: 0,      sumBegin: 880.48, sumEnd: 954.00},
     {month: 'Березень 2021', add: 0,      sumBegin: 954.00, sumEnd: 1300.00},
     {month: 'Квітень 2021',  add: 0,      sumBegin: 1300.00, sumEnd: 3200.00},
+    {month: 'Травень 2021',  add: 0,      sumBegin: 3200.00, sumEnd: 1973.00},
 ];
 
 
