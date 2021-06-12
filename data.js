@@ -10,9 +10,10 @@ const deposit = [
     {key: 'EXM_USD', title: 'EXMO Coin', top: 1, sum: 0,    priceIn: 0,     priceMin: 0.0028, priceMax: 0.09},
 // PRIORITY 2
     {key: 'topHead', title: 'PRIORITY 2'},
-    {key: 'XEM_USD', title: 'NEM',  top: 2, sum: 0, priceIn: 0, priceMin: 0.033, priceMax: 1.6},
-    {key: 'TRX_USD', title: 'Tron', top: 2, sum: 0, priceIn: 0, priceMin: 0.014, priceMax: 0.22},
-    {key: 'EOS_USD', title: 'EOS',  top: 2, sum: 0, priceIn: 0, priceMin: 2.4,   priceMax: 20},
+    {key: 'XEM_USD', title: 'NEM',      top: 2, sum: 0, priceIn: 0, priceMin: 0.033, priceMax: 1.6},
+    {key: 'TRX_USD', title: 'Tron',     top: 2, sum: 0, priceIn: 0, priceMin: 0.014, priceMax: 0.22},
+    {key: 'EOS_USD', title: 'EOS',      top: 2, sum: 0, priceIn: 0, priceMin: 2.4,   priceMax: 20},
+    {key: 'DOT_USD', title: 'Polkadot', top: 5, sum: 0, priceIn: 0, priceMin: 9.00,  priceMax: 45.00},
 // PRIORITY 3
     {key: 'topHead', title: 'PRIORITY 3'},
     {key: 'BTC_USD', title: 'Bitcoin',      top: 3, sum: 0, priceIn: 0, priceMin: 3500, priceMax: 41000},
@@ -35,47 +36,9 @@ const deposit = [
     {key: 'ATOM_USD',  title: 'Cosmos',       top: 5, sum: 0, priceIn: 0, priceMin: 2,     priceMax: 25},
     {key: 'BTG_USD',   title: 'Bitcoin Gold', top: 5, sum: 0, priceIn: 0, priceMin: 6,     priceMax: 440},
     {key: 'DOGE_USD',  title: 'Dogecoin',     top: 5, sum: 0, priceIn: 0, priceMin: 0.002, priceMax: 0.128},
-    {key: 'LSK_USD',   title: 'Lisk',         top: 5, sum: 0, priceIn: 0, priceMin: 1.00,  priceMax: 32.00},
 // TOTAL
     {key: 'topHead', title: 'TOTAL'},
 ];
-/*const deposit = [
-// TOP 5
-    {key: 'topHead', title: 'TOP 5'},
-    {key: 'BTC_USD', title: 'Bitcoin',  top: 5, sum: 0,    priceIn: 0,     priceMin: 3500,   priceMax: 41000},
-    {key: 'ETH_USD', title: 'Ethereum', top: 5, sum: 0,    priceIn: 0,     priceMin: 105,    priceMax: 1250},
-    {key: 'XRP_USD', title: 'Ripple',   top: 5, sum: 1954, priceIn: 1.531, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'ADA_USD', title: 'Cardano',  top: 5, sum: 0,    priceIn: 0,     priceMin: 0.0275, priceMax: 1.02},
-// TOP 10
-    {key: 'topHead',  title: 'TOP 10'},
-    {key: 'LTC_USD',  title: 'Litecoin',     top: 10, sum: 0, priceIn: 0, priceMin: 35,    priceMax: 320},
-    {key: 'DOGE_USD', title: 'Dogecoin',     top: 10, sum: 0, priceIn: 0, priceMin: 0.002, priceMax: 0.128},
-    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 10, sum: 0, priceIn: 0, priceMin: 140,   priceMax: 3300},
-    {key: 'XLM_USD',  title: 'Stellar',      top: 10, sum: 0, priceIn: 0, priceMin: 0.045, priceMax: 0.8},
-// TOP 20
-    {key: 'topHead', title: 'TOP 20'},
-    {key: 'TRX_USD', title: 'Tron', top: 20, sum: 0, priceIn: 0, priceMin: 0.014, priceMax: 0.22},
-    {key: 'EOS_USD', title: 'EOS',  top: 20, sum: 0, priceIn: 0, priceMin: 2.4,   priceMax: 20},
-// TOP 50
-    {key: 'topHead',  title: 'TOP 50'},
-    {key: 'XMR_USD',  title: 'Monero', top: 50, sum: 0, priceIn: 0, priceMin: 45,    priceMax: 420},
-    {key: 'NEO_USD',  title: 'NEO',    top: 50, sum: 0, priceIn: 0, priceMin: 6.45,  priceMax: 160},
-    {key: 'XEM_USD',  title: 'NEM',    top: 20, sum: 0, priceIn: 0, priceMin: 0.033, priceMax: 1.6},
-    {key: 'DASH_USD', title: 'Dash',   top: 50, sum: 0, priceIn: 0, priceMin: 45,    priceMax: 1200},
-    {key: 'ZEC_USD',  title: 'Zcash',  top: 50, sum: 0, priceIn: 0, priceMin: 30,    priceMax: 882},
-// TOP 99
-    {key: 'topHead',   title: 'TOP 99'},
-    {key: 'BTG_USD',   title: 'Bitcoin Gold', top: 99, sum: 0, priceIn: 0, priceMin: 6,    priceMax: 440},
-    {key: 'WAVES_USD', title: 'Waves',        top: 99, sum: 0, priceIn: 0, priceMin: 0.8,  priceMax: 15},
-    {key: 'ZRX_USD',   title: '0x',           top: 99, sum: 0, priceIn: 0, priceMin: 0.20, priceMax: 2.07},
-    {key: 'QTUM_USD',  title: 'Qtum',         top: 99, sum: 0, priceIn: 0, priceMin: 1.54, priceMax: 90},
-    {key: 'OMG_USD',   title: 'OmiseGO',      top: 99, sum: 0, priceIn: 0, priceMin: 0.6,  priceMax: 24},
-// TOP 999
-    {key: 'EXM_USD', title: 'EXMO Coin', top: 999, sum: 0, priceIn: 0, priceMin: 0.0028, priceMax: 0.09},
-    {key: 'LSK_USD', title: 'Lisk',      top: 999, sum: 0, priceIn: 0, priceMin: 1.00,   priceMax: 32.00},
-// TOP 1
-    {key: 'USD', title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
-];*/
 
 
 
