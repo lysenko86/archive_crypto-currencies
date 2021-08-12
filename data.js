@@ -4,8 +4,8 @@ const deposit = [
     {key: 'USD',     title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
 // PRIORITY 1 - 50% of deposit
     {key: 'topHead', title: 'PRIORITY 1'},
-    {key: 'XRP_USD', title: 'Ripple', top: 1, sum: 1954, priceIn: 1.531, priceMin: 0.205, priceMax: 3.2},
-    {key: 'EOS_USD', title: 'EOS',    top: 1, sum: 0,    priceIn: 0,     priceMin: 2.4,   priceMax: 20},
+    {key: 'XRP_USD', title: 'Ripple', top: 1, sum: 1000,   priceIn: 1.531,  priceMin: 0.205, priceMax: 3.2},
+    {key: 'EOS_USD', title: 'EOS',    top: 1, sum: 200.79, priceIn: 4.7776, priceMin: 2.4,   priceMax: 20},
 // PRIORITY 2 - 30% of deposit
     {key: 'topHead',   title: 'PRIORITY 2'},
     {key: 'BTC_USD',   title: 'Bitcoin',   top: 2, sum: 0, priceIn: 0, priceMin: 3500,   priceMax: 41000},
@@ -198,6 +198,8 @@ const actions = [
     {date: '18.04.2021', type: 'buy',  pair: 'XRP/USD',   sum: 226,       price: 1.3259,   sumUsd: 300.00},
     {date: '18.04.2021', type: 'buy',  pair: 'ETH/USD',   sum: 0.018018,  price: 2219.89,  sumUsd: 40.00},
     {date: '18.04.2021', type: 'buy',  pair: 'ETH/USD',   sum: 0.0009377, price: 56520,    sumUsd: 53.00},
+    {date: '12.08.2021', type: 'sell', pair: 'XRP/USD',   sum: 954,       price: 1.008,    sumUsd: 959.78},
+    {date: '12.08.2021', type: 'buy',  pair: 'EOS/USD',   sum: 200.79,    price: 4.7776,   sumUsd: 959.29},
 ]
 
 
