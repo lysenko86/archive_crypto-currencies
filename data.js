@@ -2,40 +2,37 @@ const deposit = [
 // PRIORITY 0
     {key: 'topHead', title: 'PRIORITY 0'},
     {key: 'USD',     title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
-// PRIORITY 1
+// PRIORITY 1 - 50% of deposit
     {key: 'topHead', title: 'PRIORITY 1'},
-    {key: 'XRP_USD', title: 'Ripple',    top: 1, sum: 1954, priceIn: 1.531, priceMin: 0.205,  priceMax: 3.2},
-    {key: 'ADA_USD', title: 'Cardano',   top: 1, sum: 0,    priceIn: 0,     priceMin: 0.0275, priceMax: 1.02},
-    {key: 'XLM_USD', title: 'Stellar',   top: 1, sum: 0,    priceIn: 0,     priceMin: 0.045,  priceMax: 0.8},
-    {key: 'EXM_USD', title: 'EXMO Coin', top: 1, sum: 0,    priceIn: 0,     priceMin: 0.0028, priceMax: 0.09},
-// PRIORITY 2
-    {key: 'topHead', title: 'PRIORITY 2'},
-    {key: 'XEM_USD', title: 'NEM',      top: 2, sum: 0, priceIn: 0, priceMin: 0.033, priceMax: 1.6},
-    {key: 'TRX_USD', title: 'Tron',     top: 2, sum: 0, priceIn: 0, priceMin: 0.014, priceMax: 0.22},
-    {key: 'EOS_USD', title: 'EOS',      top: 2, sum: 0, priceIn: 0, priceMin: 2.4,   priceMax: 20},
-    {key: 'DOT_USD', title: 'Polkadot', top: 5, sum: 0, priceIn: 0, priceMin: 9.00,  priceMax: 45.00},
-// PRIORITY 3
-    {key: 'topHead', title: 'PRIORITY 3'},
-    {key: 'BTC_USD', title: 'Bitcoin',      top: 3, sum: 0, priceIn: 0, priceMin: 3500, priceMax: 41000},
-    {key: 'BCH_USD', title: 'Bitcoin Cash', top: 3, sum: 0, priceIn: 0, priceMin: 140,  priceMax: 3300},
-    {key: 'LTC_USD', title: 'Litecoin',     top: 3, sum: 0, priceIn: 0, priceMin: 35,   priceMax: 320},
-    {key: 'ETH_USD', title: 'Ethereum',     top: 3, sum: 0, priceIn: 0, priceMin: 105,  priceMax: 1250},
-// PRIORITY 4
+    {key: 'XRP_USD', title: 'Ripple', top: 1, sum: 1954, priceIn: 1.531, priceMin: 0.205, priceMax: 3.2},
+    {key: 'EOS_USD', title: 'EOS',    top: 1, sum: 0,    priceIn: 0,     priceMin: 2.4,   priceMax: 20},
+// PRIORITY 2 - 30% of deposit
+    {key: 'topHead',   title: 'PRIORITY 2'},
+    {key: 'BTC_USD',   title: 'Bitcoin',   top: 2, sum: 0, priceIn: 0, priceMin: 3500,   priceMax: 41000},
+    {key: 'ETH_USD',   title: 'Ethereum',  top: 2, sum: 0, priceIn: 0, priceMin: 105,    priceMax: 1250},
+    {key: 'ADA_USD',   title: 'Cardano',   top: 2, sum: 0, priceIn: 0, priceMin: 0.0275, priceMax: 1.02},
+    {key: 'DOT_USD',   title: 'Polkadot',  top: 2, sum: 0, priceIn: 0, priceMin: 9.00,   priceMax: 45.00},
+    {key: 'EXM_USD',   title: 'EXMO Coin', top: 2, sum: 0, priceIn: 0, priceMin: 0.0028, priceMax: 0.09},
+    {key: 'WAVES_USD', title: 'Waves',     top: 2, sum: 0, priceIn: 0, priceMin: 0.8,    priceMax: 15},
+// PRIORITY 3 - 10% of deposit
+    {key: 'topHead',  title: 'PRIORITY 3'},
+    {key: 'XEM_USD',  title: 'NEM',          top: 3, sum: 0, priceIn: 0, priceMin: 0.033, priceMax: 1.6},
+    {key: 'XLM_USD',  title: 'Stellar',      top: 3, sum: 0, priceIn: 0, priceMin: 0.045, priceMax: 0.8},
+    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 3, sum: 0, priceIn: 0, priceMin: 140,   priceMax: 3300},
+    {key: 'LTC_USD',  title: 'Litecoin',     top: 3, sum: 0, priceIn: 0, priceMin: 35,    priceMax: 320},
+    {key: 'DASH_USD', title: 'Dash',         top: 3, sum: 0, priceIn: 0, priceMin: 45,    priceMax: 1200},
+    {key: 'NEO_USD',  title: 'NEO',          top: 3, sum: 0, priceIn: 0, priceMin: 6.45,  priceMax: 160},
+    {key: 'OMG_USD',  title: 'OmiseGO',      top: 3, sum: 0, priceIn: 0, priceMin: 0.6,   priceMax: 24},
+    {key: 'QTUM_USD', title: 'Qtum',         top: 3, sum: 0, priceIn: 0, priceMin: 1.54,  priceMax: 90},
+    {key: 'ZEC_USD',  title: 'Zcash',        top: 3, sum: 0, priceIn: 0, priceMin: 30,    priceMax: 882},
+// PRIORITY 4 - 10% of deposit
     {key: 'topHead',  title: 'PRIORITY 4'},
-    {key: 'XMR_USD',  title: 'Monero', top: 4, sum: 0, priceIn: 0, priceMin: 45,   priceMax: 420},
-    {key: 'DASH_USD', title: 'Dash',   top: 4, sum: 0, priceIn: 0, priceMin: 45,   priceMax: 1200},
-    {key: 'ZEC_USD',  title: 'Zcash',  top: 4, sum: 0, priceIn: 0, priceMin: 30,   priceMax: 882},
-    {key: 'NEO_USD',  title: 'NEO',    top: 4, sum: 0, priceIn: 0, priceMin: 6.45, priceMax: 160},
-// PRIORITY 5
-    {key: 'topHead',   title: 'PRIORITY 5'},
-    {key: 'WAVES_USD', title: 'Waves',        top: 5, sum: 0, priceIn: 0, priceMin: 0.8,   priceMax: 15},
-    {key: 'QTUM_USD',  title: 'Qtum',         top: 5, sum: 0, priceIn: 0, priceMin: 1.54,  priceMax: 90},
-    {key: 'OMG_USD',   title: 'OmiseGO',      top: 5, sum: 0, priceIn: 0, priceMin: 0.6,   priceMax: 24},
-    {key: 'ZRX_USD',   title: '0x',           top: 5, sum: 0, priceIn: 0, priceMin: 0.20,  priceMax: 2.07},
-    {key: 'XTZ_USD',   title: 'Tezos',        top: 5, sum: 0, priceIn: 0, priceMin: 0.40,  priceMax: 7.5},
-    {key: 'ATOM_USD',  title: 'Cosmos',       top: 5, sum: 0, priceIn: 0, priceMin: 2,     priceMax: 25},
-    {key: 'BTG_USD',   title: 'Bitcoin Gold', top: 5, sum: 0, priceIn: 0, priceMin: 6,     priceMax: 440},
-    {key: 'DOGE_USD',  title: 'Dogecoin',     top: 5, sum: 0, priceIn: 0, priceMin: 0.002, priceMax: 0.128},
+    {key: 'TRX_USD',  title: 'Tron',         top: 4, sum: 0, priceIn: 0, priceMin: 0.014, priceMax: 0.22},
+    {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 4, sum: 0, priceIn: 0, priceMin: 6,     priceMax: 440},
+    {key: 'DOGE_USD', title: 'Dogecoin',     top: 4, sum: 0, priceIn: 0, priceMin: 0.002, priceMax: 0.128},
+    {key: 'ZRX_USD',  title: '0x',           top: 4, sum: 0, priceIn: 0, priceMin: 0.20,  priceMax: 2.07},
+    {key: 'XTZ_USD',  title: 'Tezos',        top: 4, sum: 0, priceIn: 0, priceMin: 0.40,  priceMax: 7.5},
+    {key: 'ATOM_USD', title: 'Cosmos',       top: 4, sum: 0, priceIn: 0, priceMin: 2,     priceMax: 25},
 // TOTAL
     {key: 'topHead', title: 'TOTAL'},
 ];
@@ -251,6 +248,8 @@ const analytics = [
     {month: 'Березень 2021', add: 0,      sumBegin: 954.00, sumEnd: 1300.00},
     {month: 'Квітень 2021',  add: 0,      sumBegin: 1300.00, sumEnd: 3200.00},
     {month: 'Травень 2021',  add: 0,      sumBegin: 3200.00, sumEnd: 1973.00},
+    {month: 'Червень 2021',  add: 0,      sumBegin: 1973.00, sumEnd: 1800.00},
+    {month: 'Липень 2021',   add: 0,      sumBegin: 1800.00, sumEnd: 1420.00},
 ];
 
 
