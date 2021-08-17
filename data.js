@@ -3,8 +3,10 @@ const deposit = [
     {key: 'topHead', title: 'PRIORITY 0'},
     {key: 'USD',     title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
 // PRIORITY 1 - 50% of deposit
-    {key: 'topHead', title: 'PRIORITY 1'},
-    {key: 'XRP_USD', title: 'Ripple', top: 1, sum: 1955, priceIn: 1.531,  priceMin: 0.205, priceMax: 3.2},
+    {key: 'topHead',  title: 'PRIORITY 1'},
+    {key: 'XRP_USD',  title: 'Ripple', top: 1, sum: 1955, priceIn: 1.531, priceMin: 0.205, priceMax: 3.2},
+    {key: 'XEM_USD',  title: 'NEM',    top: 1, sum: 510,  priceIn: 0.212, priceMin: 0.033, priceMax: 1.6},
+    {key: 'QTUM_USD', title: 'Qtum',   top: 1, sum: 5.55, priceIn: 12.98, priceMin: 1.54,  priceMax: 90},
 // PRIORITY 2 - 30% of deposit
     {key: 'topHead',   title: 'PRIORITY 2'},
     {key: 'BTC_USD',   title: 'Bitcoin',   top: 2, sum: 0, priceIn: 0, priceMin: 3500,   priceMax: 41000},
@@ -15,14 +17,12 @@ const deposit = [
     {key: 'WAVES_USD', title: 'Waves',     top: 2, sum: 0, priceIn: 0, priceMin: 0.8,    priceMax: 15},
 // PRIORITY 3 - 10% of deposit
     {key: 'topHead',  title: 'PRIORITY 3'},
-    {key: 'XEM_USD',  title: 'NEM',          top: 3, sum: 0, priceIn: 0, priceMin: 0.033, priceMax: 1.6},
     {key: 'XLM_USD',  title: 'Stellar',      top: 3, sum: 0, priceIn: 0, priceMin: 0.045, priceMax: 0.8},
     {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 3, sum: 0, priceIn: 0, priceMin: 140,   priceMax: 3300},
     {key: 'LTC_USD',  title: 'Litecoin',     top: 3, sum: 0, priceIn: 0, priceMin: 35,    priceMax: 320},
     {key: 'DASH_USD', title: 'Dash',         top: 3, sum: 0, priceIn: 0, priceMin: 45,    priceMax: 1200},
     {key: 'NEO_USD',  title: 'NEO',          top: 3, sum: 0, priceIn: 0, priceMin: 6.45,  priceMax: 160},
     {key: 'OMG_USD',  title: 'OmiseGO',      top: 3, sum: 0, priceIn: 0, priceMin: 0.6,   priceMax: 24},
-    {key: 'QTUM_USD', title: 'Qtum',         top: 3, sum: 0, priceIn: 0, priceMin: 1.54,  priceMax: 90},
     {key: 'ZEC_USD',  title: 'Zcash',        top: 3, sum: 0, priceIn: 0, priceMin: 30,    priceMax: 882},
 // PRIORITY 4 - 10% of deposit
     {key: 'topHead',  title: 'PRIORITY 4'},
@@ -202,6 +202,9 @@ const actions = [
     {date: '12.08.2021', type: 'buy',  pair: 'EOS/USD',   sum: 200.79,    price: 4.7776,   sumUsd: 959.29},
     {date: '13.08.2021', type: 'sell', pair: 'EOS/USD',   sum: 200,       price: 4.98,     sumUsd: 998.00},
     {date: '13.08.2021', type: 'buy',  pair: 'XRP/USD',   sum: 995.58,    price: 1.04,     sumUsd: 959.29},
+    {date: '17.08.2021', type: 'add',  pair: '',          sum: 180.00,    price: 1,        sumUsd: 180.00},   // 5000грн
+    {date: '17.08.2021', type: 'buy',  pair: 'QTUM/USD',  sum: 5.55,      price: 12.98,    sumUsd: 72.07},
+    {date: '17.08.2021', type: 'buy',  pair: 'XEM/USD',   sum: 510.00,    price: 0.212,    sumUsd: 108.00},
 ]
 
 
