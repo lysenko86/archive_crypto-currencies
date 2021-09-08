@@ -7,6 +7,10 @@ const deposit = [
     {key: 'XRP_USD',  title: 'Ripple', top: 1, sum: 1955, priceIn: 1.531, priceMin: 0.205, priceMax: 3.2},
     {key: 'XEM_USD',  title: 'NEM',    top: 1, sum: 510,  priceIn: 0.212, priceMin: 0.033, priceMax: 1.6},
     {key: 'QTUM_USD', title: 'Qtum',   top: 1, sum: 5.55, priceIn: 12.98, priceMin: 1.54,  priceMax: 90},
+    {key: 'DOGE_USD', title: 'Dogecoin',     top: 4, sum: 747.75, priceIn: 0.2614, priceMin: 0.002, priceMax: 0.128},
+    {key: 'XLM_USD',  title: 'Stellar',      top: 3, sum: 299.1, priceIn: 0.3363, priceMin: 0.045, priceMax: 0.8},
+    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 3, sum: 0.22269, priceIn: 672.37, priceMin: 140,   priceMax: 3300},
+    {key: 'LTC_USD',  title: 'Litecoin',     top: 3, sum: 0.298011, priceIn: 185.11, priceMin: 35,    priceMax: 320},
 // PRIORITY 2 - 30% of deposit
     {key: 'topHead',   title: 'PRIORITY 2'},
     {key: 'BTC_USD',   title: 'Bitcoin',   top: 2, sum: 0, priceIn: 0, priceMin: 3500,   priceMax: 41000},
@@ -17,9 +21,6 @@ const deposit = [
     {key: 'WAVES_USD', title: 'Waves',     top: 2, sum: 0, priceIn: 0, priceMin: 0.8,    priceMax: 15},
 // PRIORITY 3 - 10% of deposit
     {key: 'topHead',  title: 'PRIORITY 3'},
-    {key: 'XLM_USD',  title: 'Stellar',      top: 3, sum: 0, priceIn: 0, priceMin: 0.045, priceMax: 0.8},
-    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 3, sum: 0, priceIn: 0, priceMin: 140,   priceMax: 3300},
-    {key: 'LTC_USD',  title: 'Litecoin',     top: 3, sum: 0, priceIn: 0, priceMin: 35,    priceMax: 320},
     {key: 'DASH_USD', title: 'Dash',         top: 3, sum: 0, priceIn: 0, priceMin: 45,    priceMax: 1200},
     {key: 'NEO_USD',  title: 'NEO',          top: 3, sum: 0, priceIn: 0, priceMin: 6.45,  priceMax: 160},
     {key: 'OMG_USD',  title: 'OmiseGO',      top: 3, sum: 0, priceIn: 0, priceMin: 0.6,   priceMax: 24},
@@ -29,7 +30,6 @@ const deposit = [
     {key: 'TRX_USD',  title: 'Tron',         top: 4, sum: 0, priceIn: 0, priceMin: 0.014, priceMax: 0.22},
     {key: 'EOS_USD',  title: 'EOS',          top: 4, sum: 0, priceIn: 0, priceMin: 2.4,   priceMax: 20},
     {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 4, sum: 0, priceIn: 0, priceMin: 6,     priceMax: 440},
-    {key: 'DOGE_USD', title: 'Dogecoin',     top: 4, sum: 0, priceIn: 0, priceMin: 0.002, priceMax: 0.128},
     {key: 'ZRX_USD',  title: '0x',           top: 4, sum: 0, priceIn: 0, priceMin: 0.20,  priceMax: 2.07},
     {key: 'XTZ_USD',  title: 'Tezos',        top: 4, sum: 0, priceIn: 0, priceMin: 0.40,  priceMax: 7.5},
     {key: 'ATOM_USD', title: 'Cosmos',       top: 4, sum: 0, priceIn: 0, priceMin: 2,     priceMax: 25},
@@ -205,6 +205,11 @@ const actions = [
     {date: '17.08.2021', type: 'add',  pair: '',          sum: 180.00,    price: 1,        sumUsd: 180.00},   // 5000грн
     {date: '17.08.2021', type: 'buy',  pair: 'QTUM/USD',  sum: 5.55,      price: 12.98,    sumUsd: 72.07},
     {date: '17.08.2021', type: 'buy',  pair: 'XEM/USD',   sum: 510.00,    price: 0.212,    sumUsd: 108.00},
+    {date: '08.09.2021', type: 'add',  pair: '',          sum: 504.00,    price: 1,        sumUsd: 504.00},   // 14000грн
+    {date: '08.09.2021', type: 'buy',  pair: 'DOGE/USD',  sum: 747.75,    price: 0.2614,   sumUsd: 195.85},
+    {date: '08.09.2021', type: 'buy',  pair: 'XLM/USD',   sum: 299.1,     price: 0.3363,   sumUsd: 100.89},
+    {date: '08.09.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.22269,   price: 672.37,   sumUsd: 150.17},
+    {date: '08.09.2021', type: 'buy',  pair: 'LTC/USD',   sum: 0.298011,  price: 185.11,   sumUsd: 55.33},
 ]
 
 
