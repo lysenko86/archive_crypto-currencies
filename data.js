@@ -15,7 +15,7 @@ const deposit = [
     {key: 'topHead',   title: 'PRIORITY 2'},
     {key: 'BTC_USD',   title: 'Bitcoin',   top: 2, sum: 0, priceIn: 0, priceMin: 3500,   priceMax: 63000},
     {key: 'ETH_USD',   title: 'Ethereum',  top: 2, sum: 0, priceIn: 0, priceMin: 105,    priceMax: 4100},
-    {key: 'ADA_USD',   title: 'Cardano',   top: 2, sum: 0, priceIn: 0, priceMin: 0.0275, priceMax: 3.00},
+    {key: 'ADA_USD',   title: 'Cardano',   top: 2, sum: 33.42, priceIn: 2.1045, priceMin: 0.0275, priceMax: 3.00},
     {key: 'DOT_USD',   title: 'Polkadot',  top: 2, sum: 0, priceIn: 0, priceMin: 9.00,   priceMax: 45.00},
     {key: 'EXM_USD',   title: 'EXMO Coin', top: 2, sum: 0, priceIn: 0, priceMin: 0.0028, priceMax: 0.09},
     {key: 'WAVES_USD', title: 'Waves',     top: 2, sum: 0, priceIn: 0, priceMin: 0.8,    priceMax: 15},
@@ -214,6 +214,7 @@ const actions = [
     {date: '29.09.2021', type: 'sell', pair: 'LTC/USD',   sum: 0.298011,  price: 152,      sumUsd: 45.29},
     {date: '29.09.2021', type: 'sell', pair: 'DOGE/USD',  sum: 747.75,    price: 0.206,    sumUsd: 154.03},
     {date: '29.09.2021', type: 'out',  pair: '',          sum: 282.84,    price: 1,        sumUsd: 282.84},   // out 5509грн
+    {date: '29.09.2021', type: 'buy',  pair: 'ADA/USD',   sum: 33.42147,  price: 2.1045,   sumUsd: 70.34},
 ]
 
 
