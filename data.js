@@ -1,38 +1,73 @@
-const deposit = [
-// PRIORITY 0
-    {key: 'topHead', title: 'PRIORITY 0'},
-    {key: 'USD',     title: 'Exmo', priceNow: 1, sum: 0.00, priceIn: 1, priceMin: 1, priceMax: 1},
-// PRIORITY 1 - 50% of deposit
+const depositShort = [
+// PRIORITY 1
     {key: 'topHead',  title: 'PRIORITY 1'},
-    {key: 'XRP_USD',  title: 'Ripple', top: 1, sum: 1955, priceIn: 1.531, priceMin: 0.205, priceMax: 3.2},
-    {key: 'XEM_USD',  title: 'NEM',    top: 1, sum: 510,  priceIn: 0.212, priceMin: 0.033, priceMax: 1.6},
-    {key: 'QTUM_USD', title: 'Qtum',   top: 1, sum: 5.55, priceIn: 12.98, priceMin: 1.54,  priceMax: 90},
-    {key: 'DOGE_USD', title: 'Dogecoin',     top: 4, sum: 0, priceIn: 0, priceMin: 0.002, priceMax: 0.65},
-    {key: 'XLM_USD',  title: 'Stellar',      top: 3, sum: 0, priceIn: 0, priceMin: 0.045, priceMax: 0.8},
-    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 3, sum: 0.22269, priceIn: 672.37, priceMin: 140,   priceMax: 3300},
-    {key: 'LTC_USD',  title: 'Litecoin',     top: 3, sum: 0, priceIn: 0, priceMin: 35,    priceMax: 320},
-// PRIORITY 2 - 30% of deposit
+    {key: 'XRP_USD',  title: 'Ripple',       top: 1, sum: 455,     priceIn: 1.531},
+    {key: 'XEM_USD',  title: 'NEM',          top: 1, sum: 510,     priceIn: 0.212},
+    {key: 'QTUM_USD', title: 'Qtum',         top: 1, sum: 5.55,    priceIn: 12.98},
+    {key: 'DOGE_USD', title: 'Dogecoin',     top: 4, sum: 0,       priceIn: 0},
+    {key: 'XLM_USD',  title: 'Stellar',      top: 3, sum: 0,       priceIn: 0},
+    {key: 'BCH_USD',  title: 'Bitcoin Cash', top: 3, sum: 0.22269, priceIn: 672.37},
+    {key: 'LTC_USD',  title: 'Litecoin',     top: 3, sum: 0,       priceIn: 0},
+// PRIORITY 2
     {key: 'topHead',   title: 'PRIORITY 2'},
-    {key: 'BTC_USD',   title: 'Bitcoin',   top: 2, sum: 0, priceIn: 0, priceMin: 3500,   priceMax: 63000},
-    {key: 'ETH_USD',   title: 'Ethereum',  top: 2, sum: 0, priceIn: 0, priceMin: 105,    priceMax: 4100},
-    {key: 'ADA_USD',   title: 'Cardano',   top: 2, sum: 33.42, priceIn: 2.1045, priceMin: 0.0275, priceMax: 3.00},
-    {key: 'DOT_USD',   title: 'Polkadot',  top: 2, sum: 0, priceIn: 0, priceMin: 9.00,   priceMax: 45.00},
-    {key: 'EXM_USD',   title: 'EXMO Coin', top: 2, sum: 0, priceIn: 0, priceMin: 0.0028, priceMax: 0.09},
-    {key: 'WAVES_USD', title: 'Waves',     top: 2, sum: 0, priceIn: 0, priceMin: 0.8,    priceMax: 15},
-// PRIORITY 3 - 10% of deposit
+    {key: 'BTC_USD',   title: 'Bitcoin',   top: 2, sum: 0,     priceIn: 0},
+    {key: 'ETH_USD',   title: 'Ethereum',  top: 2, sum: 0,     priceIn: 0},
+    {key: 'ADA_USD',   title: 'Cardano',   top: 2, sum: 33.42, priceIn: 2.1045},
+    {key: 'DOT_USD',   title: 'Polkadot',  top: 2, sum: 0,     priceIn: 0},
+    {key: 'EXM_USD',   title: 'EXMO Coin', top: 2, sum: 4521,  priceIn: 0.0658},
+    {key: 'WAVES_USD', title: 'Waves',     top: 2, sum: 0,     priceIn: 0},
+// PRIORITY 3
     {key: 'topHead',  title: 'PRIORITY 3'},
-    {key: 'DASH_USD', title: 'Dash',         top: 3, sum: 0, priceIn: 0, priceMin: 45,    priceMax: 1200},
-    {key: 'NEO_USD',  title: 'NEO',          top: 3, sum: 0, priceIn: 0, priceMin: 6.45,  priceMax: 160},
-    {key: 'OMG_USD',  title: 'OmiseGO',      top: 3, sum: 0, priceIn: 0, priceMin: 0.6,   priceMax: 24},
-    {key: 'ZEC_USD',  title: 'Zcash',        top: 3, sum: 0, priceIn: 0, priceMin: 30,    priceMax: 882},
-// PRIORITY 4 - 10% of deposit
+    {key: 'DASH_USD', title: 'Dash',         top: 3, sum: 0, priceIn: 0},
+    {key: 'NEO_USD',  title: 'NEO',          top: 3, sum: 0, priceIn: 0},
+    {key: 'OMG_USD',  title: 'OmiseGO',      top: 3, sum: 0, priceIn: 0},
+    {key: 'ZEC_USD',  title: 'Zcash',        top: 3, sum: 0, priceIn: 0},
+// PRIORITY 4
     {key: 'topHead',  title: 'PRIORITY 4'},
-    {key: 'TRX_USD',  title: 'Tron',         top: 4, sum: 0, priceIn: 0, priceMin: 0.014, priceMax: 0.22},
-    {key: 'EOS_USD',  title: 'EOS',          top: 4, sum: 0, priceIn: 0, priceMin: 2.4,   priceMax: 20},
-    {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 4, sum: 0, priceIn: 0, priceMin: 6,     priceMax: 440},
-    {key: 'ZRX_USD',  title: '0x',           top: 4, sum: 0, priceIn: 0, priceMin: 0.20,  priceMax: 2.07},
-    {key: 'XTZ_USD',  title: 'Tezos',        top: 4, sum: 0, priceIn: 0, priceMin: 0.40,  priceMax: 7.5},
-    {key: 'ATOM_USD', title: 'Cosmos',       top: 4, sum: 0, priceIn: 0, priceMin: 2,     priceMax: 25},
+    {key: 'TRX_USD',  title: 'Tron',         top: 4, sum: 0, priceIn: 0},
+    {key: 'EOS_USD',  title: 'EOS',          top: 4, sum: 0, priceIn: 0},
+    {key: 'BTG_USD',  title: 'Bitcoin Gold', top: 4, sum: 0, priceIn: 0},
+    {key: 'ZRX_USD',  title: '0x',           top: 4, sum: 0, priceIn: 0},
+    {key: 'XTZ_USD',  title: 'Tezos',        top: 4, sum: 0, priceIn: 0},
+    {key: 'ATOM_USD', title: 'Cosmos',       top: 4, sum: 0, priceIn: 0},
+// TOTAL
+    {key: 'topHead', title: 'TOTAL'},
+];
+
+
+
+const depositLong = [
+// PRIORITY 1
+    {key: 'topHead',  title: 'PRIORITY 1'},
+    {key: 'XRP_USD',  title: 'Ripple',       sum: 1500},
+    {key: 'XEM_USD',  title: 'NEM',          sum: 0},
+    {key: 'QTUM_USD', title: 'Qtum',         sum: 0},
+    {key: 'DOGE_USD', title: 'Dogecoin',     sum: 0},
+    {key: 'XLM_USD',  title: 'Stellar',      sum: 0},
+    {key: 'BCH_USD',  title: 'Bitcoin Cash', sum: 0},
+    {key: 'LTC_USD',  title: 'Litecoin',     sum: 0},
+// PRIORITY 2
+    {key: 'topHead',   title: 'PRIORITY 2'},
+    {key: 'BTC_USD',   title: 'Bitcoin',   sum: 0},
+    {key: 'ETH_USD',   title: 'Ethereum',  sum: 0},
+    {key: 'ADA_USD',   title: 'Cardano',   sum: 0},
+    {key: 'DOT_USD',   title: 'Polkadot',  sum: 0},
+    {key: 'EXM_USD',   title: 'EXMO Coin', sum: 0},
+    {key: 'WAVES_USD', title: 'Waves',     sum: 0},
+// PRIORITY 3
+    {key: 'topHead',  title: 'PRIORITY 3'},
+    {key: 'DASH_USD', title: 'Dash',    sum: 0},
+    {key: 'NEO_USD',  title: 'NEO',     sum: 0},
+    {key: 'OMG_USD',  title: 'OmiseGO', sum: 0},
+    {key: 'ZEC_USD',  title: 'Zcash',   sum: 0},
+// PRIORITY 4
+    {key: 'topHead',  title: 'PRIORITY 4'},
+    {key: 'TRX_USD',  title: 'Tron',         sum: 0},
+    {key: 'EOS_USD',  title: 'EOS',          sum: 0},
+    {key: 'BTG_USD',  title: 'Bitcoin Gold', sum: 0},
+    {key: 'ZRX_USD',  title: '0x',           sum: 0},
+    {key: 'XTZ_USD',  title: 'Tezos',        sum: 0},
+    {key: 'ATOM_USD', title: 'Cosmos',       sum: 0},
 // TOTAL
     {key: 'topHead', title: 'TOTAL'},
 ];
@@ -202,10 +237,12 @@ const actions = [
     {date: '12.08.2021', type: 'buy',  pair: 'EOS/USD',   sum: 200.79,    price: 4.7776,   sumUsd: 959.29},
     {date: '13.08.2021', type: 'sell', pair: 'EOS/USD',   sum: 200,       price: 4.98,     sumUsd: 998.00},
     {date: '13.08.2021', type: 'buy',  pair: 'XRP/USD',   sum: 995.58,    price: 1.04,     sumUsd: 959.29},
-    {date: '17.08.2021', type: 'add',  pair: '',          sum: 180.00,    price: 1,        sumUsd: 180.00},   // in 5000грн
+    {date: '17.08.2021', type: 'add',  pair: '',          sum: 180.00,    price: 1,        sumUsd: 180.00},
+    // in 5000грн >>>>> -23429грн -5000грн = -28429грн
     {date: '17.08.2021', type: 'buy',  pair: 'QTUM/USD',  sum: 5.55,      price: 12.98,    sumUsd: 72.07},
     {date: '17.08.2021', type: 'buy',  pair: 'XEM/USD',   sum: 510.00,    price: 0.212,    sumUsd: 108.00},
-    {date: '08.09.2021', type: 'add',  pair: '',          sum: 504.00,    price: 1,        sumUsd: 504.00},   // in 14000грн
+    {date: '08.09.2021', type: 'add',  pair: '',          sum: 504.00,    price: 1,        sumUsd: 504.00},
+    // in 14000грн >>>>> -28429грн -14000грн = -42429грн
     {date: '08.09.2021', type: 'buy',  pair: 'DOGE/USD',  sum: 747.75,    price: 0.2614,   sumUsd: 195.85},
     {date: '08.09.2021', type: 'buy',  pair: 'XLM/USD',   sum: 299.1,     price: 0.3363,   sumUsd: 100.89},
     {date: '08.09.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.22269,   price: 672.37,   sumUsd: 150.17},
@@ -213,62 +250,14 @@ const actions = [
     {date: '29.09.2021', type: 'sell', pair: 'XLM/USD',   sum: 299.1,     price: 0.2792,   sumUsd: 83.50},
     {date: '29.09.2021', type: 'sell', pair: 'LTC/USD',   sum: 0.298011,  price: 152,      sumUsd: 45.29},
     {date: '29.09.2021', type: 'sell', pair: 'DOGE/USD',  sum: 747.75,    price: 0.206,    sumUsd: 154.03},
-    {date: '29.09.2021', type: 'out',  pair: '',          sum: 282.84,    price: 1,        sumUsd: 282.84},   // out 5509грн
+    {date: '29.09.2021', type: 'out',  pair: '',          sum: 282.84,    price: 1,        sumUsd: 282.84},
+    // out 5509грн >>>>> -42429грн +5509грн = -36920грн
     {date: '29.09.2021', type: 'buy',  pair: 'ADA/USD',   sum: 33.42147,  price: 2.1045,   sumUsd: 70.34},
+    {date: '03.10.2021', type: 'add',  pair: '',          sum: 300.00,    price: 1,        sumUsd: 300.00},
+    // in 8000грн >>>>> -36920грн -8000грн = -44920грн
+    {date: '03.10.2021', type: 'buy',  pair: 'EXM/USD',   sum: 4521.00,   price: 0.0658,   sumUsd: 297.48},
 ]
 
 
 
-const analytics = [
-// 2018
-    {month: 'Січень 2018',   add: 89.44,  sumBegin: 0,      sumEnd: 37.81},
-    {month: 'Лютий 2018',    add: 179.76, sumBegin: 37.81,  sumEnd: 218.90},
-    {month: 'Березень 2018', add: 0,      sumBegin: 218.90, sumEnd: 180.00},
-    {month: 'Квітень 2018',  add: 0,      sumBegin: 180.00, sumEnd: 194.47},
-    {month: 'Травень 2018',  add: 0,      sumBegin: 194.47, sumEnd: 137.11},
-    {month: 'Червень 2018',  add: 0,      sumBegin: 137.11, sumEnd: 107.53},
-    {month: 'Липень 2018',   add: 0,      sumBegin: 107.53, sumEnd: 107.53},
-    {month: 'Серпень 2018',  add: 35.02,  sumBegin: 107.53, sumEnd: 131.04},
-    {month: 'Вересень 2018', add: 313.34, sumBegin: 131.04, sumEnd: 408.09},
-    {month: 'Жовтень 2018',  add: 214.61, sumBegin: 408.09, sumEnd: 642.63},
-    {month: 'Листопад 2018', add: 0,      sumBegin: 642.63, sumEnd: 642.63},
-    {month: 'Грудень 2018',  add: 0,      sumBegin: 642.63, sumEnd: 642.63},
-// 2019
-    {month: 'Січень 2019',   add: 0,      sumBegin: 642.63, sumEnd: 642.63},
-    {month: 'Лютий 2019',    add: 0,      sumBegin: 642.63, sumEnd: 642.63},
-    {month: 'Березень 2019', add: 0,      sumBegin: 642.63, sumEnd: 642.63},
-    {month: 'Квітень 2019',  add: 0,      sumBegin: 642.63, sumEnd: 642.63},
-    {month: 'Травень 2019',  add: 0,      sumBegin: 642.63, sumEnd: 445.92},
-    {month: 'Червень 2019',  add: 0,      sumBegin: 445.92, sumEnd: 352.23},
-    {month: 'Липень 2019',   add: 0,      sumBegin: 352.23, sumEnd: 323.42},
-    {month: 'Серпень 2019',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Вересень 2019', add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Жовтень 2019',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Листопад 2019', add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Грудень 2019',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-// 2020
-    {month: 'Січень 2020',   add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Лютий 2020',    add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Березень 2020', add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Квітень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Травень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Червень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Липень 2020',   add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Серпень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Вересень 2020', add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Жовтень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Листопад 2020', add: 0,      sumBegin: 323.42, sumEnd: 323.42},
-    {month: 'Грудень 2020',  add: 0,      sumBegin: 323.42, sumEnd: 695.52},
-// 2021
-    {month: 'Січень 2021',   add: 0,      sumBegin: 695.52, sumEnd: 880.48},
-    {month: 'Лютий 2021',    add: 0,      sumBegin: 880.48, sumEnd: 954.00},
-    {month: 'Березень 2021', add: 0,      sumBegin: 954.00, sumEnd: 1300.00},
-    {month: 'Квітень 2021',  add: 0,      sumBegin: 1300.00, sumEnd: 3200.00},
-    {month: 'Травень 2021',  add: 0,      sumBegin: 3200.00, sumEnd: 1973.00},
-    {month: 'Червень 2021',  add: 0,      sumBegin: 1973.00, sumEnd: 1800.00},
-    {month: 'Липень 2021',   add: 0,      sumBegin: 1800.00, sumEnd: 1420.00},
-];
-
-
-
-export { deposit, actions, analytics };
+export { depositShort, depositLong, actions };
