@@ -3,6 +3,7 @@ const depositShort = [
     {key: 'topHead',  title: 'PRIORITY 1'},
     {key: 'XRP_USD',  title: 'Ripple',       top: 1, sum: 455,     priceIn: 1.531},
     {key: 'XEM_USD',  title: 'NEM',          top: 1, sum: 510,     priceIn: 0.212},
+    {key: 'XEM_USD',  title: 'NEM',          top: 1, sum: 4153,    priceIn: 0.17},
     {key: 'QTUM_USD', title: 'Qtum',         top: 1, sum: 5.55,    priceIn: 12.98},
     {key: 'DOGE_USD', title: 'Dogecoin',     top: 4, sum: 0,       priceIn: 0},
     {key: 'XLM_USD',  title: 'Stellar',      top: 3, sum: 0,       priceIn: 0},
@@ -15,6 +16,7 @@ const depositShort = [
     {key: 'ADA_USD',   title: 'Cardano',   top: 2, sum: 33.42, priceIn: 2.1045},
     {key: 'DOT_USD',   title: 'Polkadot',  top: 2, sum: 0,     priceIn: 0},
     {key: 'EXM_USD',   title: 'EXMO Coin', top: 2, sum: 4521,  priceIn: 0.0658},
+    {key: 'EXM_USD',   title: 'EXMO Coin', top: 2, sum: 5989,  priceIn: 0.064},
     {key: 'WAVES_USD', title: 'Waves',     top: 2, sum: 0,     priceIn: 0},
 // PRIORITY 3
     {key: 'topHead',  title: 'PRIORITY 3'},
@@ -256,6 +258,12 @@ const actions = [
     {date: '03.10.2021', type: 'add',  pair: '',          sum: 300.00,    price: 1,        sumUsd: 300.00},
     // in 8000грн >>>>> -36920грн -8000грн = -44920грн
     {date: '03.10.2021', type: 'buy',  pair: 'EXM/USD',   sum: 4521.00,   price: 0.0658,   sumUsd: 297.48},
+    {date: '05.10.2021', type: 'add',  pair: '',          sum: 706.00,    price: 1,        sumUsd: 706.00},
+    // in 20000грн >>>>> -44920грн -20000грн = -64920грн
+    {date: '05.10.2021', type: 'buy',  pair: 'XEM/USD',   sum: 4153.00,   price: 0.17,     sumUsd: 706.00},
+    {date: '05.10.2021', type: 'add',  pair: '',          sum: 376.00,    price: 1,        sumUsd: 376.00},
+    // in 10000грн >>>>> -64920грн -10000грн = -74920грн
+    {date: '05.10.2021', type: 'buy',  pair: 'EXM/USD',   sum: 5989.00,   price: 0.064,   sumUsd: 376.00},
 ]
 
 
