@@ -41,8 +41,8 @@ const depositShort = [
 const depositLong = [
 // PRIORITY 1
     {key: 'topHead',  title: 'PRIORITY 1'},
-    {key: 'XRP_USD',  title: 'Ripple',  sum: 1500}, // should be 2000
-    {key: 'ADA_USD',  title: 'Cardano', sum: 33},   // should be 1500
+    {key: 'XRP_USD',  title: 'Ripple',  sum: 1500}, // +++ should be 1500
+    {key: 'ADA_USD',  title: 'Cardano', sum: 33},   // should be 1000
 // PRIORITY 2
     {key: 'topHead',   title: 'PRIORITY 2'},
     {key: 'XEM_USD',   title: 'NEM',          sum: 0},
