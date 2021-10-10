@@ -8,9 +8,9 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <Actions />
-        <CurrenciesLong />
         <CurrenciesShort />
+        <CurrenciesLong />
+        <Actions />
       </main>
     );
   }

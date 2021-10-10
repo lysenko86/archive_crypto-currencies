@@ -1,38 +1,32 @@
 const depositShort = [
-// PRIORITY 1
-    {key: 'topHead',  title: 'PRIORITY 1'},
-    {key: 'XRP_USD',  title: 'Ripple',  sum: 455,    priceIn: 1.531},
-    {key: 'XRP_USD',  title: 'Ripple',  sum: 300,    priceIn: 1.076},
-    {key: 'ADA_USD',  title: 'Cardano', sum: 189.75, priceIn: 2.265},
-// PRIORITY 2
-    {key: 'topHead',   title: 'PRIORITY 2'},
+  // PAIRS FOR THE TRADING
+    {key: 'topHead',  title: 'PAIRS FOR THE TRADING'},
+    {key: 'XRP_USD',   title: 'Ripple',       sum: 455,     priceIn: 1.531},
+    {key: 'XRP_USD',   title: 'Ripple',       sum: 300,     priceIn: 1.076},
     {key: 'XEM_USD',   title: 'NEM',          sum: 510,     priceIn: 0.212},
-    {key: 'XEM_USD',   title: 'NEM',          sum: 4153,    priceIn: 0.17},
+    {key: 'XEM_USD',   title: 'NEM',          sum: 3153,    priceIn: 0.17},
     {key: 'QTUM_USD',  title: 'Qtum',         sum: 5.55,    priceIn: 12.98},
+    {key: 'BCH_USD',   title: 'Bitcoin Cash', sum: 0.22269, priceIn: 672.37},
+    {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 4521,    priceIn: 0.0658},
+    {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 3989,    priceIn: 0.064},
+    {key: 'ADA_USD',   title: 'Cardano',      sum: 0,       priceIn: 0},
     {key: 'DOGE_USD',  title: 'Dogecoin',     sum: 0,       priceIn: 0},
     {key: 'XLM_USD',   title: 'Stellar',      sum: 0,       priceIn: 0},
-    {key: 'BCH_USD',   title: 'Bitcoin Cash', sum: 0.22269, priceIn: 672.37},
     {key: 'LTC_USD',   title: 'Litecoin',     sum: 0,       priceIn: 0},
     {key: 'BTC_USD',   title: 'Bitcoin',      sum: 0,       priceIn: 0},
     {key: 'ETH_USD',   title: 'Ethereum',     sum: 0,       priceIn: 0},
     {key: 'DOT_USD',   title: 'Polkadot',     sum: 0,       priceIn: 0},
-    {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 4521,    priceIn: 0.0658},
-    {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 5989,    priceIn: 0.064},
     {key: 'WAVES_USD', title: 'Waves',        sum: 0,       priceIn: 0},
-// PRIORITY 3
-    {key: 'topHead',  title: 'PRIORITY 3'},
-    {key: 'DASH_USD', title: 'Dash',         sum: 0, priceIn: 0},
-    {key: 'NEO_USD',  title: 'NEO',          sum: 0, priceIn: 0},
-    {key: 'OMG_USD',  title: 'OmiseGO',      sum: 0, priceIn: 0},
-    {key: 'ZEC_USD',  title: 'Zcash',        sum: 0, priceIn: 0},
-// PRIORITY 4
-    {key: 'topHead',  title: 'PRIORITY 4'},
-    {key: 'TRX_USD',  title: 'Tron',         sum: 0, priceIn: 0},
-    {key: 'EOS_USD',  title: 'EOS',          sum: 0, priceIn: 0},
-    {key: 'BTG_USD',  title: 'Bitcoin Gold', sum: 0, priceIn: 0},
-    {key: 'ZRX_USD',  title: '0x',           sum: 0, priceIn: 0},
-    {key: 'XTZ_USD',  title: 'Tezos',        sum: 0, priceIn: 0},
-    {key: 'ATOM_USD', title: 'Cosmos',       sum: 0, priceIn: 0},
+    {key: 'DASH_USD',  title: 'Dash',         sum: 0,       priceIn: 0},
+    {key: 'NEO_USD',   title: 'NEO',          sum: 0,       priceIn: 0},
+    {key: 'OMG_USD',   title: 'OmiseGO',      sum: 0,       priceIn: 0},
+    {key: 'ZEC_USD',   title: 'Zcash',        sum: 0,       priceIn: 0},
+    {key: 'TRX_USD',   title: 'Tron',         sum: 0,       priceIn: 0},
+    {key: 'EOS_USD',   title: 'EOS',          sum: 0,       priceIn: 0},
+    {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0,       priceIn: 0},
+    {key: 'ZRX_USD',   title: '0x',           sum: 0,       priceIn: 0},
+    {key: 'XTZ_USD',   title: 'Tezos',        sum: 0,       priceIn: 0},
+    {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,       priceIn: 0},
 // TOTAL
     {key: 'topHead', title: 'TOTAL'},
 ];
@@ -40,37 +34,35 @@ const depositShort = [
 
 
 const depositLong = [
-// PRIORITY 1
-    {key: 'topHead', title: 'PRIORITY 1'},
-    {key: 'XRP_USD', title: 'Ripple',  sum: 1500}, // +++ should be 1500
-    {key: 'ADA_USD', title: 'Cardano', sum: 33},   // should be 1000
-// PRIORITY 2
-    {key: 'topHead',   title: 'PRIORITY 2'},
-    {key: 'XEM_USD',   title: 'NEM',          sum: 0},
-    {key: 'QTUM_USD',  title: 'Qtum',         sum: 0},
-    {key: 'DOGE_USD',  title: 'Dogecoin',     sum: 0},
-    {key: 'XLM_USD',   title: 'Stellar',      sum: 0},
-    {key: 'BCH_USD',   title: 'Bitcoin Cash', sum: 0},
-    {key: 'LTC_USD',   title: 'Litecoin',     sum: 0},
-    {key: 'BTC_USD',   title: 'Bitcoin',      sum: 0},
-    {key: 'ETH_USD',   title: 'Ethereum',     sum: 0},
-    {key: 'DOT_USD',   title: 'Polkadot',     sum: 0},
-    {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 0},
-    {key: 'WAVES_USD', title: 'Waves',        sum: 0},
-// PRIORITY 3
-    {key: 'topHead',  title: 'PRIORITY 3'},
-    {key: 'DASH_USD', title: 'Dash',    sum: 0},
-    {key: 'NEO_USD',  title: 'NEO',     sum: 0},
-    {key: 'OMG_USD',  title: 'OmiseGO', sum: 0},
-    {key: 'ZEC_USD',  title: 'Zcash',   sum: 0},
-// PRIORITY 4
-    {key: 'topHead',  title: 'PRIORITY 4'},
-    {key: 'TRX_USD',  title: 'Tron',         sum: 0},
-    {key: 'EOS_USD',  title: 'EOS',          sum: 0},
-    {key: 'BTG_USD',  title: 'Bitcoin Gold', sum: 0},
-    {key: 'ZRX_USD',  title: '0x',           sum: 0},
-    {key: 'XTZ_USD',  title: 'Tezos',        sum: 0},
-    {key: 'ATOM_USD', title: 'Cosmos',       sum: 0},
+// PRIORITY 1 - perspective
+    {key: 'topHead',  title: 'PRIORITY 1 - perspective'},
+    {key: 'XRP_USD',  title: 'Ripple',    sum: 1500},  // should be 2000
+    {key: 'ADA_USD',  title: 'Cardano',   sum: 222},   // should be 1000
+    {key: 'EXM_USD',  title: 'EXMO Coin', sum: 2000},  // should be 10000
+    {key: 'XEM_USD',  title: 'NEM',       sum: 1000},  // should be 3000
+    {key: 'XLM_USD',  title: 'Stellar',   sum: 0},     // should be 3000
+    {key: 'DOT_USD',  title: 'Polkadot',  sum: 0},     // should be 100
+    {key: 'TRX_USD',  title: 'Tron',      sum: 0},     // should be 5000
+    {key: 'QTUM_USD', title: 'Qtum',      sum: 0},     // should be 500
+// PRIORITY 2 - consolidation
+    {key: 'topHead', title: 'PRIORITY 2 - consolidation'},
+    {key: 'BTC_USD', title: 'Bitcoin',  sum: 0},       // should be 10
+    {key: 'ETH_USD', title: 'Ethereum', sum: 0},       // should be 100
+    {key: 'LTC_USD', title: 'Litecoin', sum: 0},       // should be 1000
+// PRIORITY 3 - maybe
+    {key: 'topHead',   title: 'PRIORITY 3 - maybe'},
+    {key: 'DASH_USD',  title: 'Dash',         sum: 0},    // should be 10
+    {key: 'DOGE_USD',  title: 'Dogecoin',     sum: 0},    // should be 1000
+    {key: 'BCH_USD',   title: 'Bitcoin Cash', sum: 0},    // should be 10
+    {key: 'WAVES_USD', title: 'Waves',        sum: 0},    // should be 300
+    {key: 'NEO_USD',   title: 'NEO',          sum: 0},    // should be 50
+    {key: 'OMG_USD',   title: 'OmiseGO',      sum: 0},    // should be 200
+    {key: 'ZEC_USD',   title: 'Zcash',        sum: 0},    // should be 50
+    {key: 'EOS_USD',   title: 'EOS',          sum: 0},    // should be 100
+    {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0},    // should be 40
+    {key: 'ZRX_USD',   title: '0x',           sum: 0},    // should be 1000
+    {key: 'XTZ_USD',   title: 'Tezos',        sum: 0},    // should be 200
+    {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0},    // should be 100
 // TOTAL
     {key: 'topHead', title: 'TOTAL'},
 ];
