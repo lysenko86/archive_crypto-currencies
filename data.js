@@ -2,6 +2,7 @@ const depositShort = [
   // PAIRS FOR THE TRADING
     {key: 'topHead',  title: 'PAIRS FOR THE TRADING'},
     {key: 'BCH_USD',   title: 'Bitcoin Cash', sum: 0.22269, priceIn: 672.37},
+    {key: 'EOS_USD',   title: 'EOS',          sum: 95,      priceIn: 4.473},
     {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 4521,    priceIn: 0.0658},
     {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 3989,    priceIn: 0.064},
     {key: 'QTUM_USD',  title: 'Qtum',         sum: 5.55,    priceIn: 12.98},
@@ -16,7 +17,6 @@ const depositShort = [
     {key: 'DASH_USD',  title: 'Dash',         sum: 0,       priceIn: 0},
     {key: 'DOGE_USD',  title: 'Dogecoin',     sum: 0,       priceIn: 0},
     {key: 'DOT_USD',   title: 'Polkadot',     sum: 0,       priceIn: 0},
-    {key: 'EOS_USD',   title: 'EOS',          sum: 0,       priceIn: 0},
     {key: 'ETH_USD',   title: 'Ethereum',     sum: 0,       priceIn: 0},
     {key: 'LTC_USD',   title: 'Litecoin',     sum: 0,       priceIn: 0},
     {key: 'NEO_USD',   title: 'NEO',          sum: 0,       priceIn: 0},
@@ -36,10 +36,10 @@ const depositShort = [
 const depositLong = [
 // PRIORITY 1 - perspective
     {key: 'topHead',  title: 'PRIORITY 1 - perspective'},
-    {key: 'ADA_USD',  title: 'Cardano',   sum: 222},   // should be 1000
     {key: 'EXM_USD',  title: 'EXMO Coin', sum: 2000},  // should be 10000
     {key: 'XEM_USD',  title: 'NEM',       sum: 1000},  // should be 3000
     {key: 'XRP_USD',  title: 'Ripple',    sum: 1500},  // should be 2000
+    {key: 'ADA_USD',  title: 'Cardano',   sum: 0},     // should be 1000
     {key: 'DOT_USD',  title: 'Polkadot',  sum: 0},     // should be 100
     {key: 'QTUM_USD', title: 'Qtum',      sum: 0},     // should be 500
     {key: 'TRX_USD',  title: 'Tron',      sum: 0},     // should be 5000
@@ -56,7 +56,7 @@ const depositLong = [
     {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0},    // should be 40
     {key: 'DASH_USD',  title: 'Dash',         sum: 0},    // should be 10
     {key: 'DOGE_USD',  title: 'Dogecoin',     sum: 0},    // should be 1000
-    {key: 'EOS_USD',   title: 'EOS',          sum: 0},    // should be 100
+    {key: 'EOS_USD',   title: 'EOS',          sum: 10},   // should be 100
     {key: 'NEO_USD',   title: 'NEO',          sum: 0},    // should be 50
     {key: 'OMG_USD',   title: 'OmiseGO',      sum: 0},    // should be 200
     {key: 'WAVES_USD', title: 'Waves',        sum: 0},    // should be 300
@@ -261,6 +261,8 @@ const actions = [
     // in 20000грн >>>>> -74920грн -20000грн = -94920грн
     {date: '09.10.2021', type: 'buy',  pair: 'XRP/USD',   sum: 300.00,   price: 1.076,     sumUsd: 322.8},
     {date: '09.10.2021', type: 'buy',  pair: 'ADA/USD',   sum: 189.75,   price: 2.265,     sumUsd: 429.78},
+    {date: '12.10.2021', type: 'sell', pair: 'ADA/USD',   sum: 222.5,    price: 2.136,     sumUsd: 475.26},
+    {date: '12.10.2021', type: 'buy',  pair: 'EOS/USD',   sum: 105.37,   price: 4.473,     sumUsd: 471.32},
 ]
 
 
