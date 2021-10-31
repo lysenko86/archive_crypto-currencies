@@ -5,9 +5,7 @@ const depositShort = [
     {key: 'EOS_USD',   title: 'EOS',          sum: 70,      priceIn: 4.473},
     {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 4520,    priceIn: 0.0658},
     {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 3980,    priceIn: 0.064},
-    {key: 'QTUM_USD',  title: 'Qtum',         sum: 5.534,   priceIn: 12.98},
     {key: 'XEM_USD',   title: 'NEM',          sum: 1510,    priceIn: 0.212},
-    {key: 'XEM_USD',   title: 'NEM',          sum: 2200,    priceIn: 0.17},
     {key: 'XRP_USD',   title: 'Ripple',       sum: 454,     priceIn: 1.531},
     {key: 'ADA_USD',   title: 'Cardano',      sum: 0,       priceIn: 0},
     {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,       priceIn: 0},
@@ -20,6 +18,7 @@ const depositShort = [
     {key: 'LTC_USD',   title: 'Litecoin',     sum: 0,       priceIn: 0},
     {key: 'NEO_USD',   title: 'NEO',          sum: 0,       priceIn: 0},
     {key: 'OMG_USD',   title: 'OmiseGO',      sum: 0,       priceIn: 0},
+    {key: 'QTUM_USD',  title: 'Qtum',         sum: 0,       priceIn: 0.0},
     {key: 'TRX_USD',   title: 'Tron',         sum: 0,       priceIn: 0},
     {key: 'WAVES_USD', title: 'Waves',        sum: 0,       priceIn: 0},
     {key: 'XLM_USD',   title: 'Stellar',      sum: 0,       priceIn: 0},
@@ -257,17 +256,24 @@ const actions = [
     {date: '05.10.2021', type: 'add',  pair: '',          sum: 376.00,    price: 1,        sumUsd: 376.00},
     // in 10000грн >>>>> -64920грн -10000грн = -74920грн
     {date: '05.10.2021', type: 'buy',  pair: 'EXM/USD',   sum: 5989.00,   price: 0.064,   sumUsd: 376.00},
-    {date: '09.10.2021', type: 'add',  pair: '',          sum: 756.00,    price: 1,        sumUsd: 756.00},
+    {date: '09.10.2021', type: 'add',  pair: '',          sum: 756.00,    price: 1,       sumUsd: 756.00},
     // in 20000грн >>>>> -74920грн -20000грн = -94920грн
-    {date: '09.10.2021', type: 'buy',  pair: 'XRP/USD',   sum: 300.00,   price: 1.076,     sumUsd: 322.8},
-    {date: '09.10.2021', type: 'buy',  pair: 'ADA/USD',   sum: 189.75,   price: 2.265,     sumUsd: 429.78},
-    {date: '12.10.2021', type: 'sell', pair: 'ADA/USD',   sum: 222.5,    price: 2.136,     sumUsd: 475.26},
-    {date: '12.10.2021', type: 'buy',  pair: 'EOS/USD',   sum: 105.37,   price: 4.473,     sumUsd: 471.32},
-    {date: '22.10.2021', type: 'sell', pair: 'XRP/USD',   sum: 300.00,   price: 1.1099,    sumUsd: 332.97},
-    {date: '22.10.2021', type: 'sell', pair: 'EOS/USD',   sum: 35.00,    price: 4.7614,    sumUsd: 166.65},
-    {date: '22.10.2021', type: 'sell', pair: 'XEM/USD',   sum: 953.00,   price: 0.17681,   sumUsd: 168.50},
-    {date: '22.10.2021', type: 'out',  pair: '',          sum: 668.91,    price: 1,        sumUsd: 668.91},
-    // out 17067грн >>>>> -94920грн +17067грн = -77853грн
+    {date: '09.10.2021', type: 'buy',  pair: 'XRP/USD',   sum: 300.00,    price: 1.076,   sumUsd: 322.8},
+    {date: '09.10.2021', type: 'buy',  pair: 'ADA/USD',   sum: 189.75,    price: 2.265,   sumUsd: 429.78},
+    {date: '12.10.2021', type: 'sell', pair: 'ADA/USD',   sum: 222.5,     price: 2.136,   sumUsd: 475.26},
+    {date: '12.10.2021', type: 'buy',  pair: 'EOS/USD',   sum: 105.37,    price: 4.473,   sumUsd: 471.32},
+    {date: '22.10.2021', type: 'sell', pair: 'XRP/USD',   sum: 300.00,    price: 1.1099,  sumUsd: 332.97},
+    {date: '22.10.2021', type: 'sell', pair: 'EOS/USD',   sum: 35.00,     price: 4.7614,  sumUsd: 166.65},
+    {date: '22.10.2021', type: 'sell', pair: 'XEM/USD',   sum: 953.00,    price: 0.17681, sumUsd: 168.50},
+    {date: '22.10.2021', type: 'out',  pair: '',          sum: 668.91,    price: 1,       sumUsd: 668.91},
+    // out 17065грн >>>>> -94920грн +17065грн = -77855грн
+    {date: '31.10.2021', type: 'sell', pair: 'XEM/USD',   sum: 2200.00,   price: 0.18015, sumUsd: 396.34},
+    {date: '31.10.2021', type: 'out',  pair: '',          sum: 395.13,    price: 1,       sumUsd: 395.13},
+    // out 5655грн >>>>> -77855грн +5655грн = -72200грн
+    // out 4300грн >>>>> -72200грн +4300грн = -67900грн
+    {date: '31.10.2021', type: 'sell', pair: 'QTUM/USD',  sum: 5.5339,    price: 14.763,  sumUsd: 81.7},
+    {date: '31.10.2021', type: 'out',  pair: '',          sum: 81.46,     price: 1,       sumUsd: 81.46},
+    // out 1101грн >>>>> -67900грн +1101грн = -66799грн
 ]
 
 
