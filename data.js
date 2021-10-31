@@ -274,6 +274,7 @@ const actions = [
     {date: '31.10.2021', type: 'sell', pair: 'QTUM/USD',  sum: 5.5339,    price: 14.763,  sumUsd: 81.7},
     {date: '31.10.2021', type: 'out',  pair: '',          sum: 81.46,     price: 1,       sumUsd: 81.46},
     // out 1101грн >>>>> -67900грн +1101грн = -66799грн
+    // out 1000грн >>>>> -66799грн +1101грн = -65799грн
 ]
 
 
