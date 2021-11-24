@@ -7,7 +7,8 @@ const depositShort = [
     {key: 'EXM_USD',   title: 'EXMO Coin',    sum: 3980,    priceIn: 0.064},
     {key: 'XEM_USD',   title: 'NEM',          sum: 1510,    priceIn: 0.212},
     {key: 'XRP_USD',   title: 'Ripple',       sum: 454,     priceIn: 1.531},
-    {key: 'ADA_USD',   title: 'Cardano',      sum: 0,       priceIn: 0},
+    {key: 'XRP_USD',   title: 'Ripple',       sum: 207.557, priceIn: 1.07129},
+    {key: 'ADA_USD',   title: 'Cardano',      sum: 186.949, priceIn: 1.742},
     {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,       priceIn: 0},
     {key: 'BTC_USD',   title: 'Bitcoin',      sum: 0,       priceIn: 0},
     {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0,       priceIn: 0},
@@ -21,7 +22,7 @@ const depositShort = [
     {key: 'OMG_USD',   title: 'OmiseGO',      sum: 0,       priceIn: 0},
     {key: 'QTUM_USD',  title: 'Qtum',         sum: 0,       priceIn: 0.0},
     {key: 'TRX_USD',   title: 'Tron',         sum: 0,       priceIn: 0},
-    {key: 'WAVES_USD', title: 'Waves',        sum: 0,       priceIn: 0},
+    {key: 'WAVES_USD', title: 'Waves',        sum: 14.94,   priceIn: 21.1155},
     {key: 'XLM_USD',   title: 'Stellar',      sum: 0,       priceIn: 0},
     {key: 'XTZ_USD',   title: 'Tezos',        sum: 0,       priceIn: 0},
     {key: 'ZEC_USD',   title: 'Zcash',        sum: 0,       priceIn: 0},
@@ -36,7 +37,7 @@ const depositLong = [
 // PAIRS FOR THE INVESTING
 // PRIORITY 1
     {key: 'topHead',  title: 'PRIORITY 1'},
-    {key: 'ADA_USD',  title: 'Cardano',   sum: 0,    priceIn: 0.0},
+    {key: 'ADA_USD',  title: 'Cardano',   sum: 100,  priceIn: 1.742},
     {key: 'BTC_USD',  title: 'Bitcoin',   sum: 0,    priceIn: 0.0},
     {key: 'DOT_USD',  title: 'Polkadot',  sum: 0,    priceIn: 0.0},
     {key: 'ETH_USD',  title: 'Ethereum',  sum: 0,    priceIn: 0.0},
@@ -60,7 +61,7 @@ const depositLong = [
     {key: 'OMG_USD',   title: 'OmiseGO',      sum: 0, priceIn: 0.0},
     {key: 'QTUM_USD',  title: 'Qtum',         sum: 0, priceIn: 0.0},
     {key: 'TRX_USD',   title: 'Tron',         sum: 0, priceIn: 0.0},
-    {key: 'WAVES_USD', title: 'Waves',        sum: 0, priceIn: 0.0},
+    {key: 'WAVES_USD', title: 'Waves',        sum: 5, priceIn: 21.1155},
     {key: 'XEM_USD',   title: 'NEM',          sum: 0, priceIn: 0.0},
     {key: 'XTZ_USD',   title: 'Tezos',        sum: 0, priceIn: 0.0},
     {key: 'ZRX_USD',   title: '0x',           sum: 0, priceIn: 0.0},
@@ -277,6 +278,13 @@ const actions = [
     {date: '31.10.2021', type: 'out',  pair: '',          sum: 81.46,     price: 1,       sumUsd: 81.46},
     // out 1101грн >>>>> -67900грн +1101грн = -66799грн
     // out 1000грн >>>>> -66799грн +1101грн = -65799грн
+    {date: '24.11.2021', type: 'add',  pair: '',          sum: 763.30,    price: 1,       sumUsd: 763.30},
+    // in 20000грн >>>>> -65799грн -20000грн = -85799грн
+    {date: '24.10.2021', type: 'buy',  pair: 'ADA/USD',   sum: 286.949,   price: 1.742,   sumUsd: 499.86},
+    {date: '24.11.2021', type: 'add',  pair: '',          sum: 381.35,    price: 1,       sumUsd: 381.35},
+    // in 10000грн >>>>> -85799грн -10000грн = -95799грн
+    {date: '24.10.2021', type: 'buy',  pair: 'WAVES/USD', sum: 19.94,     price: 21.1155, sumUsd: 421.04},
+    {date: '24.10.2021', type: 'buy',  pair: 'XRP/USD',   sum: 207.557,   price: 1.07129, sumUsd: 222.35},
 ]
 
 
