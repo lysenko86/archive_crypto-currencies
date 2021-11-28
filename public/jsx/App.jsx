@@ -1,15 +1,13 @@
 import React from "react";
 
-import CurrenciesLong from "./CurrenciesLong.jsx";
-import CurrenciesShort from "./CurrenciesShort.jsx";
+import Currencies from "./Currencies.jsx";
 import Actions from "./Actions.jsx";
 
 class App extends React.Component {
   render() {
     return (
       <main>
-        <CurrenciesShort />
-        <CurrenciesLong />
+        <Currencies />
         <Actions />
       </main>
     );

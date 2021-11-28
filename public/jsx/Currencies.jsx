@@ -1,8 +1,8 @@
 import React from "react";
 
-import { depositShort } from "../../data.js";
+import { deposit } from "../../data.js";
 
-class CurrenciesShort extends React.Component {
+class Currencies extends React.Component {
   constructor(props) {
     super(props);
     this.roundPrice = this.roundPrice.bind(this);
@@ -47,7 +47,7 @@ class CurrenciesShort extends React.Component {
 
     let totalSumIn = 0;
     let totalSumNow = 0;
-    depositShort.map((currency) => {
+    deposit.map((currency) => {
       if (currency.key === "topHead") {
         return false;
       }
@@ -68,7 +68,7 @@ class CurrenciesShort extends React.Component {
         <thead>
           <tr>
             <th className="col-name" colSpan="6">
-              Short Deposit
+              Deposit
             </th>
           </tr>
           <tr>
@@ -81,7 +81,7 @@ class CurrenciesShort extends React.Component {
           </tr>
         </thead>
         <tbody>
-          {depositShort.map((currency, index) => {
+          {deposit.map((currency, index) => {
             if (currency.key === "topHead") {
               return (
                 <tr key={index}>
@@ -156,4 +156,4 @@ class CurrenciesShort extends React.Component {
   }
 }
 
-export default CurrenciesShort;
+export default Currencies;
