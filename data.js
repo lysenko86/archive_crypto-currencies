@@ -1,38 +1,34 @@
 const deposit = [
 // PRIORITY 1
     {key: 'topHead', title: 'PRIORITY 1'},
-    {key: 'ADA_USD', title: 'Cardano',   sum: 186.949, priceIn: 1.742},
-    {key: 'ADA_USD', title: 'Cardano',   sum: 100,     priceIn: 1.742},
+    {key: 'ADA_USD', title: 'Cardano',   sum: 286.949, priceIn: 1.742},
     {key: 'BTC_USD', title: 'Bitcoin',   sum: 0,       priceIn: 0},
     {key: 'DOT_USD', title: 'Polkadot',  sum: 0,       priceIn: 0},
     {key: 'ETH_USD', title: 'Ethereum',  sum: 0,       priceIn: 0},
-    {key: 'EXM_USD', title: 'EXMO Coin', sum: 4520,    priceIn: 0.0658},
+    {key: 'EXM_USD', title: 'EXMO Coin', sum: 6520,    priceIn: 0.0658},
     {key: 'EXM_USD', title: 'EXMO Coin', sum: 3980,    priceIn: 0.064},
-    {key: 'EXM_USD', title: 'EXMO Coin', sum: 2000,    priceIn: 0.0658},
     {key: 'XLM_USD', title: 'Stellar',   sum: 0,       priceIn: 0},
-    {key: 'XRP_USD', title: 'Ripple',    sum: 454,     priceIn: 1.531},
-    {key: 'XRP_USD', title: 'Ripple',    sum: 207.557, priceIn: 1.07129},
-    {key: 'XRP_USD', title: 'Ripple',    sum: 1500,    priceIn: 1.531},
+    {key: 'XRP_USD', title: 'Ripple',    sum: 1661,    priceIn: 1.531},
 
 // PRIORITY 2
     {key: 'topHead',  title: 'PRIORITY 2'},
     {key: 'BCH_USD',  title: 'Bitcoin Cash', sum: 0.22269, priceIn: 672.37},
-    {key: 'DASH_USD', title: 'Dash',         sum: 0,       priceIn: 0},
+    {key: 'BCH_USD',  title: 'Bitcoin Cash', sum: 0.8606,  priceIn: 584.47},
+    {key: 'DASH_USD', title: 'Dash',         sum: 2.3795,  priceIn: 183.46},
     {key: 'LTC_USD',  title: 'Litecoin',     sum: 0,       priceIn: 0},
     {key: 'NEO_USD',  title: 'NEO',          sum: 0,       priceIn: 0},
     {key: 'ZEC_USD',  title: 'Zcash',        sum: 0,       priceIn: 0},
 
 // PRIORITY 3
     {key: 'topHead',   title: 'PRIORITY 3'},
-    {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,     priceIn: 0},
-    {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0,     priceIn: 0},
-    {key: 'QTUM_USD',  title: 'Qtum',         sum: 0,     priceIn: 0.0},
-    {key: 'TRX_USD',   title: 'Tron',         sum: 0,     priceIn: 0},
-    {key: 'WAVES_USD', title: 'Waves',        sum: 14.94, priceIn: 21.1155},
-    {key: 'WAVES_USD', title: 'Waves',        sum: 5,     priceIn: 21.1155},
-    {key: 'XEM_USD',   title: 'NEM',          sum: 1510,  priceIn: 0.212},
-    {key: 'XTZ_USD',   title: 'Tezos',        sum: 0,     priceIn: 0},
-    {key: 'ZRX_USD',   title: '0x',           sum: 0,     priceIn: 0},
+    {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,    priceIn: 0},
+    {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0,    priceIn: 0},
+    {key: 'QTUM_USD',  title: 'Qtum',         sum: 0,    priceIn: 0.0},
+    {key: 'TRX_USD',   title: 'Tron',         sum: 0,    priceIn: 0},
+    {key: 'WAVES_USD', title: 'Waves',        sum: 0,    priceIn: 0},
+    {key: 'XEM_USD',   title: 'NEM',          sum: 1510, priceIn: 0.212},
+    {key: 'XTZ_USD',   title: 'Tezos',        sum: 0,    priceIn: 0},
+    {key: 'ZRX_USD',   title: '0x',           sum: 0,    priceIn: 0},
 
 // PRIORITY 4
     {key: 'topHead',  title: 'PRIORITY 4'},
@@ -264,6 +260,10 @@ const actions = [
     // in 10000грн >>>>> -85799грн -10000грн = -95799грн
     {date: '24.10.2021', type: 'buy',  pair: 'WAVES/USD', sum: 19.94,     price: 21.1155, sumUsd: 421.04},
     {date: '24.10.2021', type: 'buy',  pair: 'XRP/USD',   sum: 207.557,   price: 1.07129, sumUsd: 222.35},
+    {date: '02.12.2021', type: 'sell', pair: 'WAVES/USD', sum: 19.94,     price: 22.08,   sumUsd: 440.27},
+    {date: '02.12.2021', type: 'buy',  pair: 'DASH/USD',  sum: 2.3795,    price: 183.46,  sumUsd: 436.54},
+    {date: '02.12.2021', type: 'sell', pair: 'XRP/USD',   sum: 500,       price: 1,       sumUsd: 500.00},
+    {date: '02.12.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.8606,    price: 584.47,  sumUsd: 503.00},
 ]
 
 
