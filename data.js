@@ -5,18 +5,16 @@ const deposit = [
     {key: 'BTC_USD', title: 'Bitcoin',   sum: 0,       priceIn: 0},
     {key: 'DOT_USD', title: 'Polkadot',  sum: 0,       priceIn: 0},
     {key: 'ETH_USD', title: 'Ethereum',  sum: 0,       priceIn: 0},
-    {key: 'EXM_USD', title: 'EXMO Coin', sum: 6520,    priceIn: 0.0658},
-    {key: 'EXM_USD', title: 'EXMO Coin', sum: 3980,    priceIn: 0.064},
+    {key: 'EXM_USD', title: 'EXMO Coin', sum: 6590,    priceIn: 0.0658},
     {key: 'XLM_USD', title: 'Stellar',   sum: 0,       priceIn: 0},
     {key: 'XRP_USD', title: 'Ripple',    sum: 1661,    priceIn: 1.531},
 
 // PRIORITY 2
     {key: 'topHead',  title: 'PRIORITY 2'},
-    {key: 'BCH_USD',  title: 'Bitcoin Cash', sum: 0.22269, priceIn: 672.37},
     {key: 'BCH_USD',  title: 'Bitcoin Cash', sum: 0.8606,  priceIn: 584.47},
     {key: 'DASH_USD', title: 'Dash',         sum: 2.3795,  priceIn: 183.46},
     {key: 'LTC_USD',  title: 'Litecoin',     sum: 0,       priceIn: 0},
-    {key: 'NEO_USD',  title: 'NEO',          sum: 0,       priceIn: 0},
+    {key: 'NEO_USD',  title: 'NEO',          sum: 5.8968,  priceIn: 43.0},
     {key: 'ZEC_USD',  title: 'Zcash',        sum: 0,       priceIn: 0},
 
 // PRIORITY 3
@@ -36,6 +34,7 @@ const deposit = [
     {key: 'SHIB_USD', title: 'SHIBA INU', sum: 0,  priceIn: 0},
     {key: 'EOS_USD',  title: 'EOS',       sum: 70, priceIn: 4.473},
     {key: 'OMG_USD',  title: 'OmiseGO',   sum: 0,  priceIn: 0},
+    {key: 'GMT_USDT', title: 'GMT Token', sum: 260.4598,  priceIn: 0.59},
 
 // TOTAL
     {key: 'topHead', title: 'TOTAL'},
@@ -264,6 +263,10 @@ const actions = [
     {date: '02.12.2021', type: 'buy',  pair: 'DASH/USD',  sum: 2.3795,    price: 183.46,  sumUsd: 436.54},
     {date: '02.12.2021', type: 'sell', pair: 'XRP/USD',   sum: 500,       price: 1,       sumUsd: 500.00},
     {date: '02.12.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.8606,    price: 584.47,  sumUsd: 503.00},
+    {date: '08.12.2021', type: 'sell', pair: 'EXM/USD',   sum: 3900,      price: 0.04805, sumUsd: 187.39},
+    {date: '08.12.2021', type: 'buy',  pair: 'NEO/USD',   sum: 5.9146,    price: 43.0,    sumUsd: 187.29}, // реально по 31.6661
+    {date: '08.12.2021', type: 'sell', pair: 'BCH/USD',   sum: 0.222,     price: 497,     sumUsd: 110.33},
+    {date: '08.12.2021', type: 'buy',  pair: 'GMT/USDT',  sum: 260.4598,  price: 0.59,    sumUsd: 187.29}, // реально по 0.42359
 ]
 
 
