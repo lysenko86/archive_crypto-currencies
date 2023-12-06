@@ -3,38 +3,36 @@ const deposit = [
     {key: 'topHead', title: 'PRIORITY 1'},
     {key: 'ADA_USD', title: 'Cardano',   sum: 201.949,  priceIn: 1.742},
     {key: 'BTC_USD', title: 'Bitcoin',   sum: 0.009186, priceIn: 91000},
-    {key: 'DOT_USD', title: 'Polkadot',  sum: 0,        priceIn: 0},
+    {key: 'DOT_USD', title: 'Polkadot',  sum: 9.14,     priceIn: 5.4},
     {key: 'ETH_USD', title: 'Ethereum',  sum: 0,        priceIn: 0},
     {key: 'EXM_USD', title: 'EXMO Coin', sum: 6590,     priceIn: 0.0658},
     {key: 'XLM_USD', title: 'Stellar',   sum: 0,        priceIn: 0},
     {key: 'XRP_USD', title: 'Ripple',    sum: 911,      priceIn: 1.531},
+    {key: 'SOL_USD', title: 'Solana',    sum: 1.35,     priceIn: 25.077},
 
 // PRIORITY 2
     {key: 'topHead',  title: 'PRIORITY 2'},
     {key: 'BCH_USD',  title: 'Bitcoin Cash', sum: 0.8606,  priceIn: 584.47},
-    {key: 'DASH_USD', title: 'Dash',         sum: 2.3795,  priceIn: 183.46},
     {key: 'LTC_USD',  title: 'Litecoin',     sum: 1.78311, priceIn: 295},
     {key: 'NEO_USD',  title: 'NEO',          sum: 5.8968,  priceIn: 43},
     {key: 'ZEC_USD',  title: 'Zcash',        sum: 0,       priceIn: 0},
 
 // PRIORITY 3
     {key: 'topHead',   title: 'PRIORITY 3'},
-    {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,    priceIn: 0},
-    {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0,    priceIn: 0},
-    {key: 'QTUM_USD',  title: 'Qtum',         sum: 0,    priceIn: 0.0},
-    {key: 'TRX_USD',   title: 'Tron',         sum: 0,    priceIn: 0},
-    {key: 'WAVES_USD', title: 'Waves',        sum: 0,    priceIn: 0},
-    {key: 'XEM_USD',   title: 'NEM',          sum: 1510, priceIn: 0.212},
-    {key: 'XTZ_USD',   title: 'Tezos',        sum: 0,    priceIn: 0},
-    {key: 'ZRX_USD',   title: '0x',           sum: 0,    priceIn: 0},
+    {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,     priceIn: 0},
+    {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0,     priceIn: 0},
+    {key: 'QTUM_USD',  title: 'Qtum',         sum: 0,     priceIn: 0.0},
+    {key: 'TRX_USD',   title: 'Tron',         sum: 398.8, priceIn: 0.0798},
+    {key: 'WAVES_USD', title: 'Waves',        sum: 0,     priceIn: 0},
+    {key: 'XTZ_USD',   title: 'Tezos',        sum: 0,     priceIn: 0},
+    {key: 'ZRX_USD',   title: '0x',           sum: 0,     priceIn: 0},
 
 // PRIORITY 4
     {key: 'topHead',  title: 'PRIORITY 4'},
-    {key: 'DOGE_USD', title: 'Dogecoin',  sum: 0,  priceIn: 0},
-    {key: 'SHIB_USD', title: 'SHIBA INU', sum: 0,  priceIn: 0},
-    {key: 'EOS_USD',  title: 'EOS',       sum: 70, priceIn: 4.473},
-    {key: 'OMG_USD',  title: 'OmiseGO',   sum: 0,  priceIn: 0},
-    {key: 'GMT_USDT', title: 'GMT Token', sum: 260.4598,  priceIn: 0.59},
+    {key: 'DOGE_USD', title: 'Dogecoin',  sum: 498.5,    priceIn: 0.06708},
+    {key: 'SHIB_USD', title: 'SHIBA INU', sum: 997,      priceIn: 0.00000809},
+    {key: 'EOS_USD',  title: 'EOS',       sum: 70,       priceIn: 4.473},
+    {key: 'OMG_USD',  title: 'OmiseGO',   sum: 0,        priceIn: 0},
 
 // TOTAL
     {key: 'topHead', title: 'TOTAL'},
@@ -48,27 +46,27 @@ const deposit = [
 // sell - продав валюту
 const actions = [
 // 2018
-    {date: '17.01.2018', type: 'add',  pair: '',          sum: 33.60,     price: 1,        sumUsd: 33.60},    // in 1000грн
-    {date: '22.01.2018', type: 'add',  pair: '',          sum: 15.52,     price: 1,        sumUsd: 15.52},    // in 462грн
-    {date: '23.01.2018', type: 'add',  pair: '',          sum: 40.32,     price: 1,        sumUsd: 40.32},    // in 1200грн
-    {date: '05.02.2018', type: 'add',  pair: '',          sum: 45.56,     price: 1,        sumUsd: 45.56},    // in 1047грн
-    {date: '13.02.2018', type: 'add',  pair: '',          sum: 33.60,     price: 1,        sumUsd: 33.60},    // in 1000грн
-    {date: '16.02.2018', type: 'add',  pair: '',          sum: 21.00,     price: 1,        sumUsd: 21.00},    // in 625грн
-    {date: '22.02.2018', type: 'add',  pair: '',          sum: 37.58,     price: 1,        sumUsd: 37.58},    // in 1015грн
-    {date: '23.02.2018', type: 'add',  pair: '',          sum: 42.02,     price: 1,        sumUsd: 42.02},    // in 1150грн
-    {date: '13.08.2018', type: 'add',  pair: '',          sum: 35.02,     price: 1,        sumUsd: 35.02},    // in 1000грн
-    {date: '04.09.2018', type: 'add',  pair: '',          sum: 106.11,    price: 1,        sumUsd: 106.11},   // in 3000грн
-    {date: '08.09.2018', type: 'add',  pair: '',          sum: 62.34,     price: 1,        sumUsd: 62.34},    // in 1800грн
-    {date: '09.09.2018', type: 'add',  pair: '',          sum: 46.06,     price: 1,        sumUsd: 46.06},    // in 1330грн
-    {date: '12.09.2018', type: 'add',  pair: '',          sum: 42.24,     price: 1,        sumUsd: 42.24},    // in 1200грн
-    {date: '24.09.2018', type: 'add',  pair: '',          sum: 35.37,     price: 1,        sumUsd: 35.37},    // in 1000грн
-    {date: '25.09.2018', type: 'add',  pair: '',          sum: 21.22,     price: 1,        sumUsd: 21.22},    // in 600грн
-    {date: '11.10.2018', type: 'add',  pair: '',          sum: 107.27,    price: 1,        sumUsd: 107.27},   // in 3000грн
+    {date: '17.01.2018', type: 'add',  pair: '',          sum: 33.60,     price: 1,        sumUsd: 33.60},
+    {date: '22.01.2018', type: 'add',  pair: '',          sum: 15.52,     price: 1,        sumUsd: 15.52},
+    {date: '23.01.2018', type: 'add',  pair: '',          sum: 40.32,     price: 1,        sumUsd: 40.32},
+    {date: '05.02.2018', type: 'add',  pair: '',          sum: 45.56,     price: 1,        sumUsd: 45.56},
+    {date: '13.02.2018', type: 'add',  pair: '',          sum: 33.60,     price: 1,        sumUsd: 33.60},
+    {date: '16.02.2018', type: 'add',  pair: '',          sum: 21.00,     price: 1,        sumUsd: 21.00},
+    {date: '22.02.2018', type: 'add',  pair: '',          sum: 37.58,     price: 1,        sumUsd: 37.58},
+    {date: '23.02.2018', type: 'add',  pair: '',          sum: 42.02,     price: 1,        sumUsd: 42.02},
+    {date: '13.08.2018', type: 'add',  pair: '',          sum: 35.02,     price: 1,        sumUsd: 35.02},
+    {date: '04.09.2018', type: 'add',  pair: '',          sum: 106.11,    price: 1,        sumUsd: 106.11},
+    {date: '08.09.2018', type: 'add',  pair: '',          sum: 62.34,     price: 1,        sumUsd: 62.34},
+    {date: '09.09.2018', type: 'add',  pair: '',          sum: 46.06,     price: 1,        sumUsd: 46.06},
+    {date: '12.09.2018', type: 'add',  pair: '',          sum: 42.24,     price: 1,        sumUsd: 42.24},
+    {date: '24.09.2018', type: 'add',  pair: '',          sum: 35.37,     price: 1,        sumUsd: 35.37},
+    {date: '25.09.2018', type: 'add',  pair: '',          sum: 21.22,     price: 1,        sumUsd: 21.22},
+    {date: '11.10.2018', type: 'add',  pair: '',          sum: 107.27,    price: 1,        sumUsd: 107.27},
     {date: '11.10.2018', type: 'buy',  pair: 'TRX/USD',   sum: 1400,      price: 0.0228,   sumUsd: 31.92},
     {date: '11.10.2018', type: 'buy',  pair: 'ADA/USD',   sum: 400,       price: 0.077,    sumUsd: 30.8},
     {date: '11.10.2018', type: 'buy',  pair: 'OMG/USD',   sum: 4.1346154, price: 3.12,     sumUsd: 12.90},
     {date: '11.10.2018', type: 'buy',  pair: 'XLM/USD',   sum: 57.020589, price: 0.22,     sumUsd: 12.54},
-    {date: '15.10.2018', type: 'add',  pair: '',          sum: 107.34,    price: 1,        sumUsd: 107.34},   // in 3000грн
+    {date: '15.10.2018', type: 'add',  pair: '',          sum: 107.34,    price: 1,        sumUsd: 107.34},
     {date: '15.10.2018', type: 'buy',  pair: 'GAS/USD',   sum: 6,         price: 5.37,     sumUsd: 32.22},
     {date: '19.10.2018', type: 'sell', pair: 'XLM/USD',   sum: 56.906548, price: 0.2415,   sumUsd: 13.74},
     {date: '19.10.2018', type: 'sell', pair: 'TRX/USD',   sum: 1397.2,    price: 0.0246,   sumUsd: 34.37},
@@ -209,11 +207,9 @@ const actions = [
     {date: '13.08.2021', type: 'sell', pair: 'EOS/USD',   sum: 200,       price: 4.98,     sumUsd: 998.00},
     {date: '13.08.2021', type: 'buy',  pair: 'XRP/USD',   sum: 995.58,    price: 1.04,     sumUsd: 959.29},
     {date: '17.08.2021', type: 'add',  pair: '',          sum: 180.00,    price: 1,        sumUsd: 180.00},
-    // in 5000грн >>>>> -23429грн -5000грн = -28429грн
     {date: '17.08.2021', type: 'buy',  pair: 'QTUM/USD',  sum: 5.55,      price: 12.98,    sumUsd: 72.07},
     {date: '17.08.2021', type: 'buy',  pair: 'XEM/USD',   sum: 510.00,    price: 0.212,    sumUsd: 108.00},
     {date: '08.09.2021', type: 'add',  pair: '',          sum: 504.00,    price: 1,        sumUsd: 504.00},
-    // in 14000грн >>>>> -28429грн -14000грн = -42429грн
     {date: '08.09.2021', type: 'buy',  pair: 'DOGE/USD',  sum: 747.75,    price: 0.2614,   sumUsd: 195.85},
     {date: '08.09.2021', type: 'buy',  pair: 'XLM/USD',   sum: 299.1,     price: 0.3363,   sumUsd: 100.89},
     {date: '08.09.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.22269,   price: 672.37,   sumUsd: 150.17},
@@ -222,19 +218,14 @@ const actions = [
     {date: '29.09.2021', type: 'sell', pair: 'LTC/USD',   sum: 0.298011,  price: 152,      sumUsd: 45.29},
     {date: '29.09.2021', type: 'sell', pair: 'DOGE/USD',  sum: 747.75,    price: 0.206,    sumUsd: 154.03},
     {date: '29.09.2021', type: 'out',  pair: '',          sum: 282.84,    price: 1,        sumUsd: 282.84},
-    // out 5509грн >>>>> -42429грн +5509грн = -36920грн
     {date: '29.09.2021', type: 'buy',  pair: 'ADA/USD',   sum: 33.42147,  price: 2.1045,   sumUsd: 70.34},
     {date: '03.10.2021', type: 'add',  pair: '',          sum: 300.00,    price: 1,        sumUsd: 300.00},
-    // in 8000грн >>>>> -36920грн -8000грн = -44920грн
     {date: '03.10.2021', type: 'buy',  pair: 'EXM/USD',   sum: 4521.00,   price: 0.0658,   sumUsd: 297.48},
     {date: '05.10.2021', type: 'add',  pair: '',          sum: 706.00,    price: 1,        sumUsd: 706.00},
-    // in 20000грн >>>>> -44920грн -20000грн = -64920грн
     {date: '05.10.2021', type: 'buy',  pair: 'XEM/USD',   sum: 4153.00,   price: 0.17,     sumUsd: 706.00},
     {date: '05.10.2021', type: 'add',  pair: '',          sum: 376.00,    price: 1,        sumUsd: 376.00},
-    // in 10000грн >>>>> -64920грн -10000грн = -74920грн
     {date: '05.10.2021', type: 'buy',  pair: 'EXM/USD',   sum: 5989.00,   price: 0.064,   sumUsd: 376.00},
     {date: '09.10.2021', type: 'add',  pair: '',          sum: 756.00,    price: 1,       sumUsd: 756.00},
-    // in 20000грн >>>>> -74920грн -20000грн = -94920грн
     {date: '09.10.2021', type: 'buy',  pair: 'XRP/USD',   sum: 300.00,    price: 1.076,   sumUsd: 322.8},
     {date: '09.10.2021', type: 'buy',  pair: 'ADA/USD',   sum: 189.75,    price: 2.265,   sumUsd: 429.78},
     {date: '12.10.2021', type: 'sell', pair: 'ADA/USD',   sum: 222.5,     price: 2.136,   sumUsd: 475.26},
@@ -243,20 +234,13 @@ const actions = [
     {date: '22.10.2021', type: 'sell', pair: 'EOS/USD',   sum: 35.00,     price: 4.7614,  sumUsd: 166.65},
     {date: '22.10.2021', type: 'sell', pair: 'XEM/USD',   sum: 953.00,    price: 0.17681, sumUsd: 168.50},
     {date: '22.10.2021', type: 'out',  pair: '',          sum: 668.91,    price: 1,       sumUsd: 668.91},
-    // out 17065грн >>>>> -94920грн +17065грн = -77855грн
     {date: '31.10.2021', type: 'sell', pair: 'XEM/USD',   sum: 2200.00,   price: 0.18015, sumUsd: 396.34},
     {date: '31.10.2021', type: 'out',  pair: '',          sum: 395.13,    price: 1,       sumUsd: 395.13},
-    // out 5655грн >>>>> -77855грн +5655грн = -72200грн
-    // out 4300грн >>>>> -72200грн +4300грн = -67900грн
     {date: '31.10.2021', type: 'sell', pair: 'QTUM/USD',  sum: 5.5339,    price: 14.763,  sumUsd: 81.7},
     {date: '31.10.2021', type: 'out',  pair: '',          sum: 81.46,     price: 1,       sumUsd: 81.46},
-    // out 1101грн >>>>> -67900грн +1101грн = -66799грн
-    // out 1000грн >>>>> -66799грн +1101грн = -65799грн
     {date: '24.11.2021', type: 'add',  pair: '',          sum: 763.30,    price: 1,       sumUsd: 763.30},
-    // in 20000грн >>>>> -65799грн -20000грн = -85799грн
     {date: '24.10.2021', type: 'buy',  pair: 'ADA/USD',   sum: 286.949,   price: 1.742,   sumUsd: 499.86},
     {date: '24.11.2021', type: 'add',  pair: '',          sum: 381.35,    price: 1,       sumUsd: 381.35},
-    // in 10000грн >>>>> -85799грн -10000грн = -95799грн
     {date: '24.10.2021', type: 'buy',  pair: 'WAVES/USD', sum: 19.94,     price: 21.1155, sumUsd: 421.04},
     {date: '24.10.2021', type: 'buy',  pair: 'XRP/USD',   sum: 207.557,   price: 1.07129, sumUsd: 222.35},
     {date: '02.12.2021', type: 'sell', pair: 'WAVES/USD', sum: 19.94,     price: 22.08,   sumUsd: 440.27},
@@ -264,14 +248,15 @@ const actions = [
     {date: '02.12.2021', type: 'sell', pair: 'XRP/USD',   sum: 500,       price: 1,       sumUsd: 500.00},
     {date: '02.12.2021', type: 'buy',  pair: 'BCH/USD',   sum: 0.8606,    price: 584.47,  sumUsd: 503.00},
     {date: '08.12.2021', type: 'sell', pair: 'EXM/USD',   sum: 3900,      price: 0.04805, sumUsd: 187.39},
-    {date: '08.12.2021', type: 'buy',  pair: 'NEO/USD',   sum: 5.9146,    price: 43,      sumUsd: 187.29}, // реально по 31.6661
+    {date: '08.12.2021', type: 'buy',  pair: 'NEO/USD',   sum: 5.9146,    price: 31.6661, sumUsd: 187.29},
     {date: '08.12.2021', type: 'sell', pair: 'BCH/USD',   sum: 0.222,     price: 497,     sumUsd: 110.33},
-    {date: '08.12.2021', type: 'buy',  pair: 'GMT/USDT',  sum: 260.4598,  price: 0.59,    sumUsd: 187.29}, // реально по 0.42359
+    {date: '08.12.2021', type: 'buy',  pair: 'GMT/USDT',  sum: 260.4598,  price: 0.42359, sumUsd: 187.29},
     {date: '14.12.2021', type: 'sell', pair: 'XRP/USD',   sum: 750,       price: 0.84,    sumUsd: 462.00},
-    {date: '14.12.2021', type: 'buy',  pair: 'BTC/USDT',  sum: 0.009186,  price: 91000,   sumUsd: 460.54}, // реально по 50132.47
+    {date: '14.12.2021', type: 'buy',  pair: 'BTC/USDT',  sum: 0.009186,  price: 50132.4, sumUsd: 460.54},
     {date: '14.12.2021', type: 'sell', pair: 'ADA/USD',   sum: 85,        price: 1.3,     sumUsd: 110.50},
-    {date: '14.12.2021', type: 'buy',  pair: 'LTC/USDT',  sum: 1.78311,   price: 295,     sumUsd: 276.38}, // реально по 155
+    {date: '14.12.2021', type: 'buy',  pair: 'LTC/USDT',  sum: 1.78311,   price: 155,     sumUsd: 276.38},
 ]
+    // in 95799 UAH >>> 2604 USD
 
 
 
