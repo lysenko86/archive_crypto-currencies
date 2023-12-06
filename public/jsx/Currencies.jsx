@@ -150,6 +150,9 @@ class Currencies extends React.Component {
               {totalIncreasePercent + "%"}
             </td>
           </tr>
+          <tr>
+            <td colSpan="8" className="col-top">Всього залив 95799 UAH (5000 USD враховуючи старий курс)</td>
+          </tr>
         </tfoot>
       </table>
     );

@@ -1,36 +1,33 @@
 const deposit = [
 // PRIORITY 1
-    {key: 'topHead', title: 'PRIORITY 1'},
-    {key: 'ADA_USD', title: 'Cardano',   sum: 201.949,  priceIn: 1.742},
-    {key: 'BTC_USD', title: 'Bitcoin',   sum: 0.009186, priceIn: 91000},
-    {key: 'DOT_USD', title: 'Polkadot',  sum: 9.14,     priceIn: 5.4},
-    {key: 'ETH_USD', title: 'Ethereum',  sum: 0,        priceIn: 0},
-    {key: 'EXM_USD', title: 'EXMO Coin', sum: 6590,     priceIn: 0.0658},
-    {key: 'XLM_USD', title: 'Stellar',   sum: 0,        priceIn: 0},
-    {key: 'XRP_USD', title: 'Ripple',    sum: 911,      priceIn: 1.531},
-    {key: 'SOL_USD', title: 'Solana',    sum: 1.35,     priceIn: 25.077},
+    {key: 'topHead',  title: 'PRIORITY 1'},
+    {key: 'ADA_USD',  title: 'Cardano',   sum: 201.949,  priceIn: 1.742},
+    {key: 'BTC_USD',  title: 'Bitcoin',   sum: 0.009186, priceIn: 50132},
+    {key: 'DOT_USD',  title: 'Polkadot',  sum: 9.14,     priceIn: 5.4},
+    {key: 'ETH_USD',  title: 'Ethereum',  sum: 0,        priceIn: 0},
+    {key: 'EXM_USD',  title: 'EXMO Coin', sum: 6590,     priceIn: 0.0658},
+    {key: 'XLM_USD',  title: 'Stellar',   sum: 0,        priceIn: 0},
+    {key: 'XRP_USD',  title: 'Ripple',    sum: 911,      priceIn: 1.531},
+    {key: 'SOL_USDT', title: 'Solana',    sum: 1.3527,   priceIn: 25.077},
 
 // PRIORITY 2
     {key: 'topHead',  title: 'PRIORITY 2'},
     {key: 'BCH_USD',  title: 'Bitcoin Cash', sum: 0.8606,  priceIn: 584.47},
-    {key: 'LTC_USD',  title: 'Litecoin',     sum: 1.78311, priceIn: 295},
-    {key: 'NEO_USD',  title: 'NEO',          sum: 5.8968,  priceIn: 43},
-    {key: 'ZEC_USD',  title: 'Zcash',        sum: 0,       priceIn: 0},
+    {key: 'LTC_USD',  title: 'Litecoin',     sum: 1.78311, priceIn: 155},
+    {key: 'NEO_USD',  title: 'NEO',          sum: 5.8968,  priceIn: 31.6661},
 
 // PRIORITY 3
     {key: 'topHead',   title: 'PRIORITY 3'},
     {key: 'ATOM_USD',  title: 'Cosmos',       sum: 0,     priceIn: 0},
-    {key: 'BTG_USD',   title: 'Bitcoin Gold', sum: 0,     priceIn: 0},
     {key: 'QTUM_USD',  title: 'Qtum',         sum: 0,     priceIn: 0.0},
     {key: 'TRX_USD',   title: 'Tron',         sum: 398.8, priceIn: 0.0798},
-    {key: 'WAVES_USD', title: 'Waves',        sum: 0,     priceIn: 0},
     {key: 'XTZ_USD',   title: 'Tezos',        sum: 0,     priceIn: 0},
     {key: 'ZRX_USD',   title: '0x',           sum: 0,     priceIn: 0},
 
 // PRIORITY 4
     {key: 'topHead',  title: 'PRIORITY 4'},
     {key: 'DOGE_USD', title: 'Dogecoin',  sum: 498.5,    priceIn: 0.06708},
-    {key: 'SHIB_USD', title: 'SHIBA INU', sum: 997,      priceIn: 0.00000809},
+    {key: 'SHIB_USD', title: 'SHIBA INU', sum: 997000,   priceIn: 0.00000809},
     {key: 'EOS_USD',  title: 'EOS',       sum: 70,       priceIn: 4.473},
     {key: 'OMG_USD',  title: 'OmiseGO',   sum: 0,        priceIn: 0},
 
@@ -252,11 +249,20 @@ const actions = [
     {date: '08.12.2021', type: 'sell', pair: 'BCH/USD',   sum: 0.222,     price: 497,     sumUsd: 110.33},
     {date: '08.12.2021', type: 'buy',  pair: 'GMT/USDT',  sum: 260.4598,  price: 0.42359, sumUsd: 187.29},
     {date: '14.12.2021', type: 'sell', pair: 'XRP/USD',   sum: 750,       price: 0.84,    sumUsd: 462.00},
-    {date: '14.12.2021', type: 'buy',  pair: 'BTC/USDT',  sum: 0.009186,  price: 50132.4, sumUsd: 460.54},
+    {date: '14.12.2021', type: 'buy',  pair: 'BTC/USDT',  sum: 0.009186,  price: 50132,   sumUsd: 460.54},
     {date: '14.12.2021', type: 'sell', pair: 'ADA/USD',   sum: 85,        price: 1.3,     sumUsd: 110.50},
     {date: '14.12.2021', type: 'buy',  pair: 'LTC/USDT',  sum: 1.78311,   price: 155,     sumUsd: 276.38},
+// 2023
+    {date: '10.07.2023', type: 'sell', pair: 'XEM/USD',  sum: 1509,   price: 0.0278,    sumUsd: 41.95},
+    {date: '10.07.2023', type: 'sell', pair: 'DASH/USD', sum: 2.3795, price: 34.1479,   sumUsd: 81.25},
+    {date: '10.07.2023', type: 'buy',  pair: 'SHIB/USD', sum: 997000, price: 0.0000081, sumUsd: 8.07},
+    {date: '10.07.2023', type: 'buy',  pair: 'DOGE/USD', sum: 498.5,  price: 0.067,     sumUsd: 33.40},
+    {date: '10.07.2023', type: 'buy',  pair: 'TRX/USD',  sum: 398.8,  price: 0.0798,    sumUsd: 31.82},
+    {date: '10.07.2023', type: 'buy',  pair: 'DOT/USD',  sum: 9.14,   price: 5.4,       sumUsd: 49.35},
+    {date: '10.07.2023', type: 'sell', pair: 'GMT/USDT', sum: 260,    price: 0.1305,    sumUsd: 33.93},
+    {date: '10.07.2023', type: 'buy',  pair: 'SOL/USDT', sum: 1.3527, price: 25.0774,   sumUsd: 33.92},
 ]
-    // in 95799 UAH >>> 2604 USD
+    // in 95799 UAH >>> 5000 USD (враховуючи старий курс)
 
 
 
